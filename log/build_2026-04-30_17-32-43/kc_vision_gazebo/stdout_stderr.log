@@ -1,0 +1,57 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.17.4 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/kiranchand/kc_vision_ws/build/kc_vision_gazebo
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//config/ros_gz_bridge.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//launch/gazebo.launch.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/house_interior/house_interior_with_qrcodes.dae
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/house_interior/wp_1.png
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/house_interior/wp_2.png
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/house_interior/wp_3.png
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/house_interior/wp_4.png
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/house_interior/wp_5.png
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/house_interior/wp_6.png
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/my_maze/my_maze_1.dae
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//rviz/gazebo_and_rviz_and_localization_config.rviz
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//rviz/navigation.rviz
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//worlds/empty_world.sdf
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//worlds/indoor_world_with_qr_codes.sdf
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//worlds/maze_world_1.sdf
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//worlds/obstacles_in.sdf
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/ament_index/resource_index/package_run_dependencies/kc_vision_gazebo
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/ament_index/resource_index/parent_prefix_path/kc_vision_gazebo
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/environment/ament_prefix_path.sh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/environment/ament_prefix_path.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/environment/path.sh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/environment/path.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/local_setup.bash
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/local_setup.sh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/local_setup.zsh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/local_setup.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/package.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/ament_index/resource_index/packages/kc_vision_gazebo
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/cmake/kc_vision_gazeboConfig.cmake
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/cmake/kc_vision_gazeboConfig-version.cmake
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo/package.xml

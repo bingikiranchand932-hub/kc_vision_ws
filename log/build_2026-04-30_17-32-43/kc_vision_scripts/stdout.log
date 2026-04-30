@@ -1,0 +1,20 @@
+running develop
+running egg_info
+creating kc_vision_scripts.egg-info
+writing kc_vision_scripts.egg-info/PKG-INFO
+writing dependency_links to kc_vision_scripts.egg-info/dependency_links.txt
+writing requirements to kc_vision_scripts.egg-info/requires.txt
+writing top-level names to kc_vision_scripts.egg-info/top_level.txt
+writing manifest file 'kc_vision_scripts.egg-info/SOURCES.txt'
+reading manifest file 'kc_vision_scripts.egg-info/SOURCES.txt'
+writing manifest file 'kc_vision_scripts.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/kiranchand/kc_vision_ws/install/kc_vision_scripts/lib/python3.12/site-packages/kc-vision-scripts.egg-link (link to .)
+
+Installed /home/kiranchand/kc_vision_ws/build/kc_vision_scripts
+running symlink_data
+creating /home/kiranchand/kc_vision_ws/install/kc_vision_scripts/share/ament_index
+creating /home/kiranchand/kc_vision_ws/install/kc_vision_scripts/share/ament_index/resource_index
+creating /home/kiranchand/kc_vision_ws/install/kc_vision_scripts/share/ament_index/resource_index/packages
+symbolically linking /home/kiranchand/kc_vision_ws/build/kc_vision_scripts/resource/kc_vision_scripts -> /home/kiranchand/kc_vision_ws/install/kc_vision_scripts/share/ament_index/resource_index/packages
+symbolically linking /home/kiranchand/kc_vision_ws/build/kc_vision_scripts/package.xml -> /home/kiranchand/kc_vision_ws/install/kc_vision_scripts/share/kc_vision_scripts

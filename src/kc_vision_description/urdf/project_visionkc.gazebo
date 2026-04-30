@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<robot name="project_visionkc" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="body_color" value="Gazebo/Silver" />
+
+    <!-- <gazebo reference="left_Wheel_tire_1">
+        <mu1>2.0</mu1>
+        <mu2>2.0</mu2>
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.001</minDepth>
+        
+    </gazebo>
+
+
+
+    <gazebo reference="right_Wheel_Tire_1">
+        <mu1>2.0</mu1>
+        <mu2>2.0</mu2>
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.001</minDepth>
+        
+    </gazebo>
+
+    <gazebo reference="left_Omni_Wheel_v1__1__1">
+        <mu1>2.0</mu1>
+        <mu2>2.0</mu2>
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        
+    </gazebo>
+
+    <gazebo reference="right_Omni_Wheel__1">
+        <mu1>2.0</mu1>
+        <mu2>2.0</mu2>
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        
+    </gazebo> -->
+
+    <gazebo reference="left_Wheel_tire_1" xmlns:gz="http://gazeborobotics.org/schema">
+      
+        <collision>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <slip1>0.035</slip1>
+                <slip2>0</slip2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+      
+    </gazebo>
+
+    <gazebo reference="right_Wheel_tire_1" xmlns:gz="http://gazeborobotics.org/schema">
+      
+        <collision>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <slip1>0.035</slip1>
+                <slip2>0</slip2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+     
+    </gazebo>
+
+    <gazebo reference="left_Omni_Wheel_v1__1__1" xmlns:gz="http://gazeborobotics.org/schema">
+      
+        <collision>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <slip1>0.035</slip1>
+                <slip2>0</slip2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+      
+    </gazebo>
+
+    <gazebo reference="right_Omni_Wheel__1" xmlns:gz="http://gazeborobotics.org/schema">
+      
+        <collision>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <slip1>0.035</slip1>
+                <slip2>0</slip2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+    
+    </gazebo>
+
+
+
+
+
+</robot>  

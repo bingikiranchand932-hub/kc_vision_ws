@@ -1,0 +1,70 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.17.4 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/kiranchand/kc_vision_ws/build/kc_vision_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//launch/rviz.launch.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/150mm_Cutting_disc_holder_v4_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/A7_-_DC_Geared_Motor_v1_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/A7_-_DC_Geared_Motor_v1_Mirror__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/A7_-_DC_Geared_Motor_v1_Mirror__Mirror__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/A7_-_DC_Geared_Motor_v1_Mirror___1__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/base_link.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/camera_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/imu_sensor_TM171__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/left_Omni_Wheel_v1__1__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/left_Wheel_Rim_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/left_Wheel_tire_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/lidar_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/right_Omni_Wheel__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/right_Wheel_Rim_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/right_Wheel_Tire_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/camera.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/gazebo_control.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/gz_new_cont.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/lidar.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/project_visionkc.gazebo
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/robot.urdf.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/robot_core copy.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/robot_core.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/ros2_control.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/ros2_control_sim.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//rviz/navigation.rviz
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//rviz/rviz_config copy.rviz
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//rviz/rviz_config.rviz
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/ament_index/resource_index/package_run_dependencies/kc_vision_description
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/ament_index/resource_index/parent_prefix_path/kc_vision_description
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/environment/path.sh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/environment/path.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/local_setup.bash
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/local_setup.sh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/local_setup.zsh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/local_setup.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/package.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/ament_index/resource_index/packages/kc_vision_description
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/cmake/kc_vision_descriptionConfig.cmake
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/cmake/kc_vision_descriptionConfig-version.cmake
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description/package.xml

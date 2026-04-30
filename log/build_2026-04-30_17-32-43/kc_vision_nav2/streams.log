@@ -1,0 +1,60 @@
+[0.036s] Invoking command in '/home/kiranchand/kc_vision_ws/build/kc_vision_nav2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/ros2_ws/install/robot_math:/home/kiranchand/ros2_ws/install/gui_interface:/home/kiranchand/ros2_ws/install/bme_ros2_navigation_py:/home/kiranchand/ros2_ws/install/ai_assitance:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kiranchand/kc_vision_ws/src/kc_vision_nav2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kiranchand/kc_vision_ws/install/kc_vision_nav2
+[0.296s] -- The C compiler identification is GNU 13.3.0
+[0.296s] -- The CXX compiler identification is GNU 13.3.0
+[0.296s] -- Detecting C compiler ABI info
+[0.340s] -- Detecting C compiler ABI info - done
+[0.349s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.350s] -- Detecting C compile features
+[0.350s] -- Detecting C compile features - done
+[0.363s] -- Detecting CXX compiler ABI info
+[0.484s] -- Detecting CXX compiler ABI info - done
+[0.498s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.498s] -- Detecting CXX compile features
+[0.499s] -- Detecting CXX compile features - done
+[0.511s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.771s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.865s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.017s] -- Found action_msgs: 2.0.3 (/opt/ros/jazzy/share/action_msgs/cmake)
+[1.173s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.221s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.282s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.342s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.487s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.569s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.687s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.701s] -- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)
+[1.784s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.980s] -- Configuring done (1.9s)
+[1.991s] -- Generating done (0.0s)
+[1.994s] -- Build files have been written to: /home/kiranchand/kc_vision_ws/build/kc_vision_nav2
+[2.002s] Invoked command in '/home/kiranchand/kc_vision_ws/build/kc_vision_nav2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/ros2_ws/install/robot_math:/home/kiranchand/ros2_ws/install/gui_interface:/home/kiranchand/ros2_ws/install/bme_ros2_navigation_py:/home/kiranchand/ros2_ws/install/ai_assitance:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kiranchand/kc_vision_ws/src/kc_vision_nav2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kiranchand/kc_vision_ws/install/kc_vision_nav2
+[2.003s] Invoking command in '/home/kiranchand/kc_vision_ws/build/kc_vision_nav2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/ros2_ws/install/robot_math:/home/kiranchand/ros2_ws/install/gui_interface:/home/kiranchand/ros2_ws/install/bme_ros2_navigation_py:/home/kiranchand/ros2_ws/install/ai_assitance:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kiranchand/kc_vision_ws/build/kc_vision_nav2 -- -j12 -l12
+[2.056s] [ 50%] [32mBuilding CXX object CMakeFiles/cmd_vel_watchdog.dir/src/cmd_vel_watchdog.cpp.o[0m
+[9.620s] [100%] [32m[1mLinking CXX executable cmd_vel_watchdog[0m
+[9.917s] [100%] Built target cmd_vel_watchdog
+[9.928s] Invoked command in '/home/kiranchand/kc_vision_ws/build/kc_vision_nav2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/ros2_ws/install/robot_math:/home/kiranchand/ros2_ws/install/gui_interface:/home/kiranchand/ros2_ws/install/bme_ros2_navigation_py:/home/kiranchand/ros2_ws/install/ai_assitance:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kiranchand/kc_vision_ws/build/kc_vision_nav2 -- -j12 -l12
+[9.928s] Invoking command in '/home/kiranchand/kc_vision_ws/build/kc_vision_nav2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/ros2_ws/install/robot_math:/home/kiranchand/ros2_ws/install/gui_interface:/home/kiranchand/ros2_ws/install/bme_ros2_navigation_py:/home/kiranchand/ros2_ws/install/ai_assitance:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kiranchand/kc_vision_ws/build/kc_vision_nav2
+[9.936s] -- Install configuration: ""
+[9.937s] -- Execute custom install script
+[9.937s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//launch/nav2.launch.py
+[9.946s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//config/nav2_real_params.yaml
+[9.955s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//config/nav2_real_params_rpp.yaml
+[9.963s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//config/nav2_sim_params.yaml
+[9.972s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//rviz/nav2_rviz_config.rviz
+[9.981s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/lib/kc_vision_nav2/cmd_vel_watchdog
+[9.991s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/ament_index/resource_index/package_run_dependencies/kc_vision_nav2
+[10.000s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/ament_index/resource_index/parent_prefix_path/kc_vision_nav2
+[10.009s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/environment/ament_prefix_path.sh
+[10.018s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/environment/ament_prefix_path.dsv
+[10.026s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/environment/path.sh
+[10.035s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/environment/path.dsv
+[10.043s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/local_setup.bash
+[10.051s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/local_setup.sh
+[10.060s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/local_setup.zsh
+[10.068s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/local_setup.dsv
+[10.077s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/package.dsv
+[10.087s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/ament_index/resource_index/packages/kc_vision_nav2
+[10.097s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/cmake/kc_vision_nav2Config.cmake
+[10.105s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/cmake/kc_vision_nav2Config-version.cmake
+[10.114s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/package.xml
+[10.124s] Invoked command in '/home/kiranchand/kc_vision_ws/build/kc_vision_nav2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/ros2_ws/install/robot_math:/home/kiranchand/ros2_ws/install/gui_interface:/home/kiranchand/ros2_ws/install/bme_ros2_navigation_py:/home/kiranchand/ros2_ws/install/ai_assitance:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kiranchand/kc_vision_ws/build/kc_vision_nav2

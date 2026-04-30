@@ -1,0 +1,4 @@
+source;share/kc_vision_nav2/local_setup.bash
+source;share/kc_vision_nav2/local_setup.dsv
+source;share/kc_vision_nav2/local_setup.sh
+source;share/kc_vision_nav2/local_setup.zsh

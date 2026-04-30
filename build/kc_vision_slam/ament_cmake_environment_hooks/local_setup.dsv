@@ -1,0 +1,2 @@
+source;share/kc_vision_slam/environment/ament_prefix_path.sh
+source;share/kc_vision_slam/environment/path.sh

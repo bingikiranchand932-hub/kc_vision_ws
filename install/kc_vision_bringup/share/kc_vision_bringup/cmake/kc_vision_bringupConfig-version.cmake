@@ -1,0 +1,1 @@
+/home/kiranchand/kc_vision_ws/build/kc_vision_bringup/ament_cmake_core/kc_vision_bringupConfig-version.cmake

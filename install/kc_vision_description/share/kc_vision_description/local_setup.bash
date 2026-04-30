@@ -1,0 +1,1 @@
+/home/kiranchand/kc_vision_ws/build/kc_vision_description/ament_cmake_environment_hooks/local_setup.bash
