@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Top-level launch file to start the Gazebo and RVIZ without any SLAM or Nav2 functionality.
-This launch file acts as an entry point and includes the main gazebo.launch.py and rviz.launch.py files, from the slambot_gazebo and slambot_description packages.
+This launch file acts as an entry point and includes the main gazebo.launch.py and rviz.launch.py files, from the kc_vision_gazebo and kc_vision_description packages.
 
 """
 
@@ -21,27 +21,27 @@ from launch.conditions import IfCondition
 def generate_launch_description():
     """Generate the launch description for the simulation without SLAM."""
 
-    # Get the path to the slambot_gazebo package
-    pkg_slambot_gazebo = get_package_share_directory('kc_vision_gazebo')
-    pkg_slambot_description = get_package_share_directory('kc_vision_description')
-    pkg_slambot_bringup = get_package_share_directory('kc_vision_bringup')
+    # Get the path to the kc_vision_gazebo package
+    pkg_kc_vision_gazebo = get_package_share_directory('kc_vision_gazebo')
+    pkg_kc_vision_description = get_package_share_directory('kc_vision_description')
+    pkg_kc_vision_bringup = get_package_share_directory('kc_vision_bringup')
 
     # Define Config File Paths
-    twist_mux_file = os.path.join(pkg_slambot_bringup, 'config', 'twist_mux.yaml')
-    joy_config_file = os.path.join(pkg_slambot_bringup, 'config', 'joy_teleop.yaml')
-    rviz_config_path = os.path.join(pkg_slambot_gazebo, 'rviz', 'gazebo_and_rviz_and_localization_config.rviz')
+    twist_mux_file = os.path.join(pkg_kc_vision_bringup, 'config', 'twist_mux.yaml')
+    joy_config_file = os.path.join(pkg_kc_vision_bringup, 'config', 'joy_teleop.yaml')
+    rviz_config_path = os.path.join(pkg_kc_vision_gazebo, 'rviz', 'gazebo_and_rviz_and_localization_config.rviz')
 
 
     # ========================= Declare Launch Arguments =========================== #   
     declare_world_cmd = DeclareLaunchArgument(
         'world',
-        default_value='indoor_world_with_qr_codes.sdf',
+        default_value='visionkc.sdf',
         description='The world file to launch in Gazebo'
     )
 
     declare_robot_name_cmd = DeclareLaunchArgument(
         'robot_name',
-        default_value='slambot',
+        default_value='kc_vision',
         description='The name/namespace for the robot'
     )
 
@@ -77,7 +77,7 @@ def generate_launch_description():
     
     start_rviz_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_description, 'launch', 'rviz.launch.py')
+            os.path.join(pkg_kc_vision_description, 'launch', 'rviz.launch.py')
         ),
         # Pass the launch arguments to the included launch file
         launch_arguments={
@@ -94,7 +94,7 @@ def generate_launch_description():
 
     start_gz_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_gazebo, 'launch', 'gazebo.launch.py')
+            os.path.join(pkg_kc_vision_gazebo, 'launch', 'gazebo.launch.py')
         ),
         # Pass the launch arguments to the included launch file
         launch_arguments={

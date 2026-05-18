@@ -21,7 +21,7 @@ def generate_launch_description():
 
     # ================== Get Package Directories =================== #
     
-    pkg_slambot_description_share = FindPackageShare('kc_vision_description')
+    pkg_kc_vision_description_share = FindPackageShare('kc_vision_description')
 
     # ================== Declare Launch Arguments =================== #
 
@@ -37,13 +37,13 @@ def generate_launch_description():
         
     declare_urdf_model_cmd = DeclareLaunchArgument(
         'urdf_model',
-        default_value=PathJoinSubstitution([pkg_slambot_description_share, 'urdf', 'robot.urdf.xacro']),
+        default_value=PathJoinSubstitution([pkg_kc_vision_description_share, 'urdf', 'kc_vision.urdf.xacro']),
         description='Absolute path to robot URDF file')
     
     # The rviz config file choice is passed down as an argument by top level launch files
     declare_rviz_config_file_cmd = DeclareLaunchArgument(
         'rviz_config_file',
-        default_value=PathJoinSubstitution([pkg_slambot_description_share, 'rviz', 'navigation.rviz']),
+        default_value=PathJoinSubstitution([pkg_kc_vision_description_share, 'rviz', 'rviz_config.rviz']),
         description='Full path to the RViz config file.'
     )
 

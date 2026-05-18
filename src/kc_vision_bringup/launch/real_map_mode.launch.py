@@ -23,20 +23,20 @@ def generate_launch_description():
     # ========================= Paths & Environment Setup =========================== #   
 
     # 1. Get the paths to the required packages
-    pkg_slambot_description = get_package_share_directory('slambot_description')
-    pkg_slambot_slam = get_package_share_directory('slambot_slam')
-    pkg_slambot_bringup = get_package_share_directory('slambot_bringup')
-    pkg_slambot_localization = get_package_share_directory('slambot_localization')
+    pkg_kc_vision_description = get_package_share_directory('kc_vision_description')
+    pkg_kc_vision_slam = get_package_share_directory('kc_vision_slam')
+    pkg_kc_vision_bringup = get_package_share_directory('kc_vision_bringup')
+    pkg_kc_vision_localization = get_package_share_directory('kc_vision_localization')
     pkg_ldlidar_ros2 = get_package_share_directory('ldlidar_ros2')
 
     # 2. Define file paths
-    xacro_file = os.path.join(pkg_slambot_description, 'urdf', 'slambot.urdf.xacro')
-    controllers_file = os.path.join(pkg_slambot_bringup, 'config', 'slambot_controllers.yaml')
-    twist_mux_file = os.path.join(pkg_slambot_bringup, 'config', 'twist_mux.yaml') 
-    joy_config_file = os.path.join(pkg_slambot_bringup, 'config', 'joy_teleop.yaml') 
-    ekf_real_params = os.path.join(pkg_slambot_localization, 'config', 'ekf_real.yaml')
-    camera_config_file = os.path.join(pkg_slambot_bringup, 'config', 'camera.yaml')
-    slam_params_file = os.path.join(pkg_slambot_slam, 'config', 'slam_params.yaml')
+    xacro_file = os.path.join(pkg_kc_vision_description, 'urdf', 'kc_vision.urdf.xacro')
+    controllers_file = os.path.join(pkg_kc_vision_bringup, 'config', 'kc_vision_controllers.yaml')
+    twist_mux_file = os.path.join(pkg_kc_vision_bringup, 'config', 'twist_mux.yaml') 
+    joy_config_file = os.path.join(pkg_kc_vision_bringup, 'config', 'joy_teleop.yaml') 
+    ekf_real_params = os.path.join(pkg_kc_vision_localization, 'config', 'ekf_real.yaml')
+    camera_config_file = os.path.join(pkg_kc_vision_bringup, 'config', 'camera.yaml')
+    slam_params_file = os.path.join(pkg_kc_vision_slam, 'config', 'slam_params.yaml')
 
     # 3. Process URDF
     robot_description_content = Command(
@@ -76,7 +76,7 @@ def generate_launch_description():
     # In case you need to pass a different parameter file through to SLAM for the real robot!
     declare_configuration_directory_cmd = DeclareLaunchArgument(
         'configuration_directory',
-        default_value=os.path.join(pkg_slambot_slam, 'config'),
+        default_value=os.path.join(pkg_kc_vision_slam, 'config'),
         description='Directory containing the Cartographer .lua configuration file'
     )
 
@@ -189,7 +189,7 @@ def generate_launch_description():
     
     start_ekf_localization_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_localization, 'launch', 'localization.launch.py')
+            os.path.join(pkg_kc_vision_localization, 'launch', 'localization.launch.py')
         ),
         launch_arguments={
             'use_sim_time': LaunchConfiguration('use_sim_time'),
@@ -204,7 +204,7 @@ def generate_launch_description():
 
     start_slam_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_slam, 'launch', 'slam.launch.py')
+            os.path.join(pkg_kc_vision_slam, 'launch', 'slam.launch.py')
         ),
         launch_arguments={
             'use_sim_time': LaunchConfiguration('use_sim_time'),
@@ -219,7 +219,7 @@ def generate_launch_description():
 
     start_cartographer_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_slam, 'launch', 'cartographer.launch.py')
+            os.path.join(pkg_kc_vision_slam, 'launch', 'cartographer.launch.py')
         ),
         launch_arguments={
             'cartographer_config_file': LaunchConfiguration('cartographer_config_file'),

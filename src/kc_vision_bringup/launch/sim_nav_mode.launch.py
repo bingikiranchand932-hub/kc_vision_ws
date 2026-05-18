@@ -19,31 +19,31 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    # Get the path to the slambot_gazebo package
-    pkg_slambot_gazebo = get_package_share_directory('kc_vision_gazebo')
-    pkg_slambot_description = get_package_share_directory('kc_vision_description')
-    pkg_slambot_nav2 = get_package_share_directory('kc_vision_nav2')
-    pkg_slambot_slam = get_package_share_directory('kc_vision_slam')
-    pkg_slambot_bringup = get_package_share_directory('kc_vision_bringup')
+    # Get the path to the packages
+    pkg_kc_vision_gazebo = get_package_share_directory('kc_vision_gazebo')
+    pkg_kc_vision_description = get_package_share_directory('kc_vision_description')
+    pkg_kc_vision_nav2 = get_package_share_directory('kc_vision_nav2')
+    pkg_kc_vision_slam = get_package_share_directory('kc_vision_slam')
+    pkg_kc_vision_bringup = get_package_share_directory('kc_vision_bringup')
 
     # Path to the new twist_mux config
-    twist_mux_file = os.path.join(pkg_slambot_bringup, 'config', 'twist_mux.yaml')
+    twist_mux_file = os.path.join(pkg_kc_vision_bringup, 'config', 'twist_mux.yaml')
     # Path for the joystick config
-    joy_config_file = os.path.join(pkg_slambot_bringup, 'config', 'joy_teleop.yaml')
+    joy_config_file = os.path.join(pkg_kc_vision_bringup, 'config', 'joy_teleop.yaml')
     # Path to the RViz configuration file
-    rviz_config_path = os.path.join(pkg_slambot_nav2, 'rviz', 'nav2_rviz_config.rviz')
+    rviz_config_path = os.path.join(pkg_kc_vision_nav2, 'rviz', 'nav2_rviz_config.rviz')
 
 
     # ========================= Declare Launch Arguments =========================== #   
     declare_world_cmd = DeclareLaunchArgument(
         'world',
-        default_value='indoor_world_with_qr_codes.sdf',
+        default_value='visionkc.sdf',
         description='The world file to launch in Gazebo'
     )
 
     declare_robot_name_cmd = DeclareLaunchArgument(
         'robot_name',
-        default_value='slambot',
+        default_value='kc_vision',
         description='The name for the robot'
     )
 
@@ -67,7 +67,7 @@ def generate_launch_description():
 
     declare_map_cmd = DeclareLaunchArgument(
         'map',
-        default_value=os.path.join(pkg_slambot_slam, 'maps', 'indoor_map_cartographer.yaml'),
+        default_value=os.path.join(pkg_kc_vision_slam, 'maps', 'saved_map.yaml'),
         description='Full path to the map file to load for navigation'
     )
 
@@ -84,7 +84,7 @@ def generate_launch_description():
 
     start_gz_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_gazebo, 'launch', 'gazebo.launch.py')
+            os.path.join(pkg_kc_vision_gazebo, 'launch', 'gazebo.launch.py')
         ),
         # Pass the launch arguments to the included launch file
         launch_arguments={
@@ -101,7 +101,7 @@ def generate_launch_description():
 
     start_nav2_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_nav2, 'launch', 'nav2.launch.py')
+            os.path.join(pkg_kc_vision_nav2, 'launch', 'nav2.launch.py')
         ),
         launch_arguments={
             'use_sim_time': LaunchConfiguration('use_sim_time'),
@@ -115,7 +115,7 @@ def generate_launch_description():
     
     start_rviz_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_description, 'launch', 'rviz.launch.py')
+            os.path.join(pkg_kc_vision_description, 'launch', 'rviz.launch.py')
         ),
         # Pass the launch arguments to the included launch file
         launch_arguments={
@@ -132,7 +132,8 @@ def generate_launch_description():
     twist_mux_node = Node(
         package="twist_mux",
         executable="twist_mux",
-        parameters=[twist_mux_file],
+        # FIXED: Added use_sim_time parameter
+        parameters=[twist_mux_file, {'use_sim_time': LaunchConfiguration('use_sim_time')}],
         remappings=[("cmd_vel_out", "/cmd_vel")] 
     )
 
@@ -140,6 +141,8 @@ def generate_launch_description():
         package='twist_stamper',
         executable='twist_stamper',
         name='twist_stamper',
+        # FIXED: Added use_sim_time parameter
+        parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}],
         remappings=[
             ('cmd_vel_in', '/cmd_vel'),
             ('cmd_vel_out', '/cmd_vel_stamped')
@@ -151,7 +154,11 @@ def generate_launch_description():
         package='joy',
         executable='joy_node',
         name='joy_node',
-        parameters=[{'dev': '/dev/input/js0'}],
+        # FIXED: Added use_sim_time parameter
+        parameters=[{
+            'dev': '/dev/input/js0',
+            'use_sim_time': LaunchConfiguration('use_sim_time')
+        }],
         condition=IfCondition(LaunchConfiguration('using_joy'))
     )
 
@@ -160,7 +167,8 @@ def generate_launch_description():
         package='teleop_twist_joy',
         executable='teleop_node',
         name='teleop_twist_joy_node',
-        parameters=[joy_config_file],
+        # FIXED: Added use_sim_time parameter
+        parameters=[joy_config_file, {'use_sim_time': LaunchConfiguration('use_sim_time')}],
         remappings=[
             # Remap the output to the topic twist_mux is listening for
             ('cmd_vel', '/cmd_vel_joy') 

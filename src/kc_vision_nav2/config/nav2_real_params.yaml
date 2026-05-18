@@ -240,7 +240,7 @@ local_costmap:
       update_frequency: 5.0
       publish_frequency: 5.0 #Upped from 2.0 to 5.0hz
       global_frame: odom
-      robot_base_frame: "base_footprint"  #robot_base_frame: "base_link" -- for slambot we use base_footprint, not base_link as most senior parent in our TF tree
+      robot_base_frame: "base_footprint"  #robot_base_frame: "base_link" -- for kc_vision we use base_footprint, not base_link as most senior parent in our TF tree
       rolling_window: true
       width: 3
       height: 3

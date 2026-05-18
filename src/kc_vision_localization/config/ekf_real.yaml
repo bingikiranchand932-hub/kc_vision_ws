@@ -1,5 +1,5 @@
 # ekf_real.yaml
-# EKF configuration tuned for the physical Slambot.
+# EKF configuration tuned for the physical kc_vision.
 # Fuses wheel odometry with the raw IMU topic published by the micro-ROS firmware.
 
 ekf_filter_node:

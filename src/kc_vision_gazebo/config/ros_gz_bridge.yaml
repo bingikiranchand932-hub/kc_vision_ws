@@ -41,11 +41,11 @@
 #   gz_type_name: "gz.msgs.Twist"
 #   direction: ROS_TO_GZ
 
-# - ros_topic_name: "/odom" #gz topic published by DiffDrive plugin
-#   gz_topic_name: "/odom"
-#   ros_type_name: "nav_msgs/msg/Odometry"
-#   gz_type_name: "gz.msgs.Odometry"
-#   direction: GZ_TO_ROS
+- ros_topic_name: "/odom" #gz topic published by DiffDrive plugin
+  gz_topic_name: "/odom"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  direction: GZ_TO_ROS
 
 
 #==============================================

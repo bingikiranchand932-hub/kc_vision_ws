@@ -18,7 +18,7 @@
 #include "geometry_msgs/msg/twist.hpp"
 #include "rclcpp/rclcpp.hpp"
 
-namespace slambot_nav2
+namespace kc_vision_nav2
 {
 
 class CmdVelWatchdog : public rclcpp::Node
@@ -170,12 +170,12 @@ private:
   rclcpp::TimerBase::SharedPtr stop_timer_;
 };
 
-}  // namespace slambot_nav2
+}  // namespace kc_vision_nav2
 
 int main(int argc, char ** argv)
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<slambot_nav2::CmdVelWatchdog>());
+  rclcpp::spin(std::make_shared<kc_vision_nav2::CmdVelWatchdog>());
   rclcpp::shutdown();
   return 0;
 }

@@ -20,9 +20,9 @@ def generate_launch_description():
     """Generate the launch description for the Cartographer node."""
 
     # Get the path to this package's share directory
-    pkg_slambot_slam = get_package_share_directory('slambot_slam')
+    pkg_kc_vision_slam = get_package_share_directory('kc_vision_slam')
     cartographer_config_dir = LaunchConfiguration('cartographer_config_dir', default=os.path.join(
-                                                  pkg_slambot_slam, 'config'))
+                                                  pkg_kc_vision_slam, 'config'))
     configuration_basename = LaunchConfiguration('configuration_basename',
                                                  default='cartographer_params.lua')
     

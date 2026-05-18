@@ -1,6 +1,6 @@
-# Slambot Launch File Guide
+# kc_vision Launch File Guide
 
-There are a large number of launch files in the slambot program, and each package tends to contain its own specific launch files. Unless you are running specific tests, you should ONLY need to use launch files from within the `slambot_bringup` package, as these are the top level launch files.
+There are a large number of launch files in the kc_vision program, and each package tends to contain its own specific launch files. Unless you are running specific tests, you should ONLY need to use launch files from within the `kc_vision_bringup` package, as these are the top level launch files.
 
 ‼️Be careful about editing launch files within other packages, as these are called upon by the top level launch files in the bringup package!‼️
 
@@ -11,7 +11,7 @@ There are a large number of launch files in the slambot program, and each packag
 Launches Gazebo, RVIZ, and the EKF localization stack for pure teleoperation. Twist_mux, joystick (optional), and teleop nodes are started so you can drive the robot manually.
 - Optional Launch Arguments...
   - world | e.g. `indoor_world_1.sdf`
-  - robot_name | Gazebo entity name (default `slambot`)
+  - robot_name | Gazebo entity name (default `kc_vision`)
   - headless | true / false (default false)
   - use_sim_time | true / false (default true)
   - jsp_gui | true / false (default false)
@@ -19,7 +19,7 @@ Launches Gazebo, RVIZ, and the EKF localization stack for pure teleoperation. Tw
 
 ```python
 #Example
-ros2 launch slambot_bringup sim_teleop_only.launch.py world:=indoor_world_1.sdf
+ros2 launch kc_vision_bringup sim_teleop_only.launch.py world:=indoor_world_1.sdf
 
 #Teleop in another terminal
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
@@ -30,7 +30,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 Launches Gazebo, RVIZ, the EKF localization stack, and SLAM (slam_toolbox or cartographer). Use this when generating a map in simulation.
 - Optional Launch Arguments...
   - world | e.g. `indoor_world_1.sdf`
-  - robot_name | Gazebo entity name (default `slambot`)
+  - robot_name | Gazebo entity name (default `kc_vision`)
   - headless | true / false (default false)
   - use_sim_time | true / false (default true)
   - jsp_gui | true / false (default false)
@@ -43,7 +43,7 @@ Launches Gazebo, RVIZ, the EKF localization stack, and SLAM (slam_toolbox or car
 
 ```python
 #Example
-ros2 launch slambot_bringup sim_map_mode.launch.py slam_type:=cartographer
+ros2 launch kc_vision_bringup sim_map_mode.launch.py slam_type:=cartographer
 
 #Teleop in another terminal
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
@@ -51,10 +51,10 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 
 ### sim_map_mode_and_qrcodes.launch.py
-Extends `sim_map_mode` by launching the `slambot_scripts/qr_code_reader` node. Use this in QR-coded environments to capture waypoint positions while mapping.
+Extends `sim_map_mode` by launching the `kc_vision_scripts/qr_code_reader` node. Use this in QR-coded environments to capture waypoint positions while mapping.
 - Optional Launch Arguments...
   - world | e.g. `indoor_world_with_qr_codes.sdf`
-  - robot_name | Gazebo entity name (default `slambot`)
+  - robot_name | Gazebo entity name (default `kc_vision`)
   - headless | true / false (default false)
   - use_sim_time | true / false (default true)
   - jsp_gui | true / false (default false)
@@ -67,7 +67,7 @@ Extends `sim_map_mode` by launching the `slambot_scripts/qr_code_reader` node. U
 
 ```python
 #Example
-ros2 launch slambot_bringup sim_map_mode_and_qrcodes.launch.py world:=warehouse_with_qr_codes.sdf
+ros2 launch kc_vision_bringup sim_map_mode_and_qrcodes.launch.py world:=warehouse_with_qr_codes.sdf
 
 #Teleop in another terminal
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
@@ -78,7 +78,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 Launches Gazebo, RVIZ, EKF localization, and the Nav2 stack with a supplied map. Ideal for testing autonomous navigation in simulation.
 - Optional Launch Arguments...
   - world | e.g. `indoor_world_with_qr_codes.sdf`
-  - robot_name | Gazebo entity name (default `slambot`)
+  - robot_name | Gazebo entity name (default `kc_vision`)
   - headless | true / false (default false)
   - use_sim_time | true / false (default true)
   - jsp_gui | true / false (default false)
@@ -86,7 +86,7 @@ Launches Gazebo, RVIZ, EKF localization, and the Nav2 stack with a supplied map.
   - using_joy | true by default; set false if no joystick is connected
 
 ```python
-ros2 launch slambot_bringup sim_nav_mode.launch.py map:=/home/<user>/nav2_maps/indoor_map_cartographer.yaml
+ros2 launch kc_vision_bringup sim_nav_mode.launch.py map:=/home/<user>/nav2_maps/indoor_map_cartographer.yaml
 ```
 
 

@@ -14,10 +14,10 @@ from launch.conditions import IfCondition
 def generate_launch_description():
 
 	# Package paths
-	pkg_slambot_bringup = get_package_share_directory('slambot_bringup')
+	pkg_kc_vision_bringup = get_package_share_directory('kc_vision_bringup')
 
 	# File paths
-	rviz_config_path_nav2 = os.path.join(pkg_slambot_bringup, 'rviz', 'dev_rviz_nav_config.rviz')
+	rviz_config_path_nav2 = os.path.join(pkg_kc_vision_bringup, 'rviz', 'dev_rviz_nav_config.rviz')
 
 	declare_use_sim_time_cmd = DeclareLaunchArgument(
 		'use_sim_time',

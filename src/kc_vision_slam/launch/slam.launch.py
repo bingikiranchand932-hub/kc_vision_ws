@@ -24,7 +24,7 @@ def generate_launch_description():
     """Generate the launch description for the SLAM Toolbox node."""
 
     # Get the path to this package's share directory
-    pkg_slambot_slam = get_package_share_directory('kc_vision_slam')
+    pkg_kc_vision_slam = get_package_share_directory('kc_vision_slam')
 
     # --- Declare Launch Arguments ---
     declare_use_sim_time_cmd = DeclareLaunchArgument(
@@ -35,7 +35,7 @@ def generate_launch_description():
 
     declare_slam_params_file_cmd = DeclareLaunchArgument(
         'slam_params_file',
-        default_value=os.path.join(pkg_slambot_slam, 'config', 'slam_params.yaml'),
+        default_value=os.path.join(pkg_kc_vision_slam, 'config', 'slam_params.yaml'),
         description='Full path to the ROS2 parameters file to use for the slam_toolbox node'
     )
 

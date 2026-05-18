@@ -23,20 +23,20 @@ def generate_launch_description():
     # ========================= Paths & Environment Setup =========================== #   
 
     # 1. Get the paths to the required packages
-    pkg_slambot_description = get_package_share_directory('slambot_description')
-    pkg_slambot_bringup = get_package_share_directory('slambot_bringup')
-    pkg_slambot_localization = get_package_share_directory('slambot_localization')
+    pkg_kc_vision_description = get_package_share_directory('kc_vision_description')
+    pkg_kc_vision_bringup = get_package_share_directory('kc_vision_bringup')
+    pkg_kc_vision_localization = get_package_share_directory('kc_vision_localization')
     pkg_ldlidar_ros2 = get_package_share_directory('ldlidar_ros2')
-    pkg_slambot_nav2 = get_package_share_directory('slambot_nav2')
-    pkg_slambot_slam = get_package_share_directory('slambot_slam')
+    pkg_kc_vision_nav2 = get_package_share_directory('kc_vision_nav2')
+    pkg_kc_vision_slam = get_package_share_directory('kc_vision_slam')
 
     # 2. Define file paths
-    xacro_file = os.path.join(pkg_slambot_description, 'urdf', 'slambot.urdf.xacro')
-    controllers_file = os.path.join(pkg_slambot_bringup, 'config', 'slambot_controllers.yaml')
-    twist_mux_file = os.path.join(pkg_slambot_bringup, 'config', 'twist_mux.yaml') 
-    joy_config_file = os.path.join(pkg_slambot_bringup, 'config', 'joy_teleop.yaml') 
-    ekf_real_params = os.path.join(pkg_slambot_localization, 'config', 'ekf_real.yaml')
-    camera_config_file = os.path.join(pkg_slambot_bringup, 'config', 'camera.yaml')
+    xacro_file = os.path.join(pkg_kc_vision_description, 'urdf', 'kc_vision.urdf.xacro')
+    controllers_file = os.path.join(pkg_kc_vision_bringup, 'config', 'kc_vision_controllers.yaml')
+    twist_mux_file = os.path.join(pkg_kc_vision_bringup, 'config', 'twist_mux.yaml') 
+    joy_config_file = os.path.join(pkg_kc_vision_bringup, 'config', 'joy_teleop.yaml') 
+    ekf_real_params = os.path.join(pkg_kc_vision_localization, 'config', 'ekf_real.yaml')
+    camera_config_file = os.path.join(pkg_kc_vision_bringup, 'config', 'camera.yaml')
 
     # 3. Process URDF
     robot_description_content = Command(
@@ -62,13 +62,13 @@ def generate_launch_description():
 
     declare_map_cmd = DeclareLaunchArgument(
         'map',
-        default_value=os.path.join(pkg_slambot_slam, 'maps', 'campion_bedroom_2.yaml'),
+        default_value=os.path.join(pkg_kc_vision_slam, 'maps', 'campion_bedroom_2.yaml'),
         description='Full path to the map file to load for navigation'
     )
 
     declare_nav_params_cmd = DeclareLaunchArgument(
         'params_file',
-        default_value=os.path.join(pkg_slambot_nav2, 'config', 'nav2_real_params.yaml'), #Makes sure to send into Nav the 'real' params file, not the sim one
+        default_value=os.path.join(pkg_kc_vision_nav2, 'config', 'nav2_real_params.yaml'), #Makes sure to send into Nav the 'real' params file, not the sim one
         description='Full path to the navigation parameters file to load'
     )
 
@@ -176,7 +176,7 @@ def generate_launch_description():
     
     start_ekf_localization_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_localization, 'launch', 'localization.launch.py')
+            os.path.join(pkg_kc_vision_localization, 'launch', 'localization.launch.py')
         ),
         launch_arguments={
             'use_sim_time': LaunchConfiguration('use_sim_time'),
@@ -192,7 +192,7 @@ def generate_launch_description():
     # Note the real robot nav2 launch includes a remap of /cmd_vel to /cmd_vel_nav but this is handled by the nav2.launch.py file 
     start_nav2_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_nav2, 'launch', 'nav2.launch.py')
+            os.path.join(pkg_kc_vision_nav2, 'launch', 'nav2.launch.py')
         ),
         launch_arguments={
             'use_sim_time': LaunchConfiguration('use_sim_time'),
@@ -202,7 +202,7 @@ def generate_launch_description():
     )
 
     cmd_vel_watchdog_node = Node(
-        package='slambot_nav2',
+        package='kc_vision_nav2',
         executable='cmd_vel_watchdog',
         name='cmd_vel_watchdog',
         output='screen',

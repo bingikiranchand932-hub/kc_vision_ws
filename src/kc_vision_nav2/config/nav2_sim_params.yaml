@@ -241,7 +241,7 @@ local_costmap:
       update_frequency: 5.0
       publish_frequency: 5.0 #Upped from 2.0 to 5.0hz
       global_frame: odom
-      robot_base_frame: "base_footprint"  #robot_base_frame: "base_link" -- for slambot we use base_footprint, not base_link as most senior parent in our TF tree
+      robot_base_frame: "base_footprint"  #robot_base_frame: "base_link" -- for kc_vision we use base_footprint, not base_link as most senior parent in our TF tree
       rolling_window: true
       width: 3
       height: 3
@@ -252,8 +252,8 @@ local_costmap:
       #robot_radius: 0.07 -- Don't use if using polygon footprint!
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        inflation_radius: 0.2 #Reduced
-        cost_scaling_factor: 5.0
+        inflation_radius: 0.5 #Reduced
+        cost_scaling_factor: 9.0
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: true
@@ -322,7 +322,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 5.0
-        inflation_radius: 0.2 #reduced
+        inflation_radius: 0.5 #reduced
       always_send_full_costmap: True
 
 map_saver:
@@ -445,7 +445,7 @@ loopback_simulator:
     base_frame_id: "base_footprint"
     odom_frame_id: "odom"
     map_frame_id: "map"
-    scan_frame_id: "lidar_1"  # tb4_loopback_simulator.launch.py remaps to 'rplidar_link'
+    scan_frame_id: "lidar_link_1"  # tb4_loopback_simulator.launch.py remaps to 'rplidar_link'
     update_duration: 0.02
     scan_range_min: 0.05
     scan_range_max: 30.0

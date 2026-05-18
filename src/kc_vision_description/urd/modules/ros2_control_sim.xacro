@@ -8,7 +8,7 @@
 
 <!-- =============== DiffDrive (Using the ROS2_CONTROL diff-drive-controller!!)=============== -->
 
-    <ros2_control name="slambot" type="system">
+    <ros2_control name="kc_vision" type="system">
         <hardware>
             <plugin>gz_ros2_control/GazeboSimSystem</plugin>
         </hardware>
@@ -40,7 +40,7 @@
             <remapping>diff_drive_controller/cmd_vel:=/cmd_vel_stamped</remapping> <!-- CRITICAL WE DO THIS - SEE BELOW FOR WHY-->
             <remapping>diff_drive_controller/odom:=/odom</remapping> <!-- CRITICAL WE DO THIS - SEE BELOW FOR WHY-->
             </ros>
-            <parameters>$(find slambot_bringup)/config/slambot_controllers.yaml</parameters>
+            <parameters>$(find kc_vision_bringup)/config/kc_vision_controllers.yaml</parameters>
         </plugin>
     </gazebo>
 

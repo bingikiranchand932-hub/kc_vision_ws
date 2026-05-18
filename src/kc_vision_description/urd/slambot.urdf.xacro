@@ -23,7 +23,7 @@
 
     <!-- ... inside the launch file we then use commands such as this ...
     
-    xacro_file = os.path.join(get_package_share_directory('slambot_description'), 'urdf', 'slambot.urdf.xacro')
+    xacro_file = os.path.join(get_package_share_directory('kc_vision_description'), 'urdf', 'kc_vision.urdf.xacro')
     
     robot_description_config = Command(['xacro ', xacro_file, ' using_sim:=false'])
     

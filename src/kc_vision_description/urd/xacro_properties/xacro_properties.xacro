@@ -2,7 +2,7 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:property name="package_name" value="slambot_description" />
-  <xacro:property name="robot_name" value="slambot" />
+  <xacro:property name="package_name" value="kc_vision_description" />
+  <xacro:property name="robot_name" value="kc_vision" />
 
 </robot>

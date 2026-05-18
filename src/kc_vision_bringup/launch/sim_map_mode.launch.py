@@ -19,31 +19,31 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    # Get the path to the slambot_gazebo package
-    pkg_slambot_gazebo = get_package_share_directory('slambot_gazebo')
-    pkg_slambot_description = get_package_share_directory('slambot_description')
-    pkg_slambot_slam = get_package_share_directory('slambot_slam')
-    pkg_slambot_bringup = get_package_share_directory('slambot_bringup')
+    # Get the path to the kc_vision_gazebo package
+    pkg_kc_vision_gazebo = get_package_share_directory('kc_vision_gazebo')
+    pkg_kc_vision_description = get_package_share_directory('kc_vision_description')
+    pkg_kc_vision_slam = get_package_share_directory('kc_vision_slam')
+    pkg_kc_vision_bringup = get_package_share_directory('kc_vision_bringup')
 
     # Define Config File Paths
     # Path to the new twist_mux config
-    twist_mux_file = os.path.join(pkg_slambot_bringup, 'config', 'twist_mux.yaml')
+    twist_mux_file = os.path.join(pkg_kc_vision_bringup, 'config', 'twist_mux.yaml')
     
     # Path for the joystick config
-    joy_config_file = os.path.join(pkg_slambot_bringup, 'config', 'joy_teleop.yaml')
+    joy_config_file = os.path.join(pkg_kc_vision_bringup, 'config', 'joy_teleop.yaml')
 
 
     # ========================= Declare Launch Arguments =========================== #   
     
     declare_world_cmd = DeclareLaunchArgument(
         'world',
-        default_value='indoor_world_with_qr_codes.sdf',
+        default_value='visionkc.sdf',
         description='The world file to launch in Gazebo'
     )
 
     declare_robot_name_cmd = DeclareLaunchArgument(
         'robot_name',
-        default_value='slambot',
+        default_value='kc_vision',
         description='The name for the robot'
     )
 
@@ -68,7 +68,7 @@ def generate_launch_description():
     # This argument allows us to specify the SLAM params file from the command line
     declare_slam_params_file_cmd = DeclareLaunchArgument(
         'slam_params_file',
-        default_value=os.path.join(pkg_slambot_slam, 'config', 'slam_params.yaml'),
+        default_value=os.path.join(pkg_kc_vision_slam, 'config', 'slam_params.yaml'),
         description='Full path to the ROS2 parameters file for SLAM'
     )
 
@@ -90,8 +90,8 @@ def generate_launch_description():
     # ========================= Dynamic File Path Changes (RVIZ) ========================== #   
 
     # Path to the RVIZ configuration file depending on if using 'slam_toolbox' or 'cartographer_ros'
-    rviz_config_path_slamtoolbox = os.path.join(pkg_slambot_slam, 'rviz', 'gazebo_rviz_slamtoolbox_config.rviz')
-    rviz_config_path_cartographer = os.path.join(pkg_slambot_slam, 'rviz', 'gazebo_rviz_cartographer_config.rviz')
+    rviz_config_path_slamtoolbox = os.path.join(pkg_kc_vision_slam, 'rviz', 'gazebo_rviz_slamtoolbox_config.rviz')
+    rviz_config_path_cartographer = os.path.join(pkg_kc_vision_slam, 'rviz', 'gazebo_rviz_cartographer_config.rviz')
 
 
     declare_rviz_config_file_cmd = DeclareLaunchArgument(
@@ -112,7 +112,7 @@ def generate_launch_description():
     
     # ======================= Cartographer File Path Setup ==============================#   
 
-    cartographer_config_dir = LaunchConfiguration('cartographer_config_dir', default=os.path.join(pkg_slambot_slam, 'config'))
+    cartographer_config_dir = LaunchConfiguration('cartographer_config_dir', default=os.path.join(pkg_kc_vision_slam, 'config'))
     configuration_basename = LaunchConfiguration('configuration_basename', default='cartographer_params.lua')
     # --- Cartographer requires a configuration directory ---
     declare_configuration_directory_cmd = DeclareLaunchArgument(
@@ -137,7 +137,7 @@ def generate_launch_description():
     
     start_rviz_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_description, 'launch', 'rviz.launch.py')
+            os.path.join(pkg_kc_vision_description, 'launch', 'rviz.launch.py')
         ),
         # Pass the launch arguments to the included launch file
         launch_arguments={
@@ -154,7 +154,7 @@ def generate_launch_description():
 
     start_gz_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_gazebo, 'launch', 'gazebo.launch.py')
+            os.path.join(pkg_kc_vision_gazebo, 'launch', 'gazebo.launch.py')
         ),
         # Pass the launch arguments to the included launch file
         launch_arguments={
@@ -171,7 +171,7 @@ def generate_launch_description():
 
     start_slam_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_slam, 'launch', 'slam.launch.py')
+            os.path.join(pkg_kc_vision_slam, 'launch', 'slam.launch.py')
         ),
         launch_arguments={
             'use_sim_time': LaunchConfiguration('use_sim_time'),
@@ -189,7 +189,7 @@ def generate_launch_description():
 
     start_cartographer_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_slam, 'launch', 'cartographer.launch.py')
+            os.path.join(pkg_kc_vision_slam, 'launch', 'cartographer.launch.py')
         ),
         launch_arguments={
             'cartographer_config_file': LaunchConfiguration('cartographer_config_file'),

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Launch a Gazebo simulation for the Slambot.
+Launch a Gazebo simulation for the kc_vision.
 This launch file launches Gazebo only, to get a working simulation it needs to be launched alongside RVIZ and robot state publisher.
 
 """
@@ -18,11 +18,11 @@ def generate_launch_description():
 
     # ================== Get Package Directories =================== #
     
-    pkg_slambot_gazebo = get_package_share_directory('kc_vision_gazebo')
+    pkg_kc_vision_gazebo = get_package_share_directory('kc_vision_gazebo')
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
-    pkg_slambot_description = get_package_share_directory('kc_vision_description')
-    pkg_slambot_localization = get_package_share_directory('kc_vision_localization')
-    pkg_slambot_bringup = get_package_share_directory('kc_vision_bringup')
+    pkg_kc_vision_description = get_package_share_directory('kc_vision_description')
+    pkg_kc_vision_localization = get_package_share_directory('kc_vision_localization')
+    pkg_kc_vision_bringup = get_package_share_directory('kc_vision_bringup')
 
 
     # ================== Declare Launch Arguments =================== #
@@ -30,13 +30,13 @@ def generate_launch_description():
     # Robot name - for Gazebo entity name
     declare_robot_name_cmd = DeclareLaunchArgument(
         'robot_name', 
-        default_value='slambot',
+        default_value='kc_vision',
         description='The name of the robot')
 
     # World to launch in Gazebo
     declare_world_cmd = DeclareLaunchArgument(
         'world',
-        default_value='obstacles_in.sdf',
+        default_value='visionkc.sdf',
         description='The world file to launch in Gazebo')
 
     # Whether to run Gazebo without a GUI
@@ -52,19 +52,19 @@ def generate_launch_description():
     
 
     # Path to the correct ros_gz_bridge yaml file 
-    ros_gz_bridge_params_file = os.path.join(pkg_slambot_gazebo, 'config', 'ros_gz_bridge.yaml')
+    ros_gz_bridge_params_file = os.path.join(pkg_kc_vision_gazebo, 'config', 'ros_gz_bridge.yaml')
     # Path to the correct twist_mux config file
-    twist_mux_file = os.path.join(pkg_slambot_bringup, 'config', 'twist_mux.yaml')
+    twist_mux_file = os.path.join(pkg_kc_vision_bringup, 'config', 'twist_mux.yaml')
 
 
     
     # ================== Set Environment Variables =================== #
     
-    # This is critical to allow Gazebo to find the meshes from the slambot_description package
-    parent_of_share_path = os.path.dirname(pkg_slambot_description)
+    # This is critical to allow Gazebo to find the meshes from the kc_vision_description package
+    parent_of_share_path = os.path.dirname(pkg_kc_vision_description)
 
     # --- Set GZ_SIM_RESOURCE_PATH  ---
-    # This is critical to allow Gazebo to find the meshes from the slambot_description package
+    # This is critical to allow Gazebo to find the meshes from the kc_vision_description package
     set_gz_sim_resource_path = SetEnvironmentVariable(
         name='GZ_SIM_RESOURCE_PATH', 
         value=[
@@ -79,7 +79,7 @@ def generate_launch_description():
 
     # ================== Start Gazebo Simulation =================== #
 
-    world_path = PathJoinSubstitution([pkg_slambot_gazebo, 'worlds', LaunchConfiguration('world')])
+    world_path = PathJoinSubstitution([pkg_kc_vision_gazebo, 'worlds', LaunchConfiguration('world')])
 
     gz_sim_server = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -120,7 +120,7 @@ def generate_launch_description():
     
     start_ekf_localization_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_slambot_localization, 'launch', 'localization.launch.py')
+            os.path.join(pkg_kc_vision_localization, 'launch', 'localization.launch.py')
         ),
         launch_arguments={
             'use_sim_time': LaunchConfiguration('use_sim_time')
@@ -135,8 +135,8 @@ def generate_launch_description():
         executable='create',
         arguments=[
             '-name', LaunchConfiguration('robot_name'),
-            '-x', '-6.0',
-            '-y', '-2.0',
+            '-x', '-2.0',
+            '-y', '-1.0',
             '-z', '0.4',
             '-topic', 'robot_description' 
         ],

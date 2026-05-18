@@ -8,7 +8,7 @@ Panels:
         - /Status1
         - /Map1
       Splitter Ratio: 0.5
-    Tree Height: 471
+    Tree Height: 212
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -65,6 +65,26 @@ Visualization Manager:
         Value: /robot_description
       Enabled: true
       Links:
+        A7_-_DC_Geared_Motor_v1_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        A7_-_DC_Geared_Motor_v1_Mirror__1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        A7_-_DC_Geared_Motor_v1_Mirror__Mirror__1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        A7_-_DC_Geared_Motor_v1_Mirror___1__1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
@@ -79,40 +99,47 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        camera_link:
+        camera_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        camera_optical_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        front_left_wheel_link:
+        imu_sensor_TM171__1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        front_right_wheel_link:
+        left_Omni_Wheel_v1__1__1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        imu_link:
+        left_Wheel_Rim_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
+        left_Wheel_tire_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         lidar_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        rear_left_wheel_link:
+        right_Omni_Wheel__1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        rear_right_wheel_link:
+        right_Wheel_Rim_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_Wheel_Tire_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -131,20 +158,28 @@ Visualization Manager:
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
+        A7_-_DC_Geared_Motor_v1_1:
+          Value: true
+        A7_-_DC_Geared_Motor_v1_Mirror__1:
+          Value: true
+        A7_-_DC_Geared_Motor_v1_Mirror__Mirror__1:
+          Value: true
+        A7_-_DC_Geared_Motor_v1_Mirror___1__1:
+          Value: true
         All Enabled: true
         base_footprint:
           Value: true
         base_link:
           Value: true
-        camera_link:
+        camera_1:
           Value: true
-        camera_optical_link:
+        imu_sensor_TM171__1:
           Value: true
-        front_left_wheel_link:
+        left_Omni_Wheel_v1__1__1:
           Value: true
-        front_right_wheel_link:
+        left_Wheel_Rim_1:
           Value: true
-        imu_link:
+        left_Wheel_tire_1:
           Value: true
         lidar_link:
           Value: true
@@ -152,9 +187,11 @@ Visualization Manager:
           Value: true
         odom:
           Value: true
-        rear_left_wheel_link:
+        right_Omni_Wheel__1:
           Value: true
-        rear_right_wheel_link:
+        right_Wheel_Rim_1:
+          Value: true
+        right_Wheel_Tire_1:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -166,20 +203,25 @@ Visualization Manager:
           odom:
             base_footprint:
               base_link:
-                camera_link:
-                  camera_optical_link:
+                A7_-_DC_Geared_Motor_v1_1:
+                  left_Omni_Wheel_v1__1__1:
                     {}
-                front_left_wheel_link:
+                A7_-_DC_Geared_Motor_v1_Mirror__1:
+                  right_Omni_Wheel__1:
+                    {}
+                A7_-_DC_Geared_Motor_v1_Mirror__Mirror__1:
+                  right_Wheel_Rim_1:
+                    right_Wheel_Tire_1:
+                      {}
+                A7_-_DC_Geared_Motor_v1_Mirror___1__1:
+                  left_Wheel_Rim_1:
+                    left_Wheel_tire_1:
+                      {}
+                camera_1:
                   {}
-                front_right_wheel_link:
-                  {}
-                imu_link:
+                imu_sensor_TM171__1:
                   {}
                 lidar_link:
-                  {}
-                rear_left_wheel_link:
-                  {}
-                rear_right_wheel_link:
                   {}
       Update Interval: 0
       Value: true
@@ -280,7 +322,7 @@ Visualization Manager:
         Value: /odometry/filtered
       Value: false
     - Class: rviz_default_plugins/Image
-      Enabled: true
+      Enabled: false
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -292,7 +334,7 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /camera/image_raw
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -339,16 +381,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 18.04412841796875
+      Distance: 4.8113250732421875
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -1.3259507417678833
-        Y: -0.6221324801445007
-        Z: -0.5375385284423828
+        X: 0.44828394055366516
+        Y: -0.5305713415145874
+        Z: -0.5357641577720642
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
@@ -361,13 +403,13 @@ Visualization Manager:
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: false
-  Height: 1057
-  Hide Left Dock: false
+    collapsed: true
+  Height: 660
+  Hide Left Dock: true
   Hide Right Dock: false
   Image:
-    collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000019100000381fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003f00000217000000cc00fffffffb0000000a0049006d006100670065010000025c000001640000001700fffffffb000000220053006c0061006d0054006f006f006c0062006f00780050006c007500670069006e0000000213000001ad0000019e00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000021100000375fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003f000002ac000000a900fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000054b0000003cfc0100000002fc000000000000054b0000026f00fffffffa000000000200000002fb0000000800540069006d00650100000000ffffffff0000003c00fffffffb000000220053006c0061006d0054006f006f006c0062006f00780050006c007500670069006e00000002580000019e0000019e00fffffffb0000000800540069006d00650100000000000004500000000000000000000003b40000038100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+    collapsed: true
+  QMainWindow State: 000000ff00000000fd000000040000000000000191000001e1fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006f00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007300000000480000011d000000f300fffffffb0000000a0049006d006100670065000000016c000000bd0000001a00fffffffb000000220053006c0061006d0054006f006f006c0062006f00780050006c007500670069006e0000000213000001ad000001dc00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000021100000375fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003f000002ac000000c500fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000037500000042fc0100000002fc0000000000000375000002dc00fffffffa000000000200000002fb0000000800540069006d00650100000000ffffffff0000004200fffffffb000000220053006c0061006d0054006f006f006c0062006f00780050006c007500670069006e00000002580000019e000001dc00fffffffb0000000800540069006d0065010000000000000450000000000000000000000375000001e100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   SlamToolboxPlugin:
@@ -378,6 +420,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1355
-  X: 6194
-  Y: 116
+  Width: 885
+  X: 1035
+  Y: 40

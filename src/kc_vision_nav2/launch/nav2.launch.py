@@ -11,11 +11,11 @@ from launch_ros.actions import SetRemap
 def generate_launch_description():
     # 1. Get the path to the official Nav2 bringup launch file
     nav2_bringup_dir = get_package_share_directory('nav2_bringup')
-    slambot_navigation_dir = get_package_share_directory('kc_vision_nav2')
+    kc_vision_navigation_dir = get_package_share_directory('kc_vision_nav2')
     
     # 2. File paths
-    map_file_path = os.path.join(slambot_navigation_dir, 'maps', 'indoor_map_cartographer.yaml')
-    params_file_path = os.path.join(slambot_navigation_dir, 'config', 'nav2_sim_params.yaml') # <-- Use sim params for Gazebo by default
+    map_file_path = os.path.join(kc_vision_navigation_dir, 'maps', 'indoor_map_cartographer.yaml')
+    params_file_path = os.path.join(kc_vision_navigation_dir, 'config', 'nav2_sim_params.yaml') # <-- Use sim params for Gazebo by default
 
 
     # 3. Declare the launch arguments

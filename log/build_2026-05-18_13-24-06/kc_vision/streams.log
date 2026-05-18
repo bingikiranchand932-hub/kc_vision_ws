@@ -1,0 +1,115 @@
+[0.252s] Invoking command in '/home/kiranchand/kc_vision_ws/build/kc_vision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/home/kiranchand/kiran_ws/install/bme_ros2_navigation_py:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kiranchand/kc_vision_ws/src/kc_vision -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kiranchand/kc_vision_ws/install/kc_vision
+[0.311s] -- The C compiler identification is GNU 13.3.0
+[0.375s] -- The CXX compiler identification is GNU 13.3.0
+[0.395s] -- Detecting C compiler ABI info
+[0.489s] -- Detecting C compiler ABI info - done
+[0.498s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.498s] -- Detecting C compile features
+[0.499s] -- Detecting C compile features - done
+[0.510s] -- Detecting CXX compiler ABI info
+[0.625s] -- Detecting CXX compiler ABI info - done
+[0.633s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.634s] -- Detecting CXX compile features
+[0.634s] -- Detecting CXX compile features - done
+[0.644s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.870s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.978s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.124s] -- Found ament_lint_auto: 0.17.4 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.349s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.364s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.364s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.367s] -- Added test 'lint_cmake' to check CMake code style
+[1.369s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.378s] -- Added test 'xmllint' to check XML markup files
+[1.382s] -- Configuring done (1.1s)
+[1.386s] -- Generating done (0.0s)
+[1.388s] -- Build files have been written to: /home/kiranchand/kc_vision_ws/build/kc_vision
+[1.394s] Invoked command in '/home/kiranchand/kc_vision_ws/build/kc_vision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/home/kiranchand/kiran_ws/install/bme_ros2_navigation_py:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kiranchand/kc_vision_ws/src/kc_vision -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kiranchand/kc_vision_ws/install/kc_vision
+[1.395s] Invoking command in '/home/kiranchand/kc_vision_ws/build/kc_vision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/home/kiranchand/kiran_ws/install/bme_ros2_navigation_py:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kiranchand/kc_vision_ws/build/kc_vision -- -j12 -l12
+[1.469s] Invoked command in '/home/kiranchand/kc_vision_ws/build/kc_vision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/home/kiranchand/kiran_ws/install/bme_ros2_navigation_py:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kiranchand/kc_vision_ws/build/kc_vision -- -j12 -l12
+[1.470s] Invoking command in '/home/kiranchand/kc_vision_ws/build/kc_vision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/home/kiranchand/kiran_ws/install/bme_ros2_navigation_py:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kiranchand/kc_vision_ws/build/kc_vision
+[1.476s] -- Install configuration: ""
+[1.476s] -- Execute custom install script
+[1.477s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/bcr_map.pgm
+[1.492s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/bcr_map.yaml
+[1.505s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/cd.rviz
+[1.517s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/controllers.yaml
+[1.529s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/demo_waypoints.yaml
+[1.541s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/dual_ekf_navsat_params.yaml
+[1.556s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/empty.yaml
+[1.570s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/gazebo_params.yaml
+[1.582s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/gps_wpf_demo.mvc
+[1.594s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/gz_bridge copy.yaml
+[1.605s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/gz_bridge.yaml
+[1.616s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/mapper_params_online_async.yaml
+[1.629s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/mecanum_drive_controller.yaml
+[1.640s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/my_controllers.yaml
+[1.651s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/my_maps.pgm
+[1.662s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/my_maps.yaml
+[1.674s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/naav2_params.yaml
+[1.686s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/nav2_no_map_params.yaml
+[1.699s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/nav2_params copy.yaml
+[1.713s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/nav2_params.yaml
+[1.724s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/navigation.rviz
+[1.736s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/nv.rviz
+[1.747s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/rosbot_diff.yaml
+[1.758s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/twist_mux.yaml
+[1.771s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/camera.xacro
+[1.782s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/gazebo_control.xacro
+[1.793s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/gps.xacro
+[1.803s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/gz_new_cont.xacro
+[1.815s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/imu.xacro
+[1.825s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/lidar.xacro
+[1.836s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/project_visionkc.gazebo
+[1.846s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/robot.urdf.xacro
+[1.858s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/robot_core copy.xacro
+[1.872s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/robot_core.xacro
+[1.883s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/ros2_control.xacro
+[1.894s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/arduino_joy_bridge.py
+[1.905s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/dual_ekf_navsat.launch.py
+[1.916s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/gps_waypoint_follower.launch.py
+[1.927s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/launch_sim.launch.py
+[1.941s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/localization_launch.py
+[1.954s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/maps_mower.py
+[1.974s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/mapviz.launch.py
+[1.995s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/navigation_launch.py
+[2.011s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/new.launch_sim.py
+[2.023s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/nrsp.launch.py
+[2.034s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/rsp.launch.py
+[2.046s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/worlds/empty.world
+[2.059s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/worlds/obstacles_in.sdf
+[2.070s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/worlds/sim_world.sdf
+[2.082s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/worlds/small_world.sdf
+[2.092s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/worlds/tree_world.sdf
+[2.105s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/150mm_Cutting_disc_holder_v4_1.stl
+[2.117s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/A7_-_DC_Geared_Motor_v1_1.stl
+[2.128s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/A7_-_DC_Geared_Motor_v1_Mirror__1.stl
+[2.138s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/A7_-_DC_Geared_Motor_v1_Mirror__Mirror__1.stl
+[2.150s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/A7_-_DC_Geared_Motor_v1_Mirror___1__1.stl
+[2.162s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/base_link.stl
+[2.174s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/camera_1.stl
+[2.185s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/imu_sensor_TM171__1.stl
+[2.197s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/left_Omni_Wheel_v1__1__1.stl
+[2.208s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/left_Wheel_Rim_1.stl
+[2.221s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/left_Wheel_tire_1.stl
+[2.234s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/lidar_1.stl
+[2.247s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/right_Omni_Wheel__1.stl
+[2.260s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/right_Wheel_Rim_1.stl
+[2.271s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/right_Wheel_Tire_1.stl
+[2.282s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/lib/kc_vision/arduino_joy_bridge.py
+[2.293s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/ament_index/resource_index/package_run_dependencies/kc_vision
+[2.304s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/ament_index/resource_index/parent_prefix_path/kc_vision
+[2.315s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/environment/ament_prefix_path.sh
+[2.326s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/environment/ament_prefix_path.dsv
+[2.337s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/environment/path.sh
+[2.348s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/environment/path.dsv
+[2.358s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/local_setup.bash
+[2.371s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/local_setup.sh
+[2.382s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/local_setup.zsh
+[2.393s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/local_setup.dsv
+[2.404s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/package.dsv
+[2.414s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/ament_index/resource_index/packages/kc_vision
+[2.425s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/cmake/kc_visionConfig.cmake
+[2.436s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/cmake/kc_visionConfig-version.cmake
+[2.448s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/package.xml
+[2.461s] Invoked command in '/home/kiranchand/kc_vision_ws/build/kc_vision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/visionari_ws/install/project_visionkc_description:/home/kiranchand/chand_ws/install/nav2_gps_waypoint_follower_demo:/home/kiranchand/kiran_ws/install/slambot_scripts:/home/kiranchand/kiran_ws/install/bme_ros2_navigation_py:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kiranchand/kc_vision_ws/build/kc_vision

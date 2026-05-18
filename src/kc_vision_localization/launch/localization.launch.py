@@ -17,10 +17,10 @@ def generate_launch_description():
     """Generate the launch description for the EKF node."""
     
     # Get the path to the package's share directory
-    pkg_slambot_localization = get_package_share_directory('kc_vision_localization')
+    pkg_kc_vision_localization = get_package_share_directory('kc_vision_localization')
     
     # --- EKF Configuration File ---
-    ekf_config_path_sim = os.path.join(pkg_slambot_localization, 'config', 'ekf_sim.yaml')
+    ekf_config_path_sim = os.path.join(pkg_kc_vision_localization, 'config', 'ekf_sim.yaml')
 
 
     # --- Declare Launch Arguments ---

@@ -13,7 +13,7 @@
     <visual>
       <origin xyz="0 1.22465e-18 0" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://slambot_description/assets/lidar_link.stl"/>
+        <mesh filename="package://kc_vision_description/assets/lidar_link.stl"/>
       </geometry>
       <material name="lidar_link_material">
         <color rgba="0 0 0 1"/>
@@ -22,7 +22,7 @@
     <collision>
       <origin xyz="0 1.22465e-18 0" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://slambot_description/assets/lidar_link.stl"/>
+        <mesh filename="package://kc_vision_description/assets/lidar_link.stl"/>
       </geometry>
     </collision>
   </link>

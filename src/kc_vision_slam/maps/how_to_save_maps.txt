@@ -7,9 +7,9 @@ The map only exists in the node's memory, so it must be running to save it.
 
 2. Now launch the custom map_saver.launch.py file using:
 
-    * If not namespacing.... 'ros2 launch slambot_slam map_saver.launch.py map_name:=my_maze_map'  (or whatever you want to call it!)
+    * If not namespacing.... 'ros2 launch kc_vision_slam map_saver.launch.py map_name:=my_maze_map'  (or whatever you want to call it!)
 
-    * If namespacing.... 'ros2 launch slambot_slam map_saver.launch.py using_namespace:=True map_name:=my_maze_map'  (or whatever you want to call it!)
+    * If namespacing.... 'ros2 launch kc_vision_slam map_saver.launch.py using_namespace:=True map_name:=my_maze_map'  (or whatever you want to call it!)
 
 --------------
 

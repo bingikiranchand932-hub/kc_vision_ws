@@ -14,7 +14,7 @@
     <visual>
       <origin xyz="6.45358e-18 0 -0.0175" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://slambot_description/assets/camera_link.stl"/>
+        <mesh filename="package://kc_vision_description/assets/camera_link.stl"/>
       </geometry>
       <material name="camera_link_material">
         <color rgba="0.972549 0.529412 0.00392157 1"/>
@@ -23,7 +23,7 @@
     <collision>
       <origin xyz="6.45358e-18 0 -0.0175" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://slambot_description/assets/camera_link.stl"/>
+        <mesh filename="package://kc_vision_description/assets/camera_link.stl"/>
       </geometry>
     </collision>
   </link>

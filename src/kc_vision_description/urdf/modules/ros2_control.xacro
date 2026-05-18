@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <ros2_control name="GazeboSystem" type="system">
+        <hardware>
+            <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+        </hardware>
+
+        <joint name="rear_left_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min">-10</param>
+                <param name="max">10</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="rear_right_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min">-10</param>
+                <param name="max">10</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+    </ros2_control>
+
+    <gazebo>
+        <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system.so">
+            <ros>
+            <remapping>diff_drive_controller/cmd_vel:=/cmd_vel_stamped</remapping> <!-- CRITICAL WE DO THIS - SEE BELOW FOR WHY-->
+            <remapping>diff_drive_controller/odom:=/odom</remapping> <!-- CRITICAL WE DO THIS - SEE BELOW FOR WHY-->
+            </ros>         <!-- Make sure to put your package name in there!! -->
+            <parameters>$(find kc_vision_bringup)/config/kc_vision_controllers.yaml</parameters>
+            <!-- <ros>
+                <remapping>/diff_cont/cmd_vel_unstamped:=/cmd_vel_out</remapping>
+            </ros> -->
+        </plugin>
+    </gazebo>
+
+</robot>

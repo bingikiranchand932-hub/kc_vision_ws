@@ -1,1 +1,1 @@
-ament_lint_auto;ament_lint_common
+kc_vision_gazebo;kc_vision_description;kc_vision_slam;kc_vision_localization;kc_vision_nav2;kc_vision_scripts;micro_ros_agent;twist_mux;twist_stamper;controller_manager;ros2_control;ros2_controllers;joy;teleop_twist_joy;ament_lint_auto;ament_lint_common

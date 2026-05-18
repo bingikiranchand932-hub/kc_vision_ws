@@ -22,7 +22,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://slambot_description/assets/base_link.stl"/>
+        <mesh filename="package://kc_vision_description/assets/base_link.stl"/>
       </geometry>
       <material name="base_link_material">
         <color rgba="1 0 0 1"/>
@@ -47,7 +47,7 @@
     <visual>
       <origin xyz="0 0 0.032" rpy="-1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://slambot_description/assets/wheel_link.stl"/>
+        <mesh filename="package://kc_vision_description/assets/wheel_link.stl"/>
       </geometry>
       <material name="wheel_link_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -80,7 +80,7 @@
     <visual>
       <origin xyz="0 0 -0.032" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://slambot_description/assets/wheel_link.stl"/>
+        <mesh filename="package://kc_vision_description/assets/wheel_link.stl"/>
       </geometry>
       <material name="wheel_link_2_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -113,7 +113,7 @@
     <visual>
       <origin xyz="0 0 -0.032" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://slambot_description/assets/wheel_link.stl"/>
+        <mesh filename="package://kc_vision_description/assets/wheel_link.stl"/>
       </geometry>
       <material name="wheel_link_3_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -146,7 +146,7 @@
     <visual>
       <origin xyz="0 0 0.032" rpy="-1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://slambot_description/assets/wheel_link.stl"/>
+        <mesh filename="package://kc_vision_description/assets/wheel_link.stl"/>
       </geometry>
       <material name="wheel_link_4_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>

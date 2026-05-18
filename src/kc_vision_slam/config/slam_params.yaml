@@ -1,5 +1,5 @@
 # slam_params.yaml
-# Configuration for the slam_toolbox node for the Slambot.
+# Configuration for the slam_toolbox node for the kc_vision.
 
 slam_toolbox:
   ros__parameters:
