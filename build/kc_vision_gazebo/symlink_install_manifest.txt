@@ -1,5 +1,6 @@
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//config/ros_gz_bridge.yaml
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//launch/gazebo.launch.py
+/home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//launch/gps_gazebo.launch.py
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/house_interior/house_interior_with_qrcodes.dae
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/house_interior/wp_1.png
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//models/house_interior/wp_2.png

@@ -336,11 +336,13 @@
   </collision>
 </link>
 
+
 <gazebo reference="caster_wheel_1">
     <mu1 value="0.0"/>
     <mu2 value="0.0"/>
+    <kp value="1000000.0" />
+    <kd value="1.0" />
 </gazebo>
-
 
 <joint name="Rigid 1" type="fixed">
   <origin xyz="-0.137 0.156 -0.03" rpy="0 0 0"/>

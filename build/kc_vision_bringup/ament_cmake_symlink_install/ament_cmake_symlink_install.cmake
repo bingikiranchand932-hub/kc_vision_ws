@@ -315,8 +315,11 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "config" "rviz" "DESTINATION" "share/kc_vision_bringup/")
-ament_cmake_symlink_install_directory("/home/kiranchand/kc_vision_ws/src/kc_vision_bringup" DIRECTORY "launch" "config" "rviz" "DESTINATION" "share/kc_vision_bringup/")
+# install(DIRECTORY "launch" "config" "rviz" "nav2_gps_waypoint_follower_demo" "DESTINATION" "share/kc_vision_bringup/")
+ament_cmake_symlink_install_directory("/home/kiranchand/kc_vision_ws/src/kc_vision_bringup" DIRECTORY "launch" "config" "rviz" "nav2_gps_waypoint_follower_demo" "DESTINATION" "share/kc_vision_bringup/")
+
+# install(PROGRAMS "scripts/coverage_planner.py" "DESTINATION" "lib/kc_vision_bringup")
+ament_cmake_symlink_install_programs("/home/kiranchand/kc_vision_ws/src/kc_vision_bringup" PROGRAMS "scripts/coverage_planner.py" "DESTINATION" "lib/kc_vision_bringup")
 
 # install(FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_bringup/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/kc_vision_bringup" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_bringup" FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_bringup/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/kc_vision_bringup" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

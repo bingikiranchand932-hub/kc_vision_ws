@@ -22,10 +22,10 @@ def generate_launch_description():
     pkg_kc_vision_description = get_package_share_directory('kc_vision_description')
     pkg_kc_vision_bringup = get_package_share_directory('kc_vision_bringup')
     pkg_kc_vision_localization = get_package_share_directory('kc_vision_localization')
-    pkg_ldlidar_ros2 = get_package_share_directory('ldlidar_ros2')
+    # pkg_ldlidar_ros2 = get_package_share_directory('ldlidar_ros2')
 
     
-    # 2. Define file paths
+    # 2. Define file pathss
     xacro_file = os.path.join(pkg_kc_vision_description, 'urdf', 'kc_vision.urdf.xacro')
     controllers_file = os.path.join(pkg_kc_vision_bringup, 'config', 'kc_vision_controllers.yaml')
     twist_mux_file = os.path.join(pkg_kc_vision_bringup, 'config', 'twist_mux.yaml')
@@ -140,11 +140,11 @@ def generate_launch_description():
 
     # =========================== Start Sensors ============================= #
     
-    start_lidar_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(pkg_ldlidar_ros2, 'launch', 'ld06.launch.py')
-        )
-    )
+    # start_lidar_cmd = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource(
+    #         os.path.join(pkg_ldlidar_ros2, 'launch', 'ld06.launch.py')
+    #     )
+    # )
 
     camera_node = Node(
         package='camera_ros',
@@ -207,8 +207,8 @@ def generate_launch_description():
     ld.add_action(delayed_spawners)
 
     # Add Sensor Launch
-    ld.add_action(start_lidar_cmd)
-    ld.add_action(camera_node)
+    # ld.add_action(start_lidar_cmd)
+    # ld.add_action(camera_node)
    
     # Add Logic
     ld.add_action(start_ekf_localization_cmd)

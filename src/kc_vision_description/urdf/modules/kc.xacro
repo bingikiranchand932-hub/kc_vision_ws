@@ -1,8 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="kc" xmlns:xacro="http://www.ros.org/wiki/xacro">
-
-
-
+<robot name="kc_vision" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <material name="silver">
     <color rgba="0.700 0.700 0.700 1.000"/>
   </material>
@@ -19,9 +16,9 @@
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
 
-  <material name="black">
+  <material name="black_pure">
     <color rgba="0.0 0.0 0.0 1.0"/>
-  </material> 
+  </material>
 
   <material name="red">
     <color rgba="0.8 0.0 0.0 1.0"/>
@@ -54,313 +51,608 @@
   <material name="ash">
     <color rgba="0.7 0.7 0.7 1.0"/>
   </material>
+ 
+  
 
+<!-- BASE_FOOTPRINT -->
+<link name="base_footprint"/>  
 
-<joint name="base_joint" type="fixed">
+<joint name="base_footprint_joint" type="fixed">
     <parent link="base_footprint"/>
     <child link="base_link"/>
-    <origin xyz="0 0 0.05" rpy="0 0 0"/> 
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
 </joint>
- 
+
 <link name="base_link">
   <inertial>
-    <origin xyz="-0.03364661034167416 -4.764838969793257e-16 0.06884991716069974" rpy="0 0 0"/>
-    <mass value="1.649170994682965"/>
-    <inertia ixx="0.016084" iyy="0.018228" izz="0.032312" ixy="0.0" iyz="0.0" ixz="0.001026"/>
+    <origin xyz="0.008575004446762879 1.032280899255994e-06 0.001440630630916228" rpy="0 0 0"/>
+    <mass value="0.9961016802635088"/>
+    <inertia ixx="0.008348" iyy="0.010421" izz="0.018685" ixy="-0.0" iyz="-0.0" ixz="-0.000259"/>
   </inertial>
-  
   <visual>
-    <origin xyz="0 0 0" rpy="3.14159 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find kc_vision_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="white"/>
   </visual>
-  
   <collision>
-    <origin xyz="0 0 0.051" rpy="3.14159 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find kc_vision_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="lidar_link">
-  <inertial>
-    <origin xyz="0.0 0.0 0.017499999999999988" rpy="0 0 0"/>
-    <mass value="0.1048977787033632"/>
-    <inertia ixx="3.4e-05" iyy="3.4e-05" izz="4.7e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.13 -0.0 -0.099" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="yellow"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.13 -0.0 -0.099" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="camera_link">
-  <inertial>
-    <origin xyz="0.0050000000000000044 0.0 1.3877787807814457e-17" rpy="0 0 0"/>
-    <mass value="0.005342400159215928"/>
-    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.16 -0.0 -0.089" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="red"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.16 -0.0 -0.089" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="left_A7_-_DC_Geared_Motor_1">
   <inertial>
-    <origin xyz="1.7430501486614958e-14 -0.02716453886229528 -0.00020823122710948716" rpy="0 0 0"/>
+    <origin xyz="1.7430501486614958e-14 -0.02716453886229528 -0.0002082312271094941" rpy="0 0 0"/>
     <mass value="0.057651177702540524"/>
     <inertia ixx="2.7e-05" iyy="8e-06" izz="2.7e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.138 -0.156 -0.044" rpy="0 0 0"/>
+    <origin xyz="0.137 -0.156 0.03" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find kc_vision_description)/meshes/left_A7_-_DC_Geared_Motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="black"/>
+    <material name="white"/>
   </visual>
   <collision>
-    <origin xyz="0.138 -0.156 -0.044" rpy="0 0 0"/>
+    <origin xyz="0.137 -0.156 0.03" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find kc_vision_description)/meshes/left_A7_-_DC_Geared_Motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="A7_-_DC_Geared_Motor_v1__1__1">
+<link name="bottom_ydlidar_v1_1">
   <inertial>
-    <origin xyz="-1.7291723608536813e-14 0.027164538862295307 -0.00020823122710954267" rpy="0 0 0"/>
+    <origin xyz="9.832821372901535e-05 1.556221092291549e-07 0.009132618157992812" rpy="0 0 0"/>
+    <mass value="0.027860271106457276"/>
+    <inertia ixx="4e-06" iyy="4e-06" izz="7e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.137797 -1e-05 -0.018" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/bottom_ydlidar_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black_pure"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.137797 -1e-05 -0.018" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/bottom_ydlidar_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_link_1">
+  <inertial>
+    <origin xyz="-9.596258568334015e-08 -3.8216125051266517e-07 0.007341626888860253" rpy="0 0 0"/>
+    <mass value="0.0184354138944263"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="3e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.137797 -1e-05 -0.03615" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black_pure"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.137797 -1e-05 -0.03615" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_A7_-_DC_Geared_Motor_1">
+  <inertial>
+    <origin xyz="-1.7236212457305555e-14 0.027164538862295223 -0.00020823122710949063" rpy="0 0 0"/>
     <mass value="0.057651177702540524"/>
     <inertia ixx="2.7e-05" iyy="8e-06" izz="2.7e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.138 0.156 -0.044" rpy="0 0 0"/>
+    <origin xyz="0.137 0.156 0.03" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/A7_-_DC_Geared_Motor_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find kc_vision_description)/meshes/right_A7_-_DC_Geared_Motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="black"/>
+    <material name="white"/>
   </visual>
   <collision>
-    <origin xyz="0.138 0.156 -0.044" rpy="0 0 0"/>
+    <origin xyz="0.137 0.156 0.03" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/A7_-_DC_Geared_Motor_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find kc_vision_description)/meshes/right_A7_-_DC_Geared_Motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="Wheel_Rim_s_v1_1">
   <inertial>
-    <origin xyz="-3.9087346026533965e-08 -0.021063869905599192 -1.9123532306319913e-08" rpy="0 0 0"/>
-    <mass value="0.08246143789604524"/>
-    <inertia ixx="6.5e-05" iyy="0.000119" izz="6.5e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+    <origin xyz="-1.7563883791815726e-08 -0.021063869905599247 -3.981256146284862e-08" rpy="0 0 0"/>
+    <mass value="0.08790700454955766"/>
+    <inertia ixx="6.9e-05" iyy="0.000127" izz="6.9e-05" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.138 0.1928 -0.037" rpy="0 0 0"/>
+    <origin xyz="0.137 0.1928 0.037" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Rim_s_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="white"/>
   </visual>
   <collision>
-    <origin xyz="0.138 0.1928 -0.037" rpy="0 0 0"/>
+    <origin xyz="0.137 0.1928 0.037" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Rim_s_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="Wheel_Rim_s_v1__1__1">
+<link name="Wheel_Rim_s_1">
   <inertial>
-    <origin xyz="4.342273185464762e-08 0.021063869905599303 -2.827792673631979e-09" rpy="0 0 0"/>
+    <origin xyz="1.7563883791815726e-08 0.021063869905599275 -3.981256146284862e-08" rpy="0 0 0"/>
     <mass value="0.08246143789604524"/>
-    <inertia ixx="6.5e-05" iyy="0.000119" izz="6.5e-05" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+    <inertia ixx="6.5e-05" iyy="0.000119" izz="6.5e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.138 -0.1928 -0.037" rpy="0 0 0"/>
+    <origin xyz="0.137 -0.1928 0.037" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Rim_s_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Rim_s_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="white"/>
   </visual>
   <collision>
-    <origin xyz="0.138 -0.1928 -0.037" rpy="0 0 0"/>
+    <origin xyz="0.137 -0.1928 0.037" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Rim_s_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Rim_s_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="Wheel_Tire_ipt_v1_1">
   <inertial>
-    <origin xyz="-4.163336342344337e-16 -0.014033250120242785 -1.942890293094024e-16" rpy="0 0 0"/>
-    <mass value="0.30074310614732785"/>
-    <inertia ixx="0.000619" iyy="0.001184" izz="0.000619" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    <origin xyz="1.1102230246251565e-16 -0.014033250120244173 -6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="0.3007431061477273"/>
+    <inertia ixx="0.000619" iyy="0.001184" izz="0.000619" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.138 0.2043 -0.037" rpy="0 0 0"/>
+    <origin xyz="0.137 -0.2243 0.037" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Tire_ipt_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="black"/>
+    <material name="black_pure"/>
   </visual>
   <collision>
-    <origin xyz="0.138 0.2043 -0.037" rpy="0 0 0"/>
+    <origin xyz="0.137 -0.2243 0.037" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Tire_ipt_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="Wheel_Tire_ipt_v1__1__1">
+<link name="Wheel_Tire_ipt__1">
   <inertial>
-    <origin xyz="-1.6653345369377348e-16 0.013990246736913736 2.636779683484747e-16" rpy="0 0 0"/>
-    <mass value="0.30074310614732785"/>
-    <inertia ixx="0.000619" iyy="0.001184" izz="0.000619" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    <origin xyz="1.1102230246251565e-16 0.013990246736912432 3.469446951953614e-17" rpy="0 0 0"/>
+    <mass value="0.3007431061477273"/>
+    <inertia ixx="0.000619" iyy="0.001184" izz="0.000619" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.138 -0.2043 -0.037" rpy="0 0 0"/>
+    <origin xyz="0.137 0.2243 0.037" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Tire_ipt_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Tire_ipt__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="black"/>
+    <material name="black_pure"/>
   </visual>
   <collision>
-    <origin xyz="0.138 -0.2043 -0.037" rpy="0 0 0"/>
+    <origin xyz="0.137 0.2243 0.037" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Tire_ipt_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find kc_vision_description)/meshes/Wheel_Tire_ipt__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="imu_link">
+<link name="imu_link_1">
   <inertial>
-    <origin xyz="0.03011850314276346 -0.0003586145406981709 -0.06921185911362918" rpy="0 0 0"/>
+    <origin xyz="0.04011850314276347 -0.0003586145406981709 0.005788140886370831" rpy="0 0 0"/>
     <mass value="0.011487284614774149"/>
     <inertia ixx="1e-06" iyy="1e-06" izz="2e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.165 -0.0 -0.154" rpy="0 0 0"/>
+    <origin xyz="0.165 -0.0 -0.003" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find kc_vision_description)/meshes/imu_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="0.165 -0.0 -0.003" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/imu_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gps_v1_1">
+  <inertial>
+    <origin xyz="-0.15057499538146213 -0.0006972673716281069 0.0034251070994955083" rpy="0 0 0"/>
+    <mass value="0.0022599240219086498"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.003" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/gps_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black_pure"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.003" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/gps_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_Intel_D415_v1_1">
+  <inertial>
+    <origin xyz="0.010471377510819918 -1.1492084130259031e-05 0.00022328622612277985" rpy="0 0 0"/>
+    <mass value="0.040266780079221014"/>
+    <inertia ixx="3.3e-05" iyy="3e-06" izz="3.3e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.162797 -1e-05 -0.0105" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/camera_Intel_D415_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.162797 -1e-05 -0.0105" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/camera_Intel_D415_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bracket_1_1">
+  <inertial>
+    <origin xyz="-0.020000000000000018 0.15800000000000003 -0.02307195849418393" rpy="0 0 0"/>
+    <mass value="0.01974584013175395"/>
+    <inertia ixx="4e-06" iyy="6e-06" izz="2e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.165 -0.0 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/bracket_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminium"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.165 -0.0 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/bracket_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bracket_2_1">
+  <inertial>
+    <origin xyz="-0.020000000000000018 0.001999999999999974 -0.02307195849418393" rpy="0 0 0"/>
+    <mass value="0.01974584013175395"/>
+    <inertia ixx="4e-06" iyy="6e-06" izz="2e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.165 0.16 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/bracket_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminium"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.165 0.16 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/bracket_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="A7_-_DC_Geared_Motor_v1_1">
+  <inertial>
+    <origin xyz="-1.7430501486614958e-14 0.02716453886229528 -0.0002082312271094941" rpy="0 0 0"/>
+    <mass value="0.057651177702540524"/>
+    <inertia ixx="2.7e-05" iyy="8e-06" izz="2.7e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.145 0.156 0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/A7_-_DC_Geared_Motor_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminium"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.145 0.156 0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/A7_-_DC_Geared_Motor_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="A7_-_DC_Geared_Motor_2_1">
+  <inertial>
+    <origin xyz="1.7430501486614958e-14 -0.02716453886229528 -0.0002082312271094941" rpy="0 0 0"/>
+    <mass value="0.057651177702540524"/>
+    <inertia ixx="2.7e-05" iyy="8e-06" izz="2.7e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.145 -0.156 0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/A7_-_DC_Geared_Motor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminium"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.145 -0.156 0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/A7_-_DC_Geared_Motor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_rim_1">
+  <inertial>
+    <origin xyz="-5.17094886354208e-09 -0.008487250868524338 4.4178467134559085e-10" rpy="0 0 0"/>
+    <mass value="0.021894248864708542"/>
+    <inertia ixx="1.2e-05" iyy="1.4e-05" izz="1.2e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.145 0.1928 0.037" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/front_right_rim_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.145 0.1928 0.037" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/front_right_rim_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Tyre_1_1">
+  <inertial>
+    <origin xyz="-1.7227292065102873e-07 -0.02249937726143031 -1.5251439410696177e-07" rpy="0 0 0"/>
+    <mass value="0.0651938376386304"/>
+    <inertia ixx="0.000121" iyy="0.000197" izz="0.000121" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.145 0.1758 0.037" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/Tyre_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black_pure"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.145 0.1758 0.037" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/Tyre_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_rim_1">
+  <inertial>
+    <origin xyz="-5.17094886354208e-09 0.008487250868524365 -4.417846158344396e-10" rpy="0 0 0"/>
+    <mass value="0.021894248864708542"/>
+    <inertia ixx="1.2e-05" iyy="1.4e-05" izz="1.2e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.145 -0.1928 0.037" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/front_left_rim_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.145 -0.1928 0.037" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/front_left_rim_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Tyre_2_1">
+  <inertial>
+    <origin xyz="1.7227292059551758e-07 -0.024863921730532368 1.5251439415553403e-07" rpy="0 0 0"/>
+    <mass value="0.0651938376386304"/>
+    <inertia ixx="0.000121" iyy="0.000197" izz="0.000121" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.145 -0.22355 0.037" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/Tyre_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black_pure"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.145 -0.22355 0.037" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/Tyre_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="130mm_gripper_1_1">
+  <inertial>
+    <origin xyz="-4.082845173059013e-14 0.02500000000004368 -2.392391840189134e-13" rpy="0 0 0"/>
+    <mass value="0.06729687453708148"/>
+    <inertia ixx="0.000153" iyy="0.000277" izz="0.000153" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.145 0.2238 0.037" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find kc_vision_description)/meshes/130mm_gripper_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="green"/>
   </visual>
   <collision>
-    <origin xyz="0.165 -0.0 -0.154" rpy="0 0 0"/>
+    <origin xyz="-0.145 0.2238 0.037" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/imu_link_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find kc_vision_description)/meshes/130mm_gripper_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="gps_link">
+<link name="130mm_gripper_2_1">
   <inertial>
-    <origin xyz="-0.0407242334885094 5.4323224457475116e-05 -0.07001241807898116" rpy="0 0 0"/>
-    <mass value="0.016695520146201126"/>
-    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    <origin xyz="4.0717429428127616e-14 -0.02500000000004357 -2.392946951701447e-13" rpy="0 0 0"/>
+    <mass value="0.06729687453708148"/>
+    <inertia ixx="0.000153" iyy="0.000277" izz="0.000153" ixy="-0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="-0.1 -0.0 -0.154" rpy="0 0 0"/>
+    <origin xyz="-0.145 -0.2238 0.037" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/gps_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find kc_vision_description)/meshes/130mm_gripper_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="brown"/>
+    <material name="green"/>
   </visual>
   <collision>
-    <origin xyz="-0.1 -0.0 -0.154" rpy="0 0 0"/>
+    <origin xyz="-0.145 -0.2238 0.037" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find kc_vision_description)/meshes/gps_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find kc_vision_description)/meshes/130mm_gripper_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<gazebo reference="base_link">
-    <mu1 value="0.0"/>
-    <mu2 value="0.0"/>
-</gazebo>
-
-
 <joint name="Rigid 1" type="fixed">
-  <origin xyz="0.13 0.0 0.099" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="lidar_link"/>
-</joint>
-
-<joint name="Rigid 2" type="fixed">
-  <origin xyz="0.16 0.0 0.089" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="camera_link"/>
-</joint>
-
-<joint name="Rigid 3" type="fixed">
-  <origin xyz="-0.138 0.156 0.044" rpy="0 0 0"/>
+  <origin xyz="-0.137 0.156 -0.03" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="left_A7_-_DC_Geared_Motor_1"/>
 </joint>
 
-<joint name="Rigid 4" type="fixed">
-  <origin xyz="-0.138 -0.156 0.044" rpy="0 0 0"/>
+<joint name="Rigid 2" type="fixed">
+  <origin xyz="0.137797 1e-05 0.018" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="A7_-_DC_Geared_Motor_v1__1__1"/>
+  <child link="bottom_ydlidar_v1_1"/>
 </joint>
 
-<joint name="rear_left_wheel_joint" type="continuous">
-  <origin xyz="0.0 -0.0368 -0.007" rpy="0 0 0"/>
-  <parent link="A7_-_DC_Geared_Motor_v1__1__1"/>
-  <child link="Wheel_Rim_s_v1_1"/>
-  <axis xyz="-0.0 1.0 0.0"/>
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="0.0 0.0 0.01815" rpy="0 0 0"/>
+  <parent link="bottom_ydlidar_v1_1"/>
+  <child link="lidar_link_1"/>
+</joint>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="-0.137 -0.156 -0.03" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_A7_-_DC_Geared_Motor_1"/>
 </joint>
 
 <joint name="rear_right_wheel_joint" type="continuous">
+  <origin xyz="0.0 -0.0368 -0.007" rpy="0 0 0"/>
+  <parent link="right_A7_-_DC_Geared_Motor_1"/>
+  <child link="Wheel_Rim_s_v1_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="rear_left_wheel_joint" type="continuous">
   <origin xyz="0.0 0.0368 -0.007" rpy="0 0 0"/>
   <parent link="left_A7_-_DC_Geared_Motor_1"/>
-  <child link="Wheel_Rim_s_v1__1__1"/>
-  <axis xyz="0.0 1.0 -0.0"/>
+  <child link="Wheel_Rim_s_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="Rigid 7" type="fixed">
-  <origin xyz="0.0 -0.0115 0.0" rpy="0 0 0"/>
-  <parent link="Wheel_Rim_s_v1_1"/>
+  <origin xyz="0.0 0.0315 0.0" rpy="0 0 0"/>
+  <parent link="Wheel_Rim_s_1"/>
   <child link="Wheel_Tire_ipt_v1_1"/>
 </joint>
 
 <joint name="Rigid 8" type="fixed">
-  <origin xyz="0.0 0.0115 0.0" rpy="0 0 0"/>
-  <parent link="Wheel_Rim_s_v1__1__1"/>
-  <child link="Wheel_Tire_ipt_v1__1__1"/>
+  <origin xyz="0.0 -0.0315 0.0" rpy="0 0 0"/>
+  <parent link="Wheel_Rim_s_v1_1"/>
+  <child link="Wheel_Tire_ipt__1"/>
 </joint>
 
 <joint name="Rigid 9" type="fixed">
-  <origin xyz="-0.165 0.0 0.154" rpy="0 0 0"/>
+  <origin xyz="-0.165 0.0 0.003" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="imu_link"/>
+  <child link="imu_link_1"/>
 </joint>
 
 <joint name="Rigid 10" type="fixed">
-  <origin xyz="0.1 0.0 0.154" rpy="0 0 0"/>
+  <origin xyz="0.0 0.0 0.003" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="gps_link"/>
+  <child link="gps_v1_1"/>
+</joint>
+
+<joint name="Rigid 11" type="fixed">
+  <origin xyz="0.162797 1e-05 0.0105" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_Intel_D415_v1_1"/>
+</joint>
+
+<joint name="Rigid 12" type="fixed">
+  <origin xyz="0.165 0.0 0.0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="bracket_1_1"/>
+</joint>
+
+<joint name="Rigid 13" type="fixed">
+  <origin xyz="0.165 -0.16 0.0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="bracket_2_1"/>
+</joint>
+
+<joint name="Rigid 14" type="fixed">
+  <origin xyz="-0.02 0.004 -0.03" rpy="0 0 0"/>
+  <parent link="bracket_2_1"/>
+  <child link="A7_-_DC_Geared_Motor_v1_1"/>
+</joint>
+
+<joint name="Rigid 15" type="fixed">
+  <origin xyz="-0.02 0.156 -0.03" rpy="0 0 0"/>
+  <parent link="bracket_1_1"/>
+  <child link="A7_-_DC_Geared_Motor_2_1"/>
+</joint>
+
+<joint name="front_right_wheel_joint" type="continuous">
+  <origin xyz="0.0 -0.0368 -0.007" rpy="0 0 0"/>
+  <parent link="A7_-_DC_Geared_Motor_v1_1"/>
+  <child link="front_right_rim_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid 17" type="fixed">
+  <origin xyz="0.0 0.017 0.0" rpy="0 0 0"/>
+  <parent link="front_right_rim_1"/>
+  <child link="Tyre_1_1"/>
+</joint>
+
+<joint name="front_left_wheel_joint" type="continuous">
+  <origin xyz="0.0 0.0368 -0.007" rpy="0 0 0"/>
+  <parent link="A7_-_DC_Geared_Motor_2_1"/>
+  <child link="front_left_rim_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="0.0 0.03075 0.0" rpy="0 0 0"/>
+  <parent link="front_left_rim_1"/>
+  <child link="Tyre_2_1"/>
+</joint>
+
+<joint name="Rigid 20" type="fixed">
+  <origin xyz="0.0 -0.031 0.0" rpy="0 0 0"/>
+  <parent link="front_right_rim_1"/>
+  <child link="130mm_gripper_1_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="0.0 0.031 0.0" rpy="0 0 0"/>
+  <parent link="front_left_rim_1"/>
+  <child link="130mm_gripper_2_1"/>
 </joint>
 
 </robot>

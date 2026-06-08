@@ -1,0 +1,30 @@
+digraph G {
+"odom" -> "base_footprint"[label=" Broadcaster: default_authority\nAverage rate: 30.294\nBuffer length: 3.4\nMost recent transform: 40.5\nOldest transform: 37.1\n"];
+"map" -> "odom"[label=" Broadcaster: default_authority\nAverage rate: 10.294\nBuffer length: 3.4\nMost recent transform: 41.0\nOldest transform: 37.6\n"];
+"base_link" -> "left_A7_-_DC_Geared_Motor_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_footprint" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "gps_v1_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "camera_Intel_D415_v1_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "bracket_1_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "bracket_2_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"bracket_2_1" -> "A7_-_DC_Geared_Motor_v1_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"bracket_1_1" -> "A7_-_DC_Geared_Motor_2_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"front_right_rim_1" -> "Tyre_1_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"A7_-_DC_Geared_Motor_v1_1" -> "front_right_rim_1"[label=" Broadcaster: default_authority\nAverage rate: 20.299\nBuffer length: 3.35\nMost recent transform: 40.46\nOldest transform: 37.11\n"];
+"front_left_rim_1" -> "Tyre_2_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"A7_-_DC_Geared_Motor_2_1" -> "front_left_rim_1"[label=" Broadcaster: default_authority\nAverage rate: 20.299\nBuffer length: 3.35\nMost recent transform: 40.46\nOldest transform: 37.11\n"];
+"base_link" -> "bottom_ydlidar_v1_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"front_right_rim_1" -> "130mm_gripper_1_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"front_left_rim_1" -> "130mm_gripper_2_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"bottom_ydlidar_v1_1" -> "lidar_link_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "right_A7_-_DC_Geared_Motor_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"Wheel_Rim_s_1" -> "Wheel_Tire_ipt_v1_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"left_A7_-_DC_Geared_Motor_1" -> "Wheel_Rim_s_1"[label=" Broadcaster: default_authority\nAverage rate: 20.299\nBuffer length: 3.35\nMost recent transform: 40.46\nOldest transform: 37.11\n"];
+"Wheel_Rim_s_v1_1" -> "Wheel_Tire_ipt__1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"right_A7_-_DC_Geared_Motor_1" -> "Wheel_Rim_s_v1_1"[label=" Broadcaster: default_authority\nAverage rate: 20.299\nBuffer length: 3.35\nMost recent transform: 40.46\nOldest transform: 37.11\n"];
+"base_link" -> "imu_link_1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1780313156.401842"[ shape=plaintext ] ;
+}->"map";
+}

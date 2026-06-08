@@ -6,9 +6,10 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /Map1
+        - /LaserScan1
+        - /LaserScan1/Topic1
       Splitter Ratio: 0.5
-    Tree Height: 212
+    Tree Height: 744
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -65,31 +66,28 @@ Visualization Manager:
         Value: /robot_description
       Enabled: true
       Links:
-        A7_-_DC_Geared_Motor_v1_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        A7_-_DC_Geared_Motor_v1_Mirror__1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        A7_-_DC_Geared_Motor_v1_Mirror__Mirror__1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        A7_-_DC_Geared_Motor_v1_Mirror___1__1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        All Links Enabled: true
+        All Links Enabled:
+          {}
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        Wheel_Rim_s_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Wheel_Rim_s_v1_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Wheel_Tire_ipt__1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Wheel_Tire_ipt_v1_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         base_footprint:
           Alpha: 1
           Show Axes: false
@@ -98,52 +96,38 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        camera_1:
+        bottom_ydlidar_v1_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        imu_sensor_TM171__1:
+        camera_Intel_D415_v1_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        left_Omni_Wheel_v1__1__1:
+        caster_wheel_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        left_Wheel_Rim_1:
+        gps_v1_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        left_Wheel_tire_1:
+        imu_link_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        lidar_link:
+        left_A7_-_DC_Geared_Motor_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        right_Omni_Wheel__1:
+        lidar_link_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        right_Wheel_Rim_1:
+        right_A7_-_DC_Geared_Motor_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        right_Wheel_Tire_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Mass Properties:
         Inertia: false
         Mass: false
@@ -158,40 +142,38 @@ Visualization Manager:
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
-        A7_-_DC_Geared_Motor_v1_1:
-          Value: true
-        A7_-_DC_Geared_Motor_v1_Mirror__1:
-          Value: true
-        A7_-_DC_Geared_Motor_v1_Mirror__Mirror__1:
-          Value: true
-        A7_-_DC_Geared_Motor_v1_Mirror___1__1:
-          Value: true
         All Enabled: true
+        Wheel_Rim_s_1:
+          Value: true
+        Wheel_Rim_s_v1_1:
+          Value: true
+        Wheel_Tire_ipt__1:
+          Value: true
+        Wheel_Tire_ipt_v1_1:
+          Value: true
         base_footprint:
           Value: true
         base_link:
           Value: true
-        camera_1:
+        bottom_ydlidar_v1_1:
           Value: true
-        imu_sensor_TM171__1:
+        camera_Intel_D415_v1_1:
           Value: true
-        left_Omni_Wheel_v1__1__1:
+        caster_wheel_1:
           Value: true
-        left_Wheel_Rim_1:
+        gps_v1_1:
           Value: true
-        left_Wheel_tire_1:
+        imu_link_1:
           Value: true
-        lidar_link:
+        left_A7_-_DC_Geared_Motor_1:
+          Value: true
+        lidar_link_1:
           Value: true
         map:
           Value: true
         odom:
           Value: true
-        right_Omni_Wheel__1:
-          Value: true
-        right_Wheel_Rim_1:
-          Value: true
-        right_Wheel_Tire_1:
+        right_A7_-_DC_Geared_Motor_1:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -203,26 +185,25 @@ Visualization Manager:
           odom:
             base_footprint:
               base_link:
-                A7_-_DC_Geared_Motor_v1_1:
-                  left_Omni_Wheel_v1__1__1:
+                bottom_ydlidar_v1_1:
+                  lidar_link_1:
                     {}
-                A7_-_DC_Geared_Motor_v1_Mirror__1:
-                  right_Omni_Wheel__1:
-                    {}
-                A7_-_DC_Geared_Motor_v1_Mirror__Mirror__1:
-                  right_Wheel_Rim_1:
-                    right_Wheel_Tire_1:
+                camera_Intel_D415_v1_1:
+                  {}
+                caster_wheel_1:
+                  {}
+                gps_v1_1:
+                  {}
+                imu_link_1:
+                  {}
+                left_A7_-_DC_Geared_Motor_1:
+                  Wheel_Rim_s_1:
+                    Wheel_Tire_ipt_v1_1:
                       {}
-                A7_-_DC_Geared_Motor_v1_Mirror___1__1:
-                  left_Wheel_Rim_1:
-                    left_Wheel_tire_1:
+                right_A7_-_DC_Geared_Motor_1:
+                  Wheel_Rim_s_v1_1:
+                    Wheel_Tire_ipt__1:
                       {}
-                camera_1:
-                  {}
-                imu_sensor_TM171__1:
-                  {}
-                lidar_link:
-                  {}
       Update Interval: 0
       Value: true
     - Alpha: 0.699999988079071
@@ -263,21 +244,21 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 0
+      Max Intensity: 68
       Min Color: 0; 0; 0
-      Min Intensity: 0
+      Min Intensity: 9
       Name: LaserScan
       Position Transformer: XYZ
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.009999999776482582
+      Size (m): 0.09000000357627869
       Style: Flat Squares
       Topic:
         Depth: 5
         Durability Policy: Volatile
         Filter size: 10
         History Policy: Keep Last
-        Reliability Policy: Reliable
+        Reliability Policy: Best Effort
         Value: /scan
       Use Fixed Frame: true
       Use rainbow: true
@@ -381,7 +362,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 4.8113250732421875
+      Distance: 10.15585708618164
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -399,17 +380,17 @@ Visualization Manager:
       Pitch: 1.5697963237762451
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.1453959941864014
+      Yaw: 3.0103938579559326
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: true
-  Height: 660
+  Height: 996
   Hide Left Dock: true
   Hide Right Dock: false
   Image:
-    collapsed: true
-  QMainWindow State: 000000ff00000000fd000000040000000000000191000001e1fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006f00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007300000000480000011d000000f300fffffffb0000000a0049006d006100670065000000016c000000bd0000001a00fffffffb000000220053006c0061006d0054006f006f006c0062006f00780050006c007500670069006e0000000213000001ad000001dc00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000021100000375fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003f000002ac000000c500fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000037500000042fc0100000002fc0000000000000375000002dc00fffffffa000000000200000002fb0000000800540069006d00650100000000ffffffff0000004200fffffffb000000220053006c0061006d0054006f006f006c0062006f00780050006c007500670069006e00000002580000019e000001dc00fffffffb0000000800540069006d0065010000000000000450000000000000000000000375000001e100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000019100000331fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006f00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000004800000331000000f300fffffffb0000000a0049006d0061006700650000000142000002370000001a00fffffffb000000220053006c0061006d0054006f006f006c0062006f00780050006c007500670069006e0000000213000001ad000001dc00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000021100000375fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003f000002ac000000c500fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000003f200000042fc0100000002fc00000000000003f2000002dc00fffffffa000000000200000002fb0000000800540069006d00650100000000ffffffff0000004200fffffffb000000220053006c0061006d0054006f006f006c0062006f00780050006c007500670069006e00000002580000019e000001dc00fffffffb0000000800540069006d00650100000000000004500000000000000000000003f20000033100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   SlamToolboxPlugin:
@@ -420,6 +401,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 885
-  X: 1035
+  Width: 1010
+  X: 910
   Y: 40

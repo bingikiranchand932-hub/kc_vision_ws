@@ -1,0 +1,31 @@
+[0.191s] Invoking command in '/home/kiranchand/kc_vision_ws/build/kc_vision_nav2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kiranchand/kc_vision_ws/build/kc_vision_nav2 -- -j12 -l12
+[0.995s] [100%] Built target cmd_vel_watchdog
+[1.189s] Invoked command in '/home/kiranchand/kc_vision_ws/build/kc_vision_nav2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kiranchand/kc_vision_ws/build/kc_vision_nav2 -- -j12 -l12
+[1.191s] Invoking command in '/home/kiranchand/kc_vision_ws/build/kc_vision_nav2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kiranchand/kc_vision_ws/build/kc_vision_nav2
+[1.200s] -- Install configuration: ""
+[1.201s] -- Execute custom install script
+[1.201s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//launch/nav2.launch.py
+[1.201s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//config/nav2_real_params copy.yaml
+[1.201s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//config/nav2_real_params.yaml
+[1.202s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//config/nav2_real_params_rpp.yaml
+[1.202s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//config/nav2_sim_params copy.yaml
+[1.202s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//config/nav2_sim_params.yaml
+[1.202s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//rviz/nav2_rviz_config.rviz
+[1.203s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2//rviz/navigation.rviz
+[1.208s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/lib/kc_vision_nav2/cmd_vel_watchdog
+[1.212s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/ament_index/resource_index/package_run_dependencies/kc_vision_nav2
+[1.212s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/ament_index/resource_index/parent_prefix_path/kc_vision_nav2
+[1.212s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/environment/ament_prefix_path.sh
+[1.212s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/environment/ament_prefix_path.dsv
+[1.212s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/environment/path.sh
+[1.213s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/environment/path.dsv
+[1.213s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/local_setup.bash
+[1.213s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/local_setup.sh
+[1.213s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/local_setup.zsh
+[1.213s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/local_setup.dsv
+[1.214s] -- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/package.dsv
+[1.236s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/ament_index/resource_index/packages/kc_vision_nav2
+[1.237s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/cmake/kc_vision_nav2Config.cmake
+[1.238s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/cmake/kc_vision_nav2Config-version.cmake
+[1.240s] -- Up-to-date symlink: /home/kiranchand/kc_vision_ws/install/kc_vision_nav2/share/kc_vision_nav2/package.xml
+[1.337s] Invoked command in '/home/kiranchand/kc_vision_ws/build/kc_vision_nav2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kiranchand/kc_vision_ws/build/kc_vision_nav2

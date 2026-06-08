@@ -23,8 +23,14 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 install(
-  DIRECTORY launch config rviz
+  DIRECTORY launch config rviz nav2_gps_waypoint_follower_demo
   DESTINATION share/${PROJECT_NAME}/
+)
+
+install(
+  PROGRAMS
+    scripts/coverage_planner.py
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_package()

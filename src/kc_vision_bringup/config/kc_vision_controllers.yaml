@@ -21,7 +21,7 @@ diff_drive_controller:
     left_wheel_names: ["rear_left_wheel_joint"]
     right_wheel_names: ["rear_right_wheel_joint"]
 
-    wheel_separation: 0.6605
+    wheel_separation: 0.42
     wheel_radius: 0.075
 
     wheels_per_side: 1
@@ -55,12 +55,12 @@ diff_drive_controller:
     # -----------------------------
     linear.x:
       has_velocity_limits: true
-      max_velocity: 0.5
-      min_velocity: -0.5
+      max_velocity: 1.0
+      min_velocity: -1.0
 
       has_acceleration_limits: true
-      max_acceleration: 1.5
-      min_acceleration: -1.5
+      max_acceleration: 1.8
+      min_acceleration: -1.8
 
       has_jerk_limits: false
 
@@ -73,8 +73,8 @@ diff_drive_controller:
       min_velocity: -2.5
 
       has_acceleration_limits: true
-      max_acceleration: 3.0
-      min_acceleration: -3.0
+      max_acceleration: 3.5
+      min_acceleration: -3.5
 
       has_jerk_limits: false
 
@@ -93,4 +93,4 @@ diff_drive_controller:
 imu_sensor_broadcaster:
   ros__parameters:
     sensor_name: imu_sensor
-    frame_id: imu_link_1
+    frame_id: imu_link_1            

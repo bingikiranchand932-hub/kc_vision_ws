@@ -1,5 +1,7 @@
+/home/kiranchand/kc_vision_ws/install/kc_vision_localization/share/kc_vision_localization//config/dual_ekf_navsat_params.yaml
 /home/kiranchand/kc_vision_ws/install/kc_vision_localization/share/kc_vision_localization//config/ekf_real.yaml
 /home/kiranchand/kc_vision_ws/install/kc_vision_localization/share/kc_vision_localization//config/ekf_sim.yaml
+/home/kiranchand/kc_vision_ws/install/kc_vision_localization/share/kc_vision_localization//launch/dual_ekf_navsat.launch.py
 /home/kiranchand/kc_vision_ws/install/kc_vision_localization/share/kc_vision_localization//launch/localization.launch.py
 /home/kiranchand/kc_vision_ws/install/kc_vision_localization/share/ament_index/resource_index/package_run_dependencies/kc_vision_localization
 /home/kiranchand/kc_vision_ws/install/kc_vision_localization/share/ament_index/resource_index/parent_prefix_path/kc_vision_localization

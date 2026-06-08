@@ -25,10 +25,6 @@ function _colcon_prefix_chain_powershell_source_script {
 _colcon_prefix_chain_powershell_source_script "/opt/ros/jazzy\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/kiranchand/turtlebot3_ws/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/kiranchand/sam_bot/install\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/kiranchand/visionari_ws/install\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/kiranchand/kiran_ws/install\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/kiranchand/chand_ws/install\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/kiranchand/ros2_ws/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/kiranchand/ydlidar_ros2_ws/install\local_setup.ps1"
 
 # source this prefix

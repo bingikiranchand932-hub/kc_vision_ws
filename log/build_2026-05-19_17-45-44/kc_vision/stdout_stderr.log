@@ -1,0 +1,109 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.17.4 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/kiranchand/kc_vision_ws/build/kc_vision
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/bcr_map.pgm
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/bcr_map.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/cd.rviz
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/controllers.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/demo_waypoints.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/dual_ekf_navsat_params.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/empty.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/gazebo_params.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/gps_wpf_demo.mvc
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/gz_bridge copy.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/gz_bridge.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/mapper_params_online_async.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/mecanum_drive_controller.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/my_controllers.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/my_maps.pgm
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/my_maps.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/naav2_params.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/nav2_no_map_params.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/nav2_params copy.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/nav2_params.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/navigation.rviz
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/nv.rviz
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/rosbot_diff.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/config/twist_mux.yaml
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/camera.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/gazebo_control.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/gps.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/gz_new_cont.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/imu.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/lidar.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/project_visionkc.gazebo
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/robot.urdf.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/robot_core copy.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/robot_core.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/description/ros2_control.xacro
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/arduino_joy_bridge.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/dual_ekf_navsat.launch.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/gps_waypoint_follower.launch.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/launch_sim.launch.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/localization_launch.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/maps_mower.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/mapviz.launch.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/navigation_launch.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/new.launch_sim.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/nrsp.launch.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/launch/rsp.launch.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/worlds/empty.world
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/worlds/obstacles_in.sdf
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/worlds/sim_world.sdf
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/worlds/small_world.sdf
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/worlds/tree_world.sdf
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/150mm_Cutting_disc_holder_v4_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/A7_-_DC_Geared_Motor_v1_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/A7_-_DC_Geared_Motor_v1_Mirror__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/A7_-_DC_Geared_Motor_v1_Mirror__Mirror__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/A7_-_DC_Geared_Motor_v1_Mirror___1__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/base_link.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/camera_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/imu_sensor_TM171__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/left_Omni_Wheel_v1__1__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/left_Wheel_Rim_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/left_Wheel_tire_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/lidar_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/right_Omni_Wheel__1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/right_Wheel_Rim_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/meshes/right_Wheel_Tire_1.stl
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/lib/kc_vision/arduino_joy_bridge.py
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/ament_index/resource_index/package_run_dependencies/kc_vision
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/ament_index/resource_index/parent_prefix_path/kc_vision
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/environment/ament_prefix_path.sh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/environment/ament_prefix_path.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/environment/path.sh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/environment/path.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/local_setup.bash
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/local_setup.sh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/local_setup.zsh
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/local_setup.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/package.dsv
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/ament_index/resource_index/packages/kc_vision
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/cmake/kc_visionConfig.cmake
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/cmake/kc_visionConfig-version.cmake
+-- Symlinking: /home/kiranchand/kc_vision_ws/install/kc_vision/share/kc_vision/package.xml

@@ -6,7 +6,7 @@
     <xacro:arg name="using_sim" default="true" />
 
     <xacro:include filename="xacro_properties/xacro_properties.xacro" />
-    <xacro:include filename="modules/kc_vision.xacro" />
+    <xacro:include filename="modules/kc.xacro" />
     <!-- <xacro:include filename="modules/camera.xacro" /> -->
     <!-- <xacro:include filename="modules/lidar.xacro" /> -->
 

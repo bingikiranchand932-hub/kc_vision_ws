@@ -1,0 +1,1 @@
+/home/kiranchand/kc_vision_ws/src/kc_vision_bringup/scripts/coverage_planner.py

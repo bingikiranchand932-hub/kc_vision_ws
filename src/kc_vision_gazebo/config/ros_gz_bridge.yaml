@@ -80,3 +80,9 @@
   gz_type_name: "gz.msgs.IMU"
   direction: GZ_TO_ROS
   lazy: false
+
+# replace navsat_bridge - check gz topic name
+- topic_name: "gps/fix"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  direction: GZ_TO_ROS
