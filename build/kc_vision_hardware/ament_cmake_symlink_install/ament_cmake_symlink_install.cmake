@@ -315,6 +315,24 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
+# install(FILES "kc_vision_hardware.xml" "DESTINATION" "share/kc_vision_hardware/")
+ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "kc_vision_hardware.xml" "DESTINATION" "share/kc_vision_hardware/")
+
+# install("TARGETS" "kc_vision_hardware" "DESTINATION" "lib/kc_vision_hardware")
+include("/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(DIRECTORY "include/" "DESTINATION" "include")
+ament_cmake_symlink_install_directory("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" DIRECTORY "include/" "DESTINATION" "include")
+
+# install(FILES "kc_vision_hardware.xml" "DESTINATION" "share/kc_vision_hardware")
+ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "kc_vision_hardware.xml" "DESTINATION" "share/kc_vision_hardware")
+
+# install(FILES "/opt/ros/jazzy/lib/python3.12/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/kc_vision_hardware/environment")
+ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "/opt/ros/jazzy/lib/python3.12/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/kc_vision_hardware/environment")
+
+# install(FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/kc_vision_hardware/environment")
+ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/kc_vision_hardware/environment")
+
 # install(FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/kc_vision_hardware" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/kc_vision_hardware" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
@@ -350,6 +368,18 @@ ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_h
 
 # install(FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_index/share/ament_index/resource_index/packages/kc_vision_hardware" "DESTINATION" "share/ament_index/resource_index/packages")
 ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_index/share/ament_index/resource_index/packages/kc_vision_hardware" "DESTINATION" "share/ament_index/resource_index/packages")
+
+# install(FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_index/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/kc_vision_hardware" "DESTINATION" "share/ament_index/resource_index/hardware_interface__pluginlib__plugin")
+ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_index/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/kc_vision_hardware" "DESTINATION" "share/ament_index/resource_index/hardware_interface__pluginlib__plugin")
+
+# install(FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/kc_vision_hardware/cmake")
+ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/kc_vision_hardware/cmake")
+
+# install(FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/kc_vision_hardware/cmake")
+ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/kc_vision_hardware/cmake")
+
+# install(FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/kc_vision_hardware/cmake")
+ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/kc_vision_hardware/cmake")
 
 # install(FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_core/kc_vision_hardwareConfig.cmake" "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_core/kc_vision_hardwareConfig-version.cmake" "DESTINATION" "share/kc_vision_hardware/cmake")
 ament_cmake_symlink_install_files("/home/kiranchand/kc_vision_ws/src/kc_vision_hardware" FILES "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_core/kc_vision_hardwareConfig.cmake" "/home/kiranchand/kc_vision_ws/build/kc_vision_hardware/ament_cmake_core/kc_vision_hardwareConfig-version.cmake" "DESTINATION" "share/kc_vision_hardware/cmake")

@@ -23,7 +23,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 install(
-  DIRECTORY launch config rviz nav2_gps_waypoint_follower_demo
+  DIRECTORY launch config rviz nav2_gps_waypoint_follower_demo src params
   DESTINATION share/${PROJECT_NAME}/
 )
 

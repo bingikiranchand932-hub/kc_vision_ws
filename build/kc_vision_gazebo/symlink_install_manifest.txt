@@ -12,6 +12,7 @@
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//rviz/gazebo_and_rviz_and_localization_config.rviz
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//rviz/navigation.rviz
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//worlds/empty_world.sdf
+/home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//worlds/full_grass.sdf
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//worlds/grass.sdf
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//worlds/indoor_world_with_qr_codes.sdf
 /home/kiranchand/kc_vision_ws/install/kc_vision_gazebo/share/kc_vision_gazebo//worlds/living_room.sdf

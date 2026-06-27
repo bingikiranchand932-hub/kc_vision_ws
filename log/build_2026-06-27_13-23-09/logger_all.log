@@ -1,0 +1,443 @@
+[0.100s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-up-to', 'micro_ros_agent', '--cmake-args', '-DUAGENT_BUILD_EXECUTABLE=OFF', '-DUAGENT_P2P_PROFILE=OFF', '--no-warn-unused-cli']
+[0.100s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=['micro_ros_agent'], packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DUAGENT_BUILD_EXECUTABLE=OFF', '-DUAGENT_P2P_PROFILE=OFF', '--no-warn-unused-cli'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x70d64429cd40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x70d644a03ef0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x70d644a03ef0>>, mixin_verb=('build',))
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.133s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/kiranchand/kc_vision_ws'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision) by extension 'ros'
+[0.157s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kc_vision' with type 'ros.ament_cmake' and name 'kc_vision'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_bringup) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_bringup) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_bringup) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_bringup) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_bringup) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_bringup) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_bringup) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_bringup) by extension 'ros'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kc_vision_bringup' with type 'ros.ament_cmake' and name 'kc_vision_bringup'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_description) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_description) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_description) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_description) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_description) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_description) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_description) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_description) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_description) by extension 'ros'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kc_vision_description' with type 'ros.ament_cmake' and name 'kc_vision_description'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_gazebo) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_gazebo) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_gazebo) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_gazebo) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_gazebo) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_gazebo) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_gazebo) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_gazebo) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kc_vision_gazebo' with type 'ros.ament_cmake' and name 'kc_vision_gazebo'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_hardware) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_hardware) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_hardware) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_hardware) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_hardware) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_hardware) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_hardware) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_hardware) by extension 'ros'
+[0.160s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kc_vision_hardware' with type 'ros.ament_cmake' and name 'kc_vision_hardware'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_localization) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_localization) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_localization) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_localization) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_localization) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_localization) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_localization) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_localization) by extension 'ros'
+[0.161s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kc_vision_localization' with type 'ros.ament_cmake' and name 'kc_vision_localization'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_nav2) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_nav2) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_nav2) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_nav2) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_nav2) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_nav2) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_nav2) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_nav2) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_nav2) by extension 'ros'
+[0.162s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kc_vision_nav2' with type 'ros.ament_cmake' and name 'kc_vision_nav2'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_scripts) by extension 'ignore'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_scripts) by extension 'ignore_ament_install'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_scripts) by extensions ['colcon_pkg']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_scripts) by extension 'colcon_pkg'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_scripts) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_scripts) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_scripts) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_scripts) by extension 'ros'
+[0.163s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kc_vision_scripts' with type 'ros.ament_python' and name 'kc_vision_scripts'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_slam) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_slam) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_slam) by extension 'ignore_ament_install'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_slam) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_slam) by extension 'colcon_pkg'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_slam) by extensions ['colcon_meta']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_slam) by extension 'colcon_meta'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_slam) by extensions ['ros']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/kc_vision_slam) by extension 'ros'
+[0.164s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kc_vision_slam' with type 'ros.ament_cmake' and name 'kc_vision_slam'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extension 'ros'
+[0.165s] DEBUG:colcon.colcon_core.package_identification:Package 'src/micro_ros_setup' with type 'ros.ament_cmake' and name 'micro_ros_setup'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'ignore_ament_install'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['colcon_pkg']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'colcon_pkg'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['colcon_meta']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'colcon_meta'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'ros'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['cmake', 'python']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'cmake'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'python'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['python_setup_py']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'python_setup_py'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'ignore_ament_install'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'ros'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['cmake', 'python']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'cmake'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'python'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['python_setup_py']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'python_setup_py'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extension 'ignore_ament_install'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extension 'ros'
+[0.167s] DEBUG:colcon.colcon_core.package_identification:Package 'src/uros/drive_base/drive_base_msgs' with type 'ros.ament_cmake' and name 'drive_base_msgs'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'colcon_pkg'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['colcon_meta']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'colcon_meta'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['ros']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'ros'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['cmake', 'python']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'cmake'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'python'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['python_setup_py']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'python_setup_py'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extension 'ros'
+[0.169s] DEBUG:colcon.colcon_core.package_identification:Package 'src/uros/micro-ROS-Agent/micro_ros_agent' with type 'ros.ament_cmake' and name 'micro_ros_agent'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'ignore_ament_install'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['colcon_pkg']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['colcon_meta']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'colcon_meta'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['ros']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'ros'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['cmake', 'python']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'cmake'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'python'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['python_setup_py']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'python_setup_py'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'ignore_ament_install'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['colcon_pkg']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'ros'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['cmake', 'python']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'cmake'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'python'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['python_setup_py']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'python_setup_py'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'ros'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['cmake', 'python']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'cmake'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'python'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['python_setup_py']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'python_setup_py'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extension 'ignore_ament_install'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extensions ['colcon_meta']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extension 'colcon_meta'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extensions ['ros']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extension 'ros'
+[0.171s] DEBUG:colcon.colcon_core.package_identification:Package 'src/uros/micro_ros_msgs' with type 'ros.ament_cmake' and name 'micro_ros_msgs'
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.188s] INFO:colcon.colcon_core.package_selection:Skipping package 'kc_vision_bringup' in 'src/kc_vision_bringup'
+[0.188s] INFO:colcon.colcon_core.package_selection:Skipping package 'kc_vision_gazebo' in 'src/kc_vision_gazebo'
+[0.188s] INFO:colcon.colcon_core.package_selection:Skipping package 'micro_ros_setup' in 'src/micro_ros_setup'
+[0.188s] INFO:colcon.colcon_core.package_selection:Skipping package 'kc_vision_slam' in 'src/kc_vision_slam'
+[0.188s] INFO:colcon.colcon_core.package_selection:Skipping package 'kc_vision_scripts' in 'src/kc_vision_scripts'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping package 'kc_vision_nav2' in 'src/kc_vision_nav2'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping package 'kc_vision_localization' in 'src/kc_vision_localization'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping package 'kc_vision_hardware' in 'src/kc_vision_hardware'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping package 'kc_vision_description' in 'src/kc_vision_description'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping package 'kc_vision' in 'src/kc_vision'
+[0.189s] INFO:colcon.colcon_core.package_selection:Skipping package 'drive_base_msgs' in 'src/uros/drive_base/drive_base_msgs'
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.190s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kiranchand/kc_vision_ws/install/micro_ros_agent' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.191s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kiranchand/kc_vision_ws/install/micro_ros_agent' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.192s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 10 installed packages in /home/kiranchand/kc_vision_ws/install
+[0.192s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/kiranchand/ydlidar_ros2_ws/install
+[0.193s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/kiranchand/sam_bot/install
+[0.193s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 17 installed packages in /home/kiranchand/turtlebot3_ws/install
+[0.196s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 612 installed packages in /opt/ros/jazzy
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_args' from command line to '['-DUAGENT_BUILD_EXECUTABLE=OFF', '-DUAGENT_P2P_PROFILE=OFF', '--no-warn-unused-cli']'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_target' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.282s] DEBUG:colcon.colcon_core.verb:Building package 'micro_ros_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kiranchand/kc_vision_ws/build/micro_ros_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DUAGENT_BUILD_EXECUTABLE=OFF', '-DUAGENT_P2P_PROFILE=OFF', '--no-warn-unused-cli'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs', 'merge_install': False, 'path': '/home/kiranchand/kc_vision_ws/src/uros/micro_ros_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_args' from command line to '['-DUAGENT_BUILD_EXECUTABLE=OFF', '-DUAGENT_P2P_PROFILE=OFF', '--no-warn-unused-cli']'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_target' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_clean_cache' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_clean_first' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_force_configure' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'ament_cmake_args' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'catkin_cmake_args' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.283s] DEBUG:colcon.colcon_core.verb:Building package 'micro_ros_agent' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kiranchand/kc_vision_ws/build/micro_ros_agent', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DUAGENT_BUILD_EXECUTABLE=OFF', '-DUAGENT_P2P_PROFILE=OFF', '--no-warn-unused-cli'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kiranchand/kc_vision_ws/install/micro_ros_agent', 'merge_install': False, 'path': '/home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent', 'symlink_install': False, 'test_result_base': None}
+[0.283s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.284s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.284s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kiranchand/kc_vision_ws/src/uros/micro_ros_msgs' with build type 'ament_cmake'
+[0.284s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kiranchand/kc_vision_ws/src/uros/micro_ros_msgs'
+[0.287s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.287s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.287s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.299s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiranchand/kc_vision_ws/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kiranchand/kc_vision_ws/src/uros/micro_ros_msgs -DUAGENT_BUILD_EXECUTABLE=OFF -DUAGENT_P2P_PROFILE=OFF --no-warn-unused-cli -DCMAKE_INSTALL_PREFIX=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs
+[3.433s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiranchand/kc_vision_ws/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kiranchand/kc_vision_ws/src/uros/micro_ros_msgs -DUAGENT_BUILD_EXECUTABLE=OFF -DUAGENT_P2P_PROFILE=OFF --no-warn-unused-cli -DCMAKE_INSTALL_PREFIX=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs
+[3.434s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiranchand/kc_vision_ws/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kiranchand/kc_vision_ws/build/micro_ros_msgs -- -j12 -l12
+[6.062s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiranchand/kc_vision_ws/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kiranchand/kc_vision_ws/build/micro_ros_msgs -- -j12 -l12
+[6.073s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiranchand/kc_vision_ws/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kiranchand/kc_vision_ws/build/micro_ros_msgs
+[6.153s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_msgs)
+[6.153s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiranchand/kc_vision_ws/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kiranchand/kc_vision_ws/build/micro_ros_msgs
+[6.155s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs' for CMake module files
+[6.156s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs' for CMake config files
+[6.156s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'cmake_prefix_path')
+[6.156s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.ps1'
+[6.157s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.dsv'
+[6.157s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.sh'
+[6.158s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib'
+[6.158s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'ld_library_path_lib')
+[6.158s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.ps1'
+[6.158s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.dsv'
+[6.158s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.sh'
+[6.159s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/bin'
+[6.159s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib/pkgconfig/micro_ros_msgs.pc'
+[6.159s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib/python3.12/site-packages'
+[6.159s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'pythonpath')
+[6.159s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.ps1'
+[6.159s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.dsv'
+[6.160s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.sh'
+[6.160s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/bin'
+[6.160s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.ps1'
+[6.161s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv'
+[6.161s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.sh'
+[6.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.bash'
+[6.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.zsh'
+[6.163s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/colcon-core/packages/micro_ros_msgs)
+[6.163s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_msgs)
+[6.163s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs' for CMake module files
+[6.164s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs' for CMake config files
+[6.164s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'cmake_prefix_path')
+[6.164s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.ps1'
+[6.165s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.dsv'
+[6.165s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.sh'
+[6.165s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib'
+[6.166s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'ld_library_path_lib')
+[6.166s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.ps1'
+[6.166s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.dsv'
+[6.166s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.sh'
+[6.167s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/bin'
+[6.167s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib/pkgconfig/micro_ros_msgs.pc'
+[6.167s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib/python3.12/site-packages'
+[6.167s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'pythonpath')
+[6.167s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.ps1'
+[6.167s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.dsv'
+[6.167s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.sh'
+[6.168s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/bin'
+[6.168s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.ps1'
+[6.169s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv'
+[6.169s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.sh'
+[6.169s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.bash'
+[6.170s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.zsh'
+[6.170s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/share/colcon-core/packages/micro_ros_msgs)
+[6.170s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent' with build type 'ament_cmake'
+[6.170s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent'
+[6.171s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.171s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.186s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiranchand/kc_vision_ws/build/micro_ros_agent': AMENT_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:/home/kiranchand/kc_vision_ws/install/micro_ros_setup:/home/kiranchand/kc_vision_ws/install/kc_vision_bringup:/home/kiranchand/kc_vision_ws/install/micro_ros_agent:/home/kiranchand/kc_vision_ws/install/kc_vision_slam:/home/kiranchand/kc_vision_ws/install/kc_vision_nav2:/home/kiranchand/kc_vision_ws/install/kc_vision_gazebo:/home/kiranchand/kc_vision_ws/install/kc_vision_localization:/home/kiranchand/kc_vision_ws/install/kc_vision_hardware:/home/kiranchand/kc_vision_ws/install/kc_vision_description:/home/kiranchand/kc_vision_ws/install/kc_vision:/home/kiranchand/sam_bot/install/kc_vision:/home/kiranchand/ydlidar_ros2_ws/install/ydlidar_ros2_driver:/home/kiranchand/turtlebot3_ws/install/turtlebot3:/home/kiranchand/turtlebot3_ws/install/turtlebot3_bringup:/home/kiranchand/turtlebot3_ws/install/turtlebot3_node:/home/kiranchand/turtlebot3_ws/install/turtlebot3_navigation2:/home/kiranchand/turtlebot3_ws/install/turtlebot3_description:/home/kiranchand/turtlebot3_ws/install/turtlebot3_cartographer:/home/kiranchand/turtlebot3_ws/install/tile_map:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_sim:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_description:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb3_sim:/home/kiranchand/turtlebot3_ws/install/multires_image:/home/kiranchand/turtlebot3_ws/install/mapviz_plugins:/home/kiranchand/turtlebot3_ws/install/mapviz:/home/kiranchand/turtlebot3_ws/install/mapviz_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent -DUAGENT_BUILD_EXECUTABLE=OFF -DUAGENT_P2P_PROFILE=OFF --no-warn-unused-cli -DCMAKE_INSTALL_PREFIX=/home/kiranchand/kc_vision_ws/install/micro_ros_agent
+[6.566s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiranchand/kc_vision_ws/build/micro_ros_agent' returned '0': AMENT_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:/home/kiranchand/kc_vision_ws/install/micro_ros_setup:/home/kiranchand/kc_vision_ws/install/kc_vision_bringup:/home/kiranchand/kc_vision_ws/install/micro_ros_agent:/home/kiranchand/kc_vision_ws/install/kc_vision_slam:/home/kiranchand/kc_vision_ws/install/kc_vision_nav2:/home/kiranchand/kc_vision_ws/install/kc_vision_gazebo:/home/kiranchand/kc_vision_ws/install/kc_vision_localization:/home/kiranchand/kc_vision_ws/install/kc_vision_hardware:/home/kiranchand/kc_vision_ws/install/kc_vision_description:/home/kiranchand/kc_vision_ws/install/kc_vision:/home/kiranchand/sam_bot/install/kc_vision:/home/kiranchand/ydlidar_ros2_ws/install/ydlidar_ros2_driver:/home/kiranchand/turtlebot3_ws/install/turtlebot3:/home/kiranchand/turtlebot3_ws/install/turtlebot3_bringup:/home/kiranchand/turtlebot3_ws/install/turtlebot3_node:/home/kiranchand/turtlebot3_ws/install/turtlebot3_navigation2:/home/kiranchand/turtlebot3_ws/install/turtlebot3_description:/home/kiranchand/turtlebot3_ws/install/turtlebot3_cartographer:/home/kiranchand/turtlebot3_ws/install/tile_map:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_sim:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_description:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb3_sim:/home/kiranchand/turtlebot3_ws/install/multires_image:/home/kiranchand/turtlebot3_ws/install/mapviz_plugins:/home/kiranchand/turtlebot3_ws/install/mapviz:/home/kiranchand/turtlebot3_ws/install/mapviz_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent -DUAGENT_BUILD_EXECUTABLE=OFF -DUAGENT_P2P_PROFILE=OFF --no-warn-unused-cli -DCMAKE_INSTALL_PREFIX=/home/kiranchand/kc_vision_ws/install/micro_ros_agent
+[6.567s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiranchand/kc_vision_ws/build/micro_ros_agent': AMENT_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:/home/kiranchand/kc_vision_ws/install/micro_ros_setup:/home/kiranchand/kc_vision_ws/install/kc_vision_bringup:/home/kiranchand/kc_vision_ws/install/micro_ros_agent:/home/kiranchand/kc_vision_ws/install/kc_vision_slam:/home/kiranchand/kc_vision_ws/install/kc_vision_nav2:/home/kiranchand/kc_vision_ws/install/kc_vision_gazebo:/home/kiranchand/kc_vision_ws/install/kc_vision_localization:/home/kiranchand/kc_vision_ws/install/kc_vision_hardware:/home/kiranchand/kc_vision_ws/install/kc_vision_description:/home/kiranchand/kc_vision_ws/install/kc_vision:/home/kiranchand/sam_bot/install/kc_vision:/home/kiranchand/ydlidar_ros2_ws/install/ydlidar_ros2_driver:/home/kiranchand/turtlebot3_ws/install/turtlebot3:/home/kiranchand/turtlebot3_ws/install/turtlebot3_bringup:/home/kiranchand/turtlebot3_ws/install/turtlebot3_node:/home/kiranchand/turtlebot3_ws/install/turtlebot3_navigation2:/home/kiranchand/turtlebot3_ws/install/turtlebot3_description:/home/kiranchand/turtlebot3_ws/install/turtlebot3_cartographer:/home/kiranchand/turtlebot3_ws/install/tile_map:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_sim:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_description:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb3_sim:/home/kiranchand/turtlebot3_ws/install/multires_image:/home/kiranchand/turtlebot3_ws/install/mapviz_plugins:/home/kiranchand/turtlebot3_ws/install/mapviz:/home/kiranchand/turtlebot3_ws/install/mapviz_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/kiranchand/kc_vision_ws/build/micro_ros_agent -- -j12 -l12
+[97.576s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiranchand/kc_vision_ws/build/micro_ros_agent' returned '0': AMENT_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:/home/kiranchand/kc_vision_ws/install/micro_ros_setup:/home/kiranchand/kc_vision_ws/install/kc_vision_bringup:/home/kiranchand/kc_vision_ws/install/micro_ros_agent:/home/kiranchand/kc_vision_ws/install/kc_vision_slam:/home/kiranchand/kc_vision_ws/install/kc_vision_nav2:/home/kiranchand/kc_vision_ws/install/kc_vision_gazebo:/home/kiranchand/kc_vision_ws/install/kc_vision_localization:/home/kiranchand/kc_vision_ws/install/kc_vision_hardware:/home/kiranchand/kc_vision_ws/install/kc_vision_description:/home/kiranchand/kc_vision_ws/install/kc_vision:/home/kiranchand/sam_bot/install/kc_vision:/home/kiranchand/ydlidar_ros2_ws/install/ydlidar_ros2_driver:/home/kiranchand/turtlebot3_ws/install/turtlebot3:/home/kiranchand/turtlebot3_ws/install/turtlebot3_bringup:/home/kiranchand/turtlebot3_ws/install/turtlebot3_node:/home/kiranchand/turtlebot3_ws/install/turtlebot3_navigation2:/home/kiranchand/turtlebot3_ws/install/turtlebot3_description:/home/kiranchand/turtlebot3_ws/install/turtlebot3_cartographer:/home/kiranchand/turtlebot3_ws/install/tile_map:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_sim:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_description:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb3_sim:/home/kiranchand/turtlebot3_ws/install/multires_image:/home/kiranchand/turtlebot3_ws/install/mapviz_plugins:/home/kiranchand/turtlebot3_ws/install/mapviz:/home/kiranchand/turtlebot3_ws/install/mapviz_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/kiranchand/kc_vision_ws/build/micro_ros_agent -- -j12 -l12
+[97.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiranchand/kc_vision_ws/build/micro_ros_agent': AMENT_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:/home/kiranchand/kc_vision_ws/install/micro_ros_setup:/home/kiranchand/kc_vision_ws/install/kc_vision_bringup:/home/kiranchand/kc_vision_ws/install/micro_ros_agent:/home/kiranchand/kc_vision_ws/install/kc_vision_slam:/home/kiranchand/kc_vision_ws/install/kc_vision_nav2:/home/kiranchand/kc_vision_ws/install/kc_vision_gazebo:/home/kiranchand/kc_vision_ws/install/kc_vision_localization:/home/kiranchand/kc_vision_ws/install/kc_vision_hardware:/home/kiranchand/kc_vision_ws/install/kc_vision_description:/home/kiranchand/kc_vision_ws/install/kc_vision:/home/kiranchand/sam_bot/install/kc_vision:/home/kiranchand/ydlidar_ros2_ws/install/ydlidar_ros2_driver:/home/kiranchand/turtlebot3_ws/install/turtlebot3:/home/kiranchand/turtlebot3_ws/install/turtlebot3_bringup:/home/kiranchand/turtlebot3_ws/install/turtlebot3_node:/home/kiranchand/turtlebot3_ws/install/turtlebot3_navigation2:/home/kiranchand/turtlebot3_ws/install/turtlebot3_description:/home/kiranchand/turtlebot3_ws/install/turtlebot3_cartographer:/home/kiranchand/turtlebot3_ws/install/tile_map:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_sim:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_description:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb3_sim:/home/kiranchand/turtlebot3_ws/install/multires_image:/home/kiranchand/turtlebot3_ws/install/mapviz_plugins:/home/kiranchand/turtlebot3_ws/install/mapviz:/home/kiranchand/turtlebot3_ws/install/mapviz_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/kiranchand/kc_vision_ws/build/micro_ros_agent
+[97.592s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_agent)
+[97.592s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent' for CMake module files
+[97.592s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiranchand/kc_vision_ws/build/micro_ros_agent' returned '0': AMENT_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs:/home/kiranchand/kc_vision_ws/install/micro_ros_setup:/home/kiranchand/kc_vision_ws/install/kc_vision_bringup:/home/kiranchand/kc_vision_ws/install/micro_ros_agent:/home/kiranchand/kc_vision_ws/install/kc_vision_slam:/home/kiranchand/kc_vision_ws/install/kc_vision_nav2:/home/kiranchand/kc_vision_ws/install/kc_vision_gazebo:/home/kiranchand/kc_vision_ws/install/kc_vision_localization:/home/kiranchand/kc_vision_ws/install/kc_vision_hardware:/home/kiranchand/kc_vision_ws/install/kc_vision_description:/home/kiranchand/kc_vision_ws/install/kc_vision:/home/kiranchand/sam_bot/install/kc_vision:/home/kiranchand/ydlidar_ros2_ws/install/ydlidar_ros2_driver:/home/kiranchand/turtlebot3_ws/install/turtlebot3:/home/kiranchand/turtlebot3_ws/install/turtlebot3_bringup:/home/kiranchand/turtlebot3_ws/install/turtlebot3_node:/home/kiranchand/turtlebot3_ws/install/turtlebot3_navigation2:/home/kiranchand/turtlebot3_ws/install/turtlebot3_description:/home/kiranchand/turtlebot3_ws/install/turtlebot3_cartographer:/home/kiranchand/turtlebot3_ws/install/tile_map:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_sim:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb4_description:/home/kiranchand/turtlebot3_ws/install/nav2_minimal_tb3_sim:/home/kiranchand/turtlebot3_ws/install/multires_image:/home/kiranchand/turtlebot3_ws/install/mapviz_plugins:/home/kiranchand/turtlebot3_ws/install/mapviz:/home/kiranchand/turtlebot3_ws/install/mapviz_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/kiranchand/kc_vision_ws/install/kc_vision_scripts:/home/kiranchand/turtlebot3_ws/install/turtlebot3_teleop:/home/kiranchand/turtlebot3_ws/install/turtlebot3_example:/home/kiranchand/turtlebot3_ws/install/nav2_gps_waypoint_follower_demo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/kiranchand/kc_vision_ws/build/micro_ros_agent
+[97.592s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent' for CMake config files
+[97.594s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'cmake_prefix_path')
+[97.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.ps1'
+[97.594s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.dsv'
+[97.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.sh'
+[97.595s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/lib'
+[97.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'ld_library_path_lib')
+[97.595s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.ps1'
+[97.595s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.dsv'
+[97.596s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.sh'
+[97.596s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/bin'
+[97.596s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/lib/pkgconfig/micro_ros_agent.pc'
+[97.596s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/lib/python3.12/site-packages'
+[97.596s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/bin'
+[97.596s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/package.ps1'
+[97.597s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/package.dsv'
+[97.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/package.sh'
+[97.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/package.bash'
+[97.598s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/package.zsh'
+[97.598s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/colcon-core/packages/micro_ros_agent)
+[97.598s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_agent)
+[97.598s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent' for CMake module files
+[97.599s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent' for CMake config files
+[97.600s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'cmake_prefix_path')
+[97.600s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.ps1'
+[97.600s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.dsv'
+[97.601s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.sh'
+[97.601s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/lib'
+[97.601s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'ld_library_path_lib')
+[97.601s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.ps1'
+[97.602s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.dsv'
+[97.602s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.sh'
+[97.602s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/bin'
+[97.602s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/lib/pkgconfig/micro_ros_agent.pc'
+[97.602s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/lib/python3.12/site-packages'
+[97.603s] Level 1:colcon.colcon_core.environment:checking '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/bin'
+[97.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/package.ps1'
+[97.603s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/package.dsv'
+[97.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/package.sh'
+[97.604s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/package.bash'
+[97.604s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/micro_ros_agent/package.zsh'
+[97.604s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiranchand/kc_vision_ws/install/micro_ros_agent/share/colcon-core/packages/micro_ros_agent)
+[97.605s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[97.605s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[97.605s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[97.605s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[97.610s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[97.610s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[97.610s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[97.622s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[97.623s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kiranchand/kc_vision_ws/install/local_setup.ps1'
+[97.623s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kiranchand/kc_vision_ws/install/_local_setup_util_ps1.py'
+[97.624s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kiranchand/kc_vision_ws/install/setup.ps1'
+[97.626s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kiranchand/kc_vision_ws/install/local_setup.sh'
+[97.627s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kiranchand/kc_vision_ws/install/_local_setup_util_sh.py'
+[97.627s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kiranchand/kc_vision_ws/install/setup.sh'
+[97.629s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kiranchand/kc_vision_ws/install/local_setup.bash'
+[97.630s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kiranchand/kc_vision_ws/install/setup.bash'
+[97.632s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kiranchand/kc_vision_ws/install/local_setup.zsh'
+[97.632s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kiranchand/kc_vision_ws/install/setup.zsh'

@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/home/kiranchand/kc_vision_ws/src/micro-ROS-agent/micro_ros_agent"
+  "/home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent"
   "/home/kiranchand/kc_vision_ws/build/micro_ros_agent"
   "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/micro_ros_agent-prefix"
   "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/micro_ros_agent-prefix/tmp"

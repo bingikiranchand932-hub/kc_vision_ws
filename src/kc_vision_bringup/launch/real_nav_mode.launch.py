@@ -26,7 +26,7 @@ def generate_launch_description():
     pkg_kc_vision_description = get_package_share_directory('kc_vision_description')
     pkg_kc_vision_bringup = get_package_share_directory('kc_vision_bringup')
     pkg_kc_vision_localization = get_package_share_directory('kc_vision_localization')
-    pkg_ldlidar_ros2 = get_package_share_directory('ldlidar_ros2')
+    # pkg_ldlidar_ros2 = get_package_share_directory('ldlidar_ros2')
     pkg_kc_vision_nav2 = get_package_share_directory('kc_vision_nav2')
     pkg_kc_vision_slam = get_package_share_directory('kc_vision_slam')
 
@@ -155,11 +155,11 @@ def generate_launch_description():
 
     # =========================== Start Sensors ============================= #
     
-    start_lidar_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(pkg_ldlidar_ros2, 'launch', 'ld06.launch.py')
-        )
-    )
+    # start_lidar_cmd = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource(
+    #         os.path.join(pkg_ldlidar_ros2, 'launch', 'ld06.launch.py')
+    #     )
+    # )
 
     # Note needed for Nav2, and better to leave out to reduce CPU load on the real robot
     # camera_node = Node(
@@ -261,7 +261,7 @@ def generate_launch_description():
     ld.add_action(cmd_vel_watchdog_node)
     
     # Add Sensor Launch
-    ld.add_action(start_lidar_cmd)
+    # ld.add_action(start_lidar_cmd)
     # ld.add_action(camera_node)
     
     # Add Logic

@@ -182,7 +182,7 @@ def generate_launch_description():
         ]))
     )
 
-    
+    start_rviz_cmd
     # ================================================================================ # 
 
     # ============= Start cartographer (only if selected as argument) ================ #

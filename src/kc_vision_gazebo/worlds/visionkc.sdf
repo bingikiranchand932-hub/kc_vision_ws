@@ -6,17 +6,14 @@
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
 
-    <!-- Plugins -->
     <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
     <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
     <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
     <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
     
-    <!-- Navsat plugin -->
     <plugin filename="gz-sim-navsat-system" name="gz::sim::systems::NavSat">
     </plugin>
 
-    <!-- Global Environment Settings -->
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
       <world_frame_orientation>ENU</world_frame_orientation>
@@ -36,7 +33,6 @@
       <shadows>true</shadows>
     </scene>
 
-    <!-- Ground Plane -->
     <model name='ground_plane'>
       <static>true</static>
       <link name='link'>
@@ -59,13 +55,20 @@
           <geometry>
             <plane>
               <normal>0 0 1</normal>
-              <size>100 100</size>
+              
+              <size>6 6</size>
             </plane>
           </geometry>
           <material>
-            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
-            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
-            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr>
+              <metal>
+                <albedo_map>file:///home/kiranchand/Downloads/project_2026/grass.jpg</albedo_map>
+                <roughness>0.9</roughness>
+                <metalness>0.0</metalness>
+              </metal>
+            </pbr>
           </material>
         </visual>
         <pose>0 0 0 0 0 0</pose>
@@ -87,7 +90,6 @@
       <self_collide>false</self_collide>
     </model>
 
-    <!-- Included Fuel Models -->
     <include>
       <uri>file:///home/kiranchand/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cutout wall/2</uri>
       <name>cutout_wall</name>
@@ -139,7 +141,6 @@
       <pose>2.8017004923103705 4.2292936453877692 0.2629022018231808 -2.0390112824207405 1.342106712695059 -2.2597345747311128</pose>
     </include>
 
-    <!-- Custom Shapes / Obstacles -->
     <model name='cylinder'>
       <pose>-1.7852916997891786 -4.9330607397382948 0.49999942638036005 -1.8112324284641906e-19 1.8140092531081912e-19 3.7196509417569639e-20</pose>
       <link name='cylinder_link'>
@@ -290,7 +291,6 @@
       <self_collide>false</self_collide>
     </model>
 
-    <!-- Global Lighting -->
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
       <cast_shadows>true</cast_shadows>

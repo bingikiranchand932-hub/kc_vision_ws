@@ -19,11 +19,24 @@ class CoveragePlanner(Node):
 
         # ===== YOUR MEASURED AREA =====
 
-        self.xmin = -1.005
-        self.xmax =  1.994
+        # self.xmin = -1.005
+        # self.xmax =  1.994
 
-        self.ymin = 0.985
-        self.ymax = 4.016
+
+        # ===== MEASURED FIELD CORNERS =====
+        #
+        # Top Left     : (-0.991,  3.93)
+        # Top Right    : ( 4.96 ,  3.96)
+        # Bottom Right : ( 4.91 , -2.05)
+        # Bottom Left  : (-0.921, -1.91)
+        #
+        # Bounding rectangle used for coverage
+
+        self.xmin = -0.991
+        self.xmax = 4.96
+
+        self.ymin = -2.05
+        self.ymax = 4.91
 
         # mower cutting width
         self.cut_width = 0.15

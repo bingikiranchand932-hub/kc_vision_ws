@@ -15,7 +15,7 @@ slam_toolbox:
     odom_frame: "odom" #We aren't using prefixed frames here but if you were (e.g. myrobot_odom) then need to account for that here
     map_frame: "map" #We aren't using prefixed frames here but if you were (e.g. myrobot_map) then need to account for that here
     base_frame: "base_footprint" #Make sure to use 'base_footprint' (not 'base_link') if you have a base_footprint to ensure a complete TF tree
-    scan_topic: "scan" #We ARE using namespaced topics (e.g. myrobot/scan) but don't worry the launch file will handle dynamic topic namespacing
+    scan_topic: "/scan" #We ARE using namespaced topics (e.g. myrobot/scan) but don't worry the launch file will handle dynamic topic namespacing
 
     use_scan_matching: true
     use_scan_barycenter: true

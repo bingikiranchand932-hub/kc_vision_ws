@@ -31,7 +31,7 @@
 /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/gps_v1_1.stl
 /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/imu_link_1.stl
 /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/left_A7_-_DC_Geared_Motor_1.stl
-/home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/lider_link_1.stl
+/home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/lidar_link_1.stl
 /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//meshes/right_A7_-_DC_Geared_Motor_1.stl
 /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/gazebo/gazebo_plugins.xacro
 /home/kiranchand/kc_vision_ws/install/kc_vision_description/share/kc_vision_description//urdf/gazebo/gazebo_properties.xacro

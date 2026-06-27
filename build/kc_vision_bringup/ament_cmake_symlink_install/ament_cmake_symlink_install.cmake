@@ -315,8 +315,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "config" "rviz" "nav2_gps_waypoint_follower_demo" "DESTINATION" "share/kc_vision_bringup/")
-ament_cmake_symlink_install_directory("/home/kiranchand/kc_vision_ws/src/kc_vision_bringup" DIRECTORY "launch" "config" "rviz" "nav2_gps_waypoint_follower_demo" "DESTINATION" "share/kc_vision_bringup/")
+# install(DIRECTORY "launch" "config" "rviz" "nav2_gps_waypoint_follower_demo" "src" "params" "DESTINATION" "share/kc_vision_bringup/")
+ament_cmake_symlink_install_directory("/home/kiranchand/kc_vision_ws/src/kc_vision_bringup" DIRECTORY "launch" "config" "rviz" "nav2_gps_waypoint_follower_demo" "src" "params" "DESTINATION" "share/kc_vision_bringup/")
 
 # install(PROGRAMS "scripts/coverage_planner.py" "DESTINATION" "lib/kc_vision_bringup")
 ament_cmake_symlink_install_programs("/home/kiranchand/kc_vision_ws/src/kc_vision_bringup" PROGRAMS "scripts/coverage_planner.py" "DESTINATION" "lib/kc_vision_bringup")

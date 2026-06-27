@@ -1,0 +1,3109 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <plugin name='gz::sim::systems::NavSat' filename='gz-sim-navsat-system'/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>17.723358999999999</latitude_deg>
+      <longitude_deg>78.094364999999996</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr>
+              <metal>
+                <albedo_map>file:///home/kiranchand/Downloads/project_2026/grass.jpg</albedo_map>
+                <roughness>0.9</roughness>
+                <metalness>0.0</metalness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cutout_wall'>
+      <static>true</static>
+      <link name='link'>
+        <pose>0 0 1.3999999999999999 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+              <collide_without_contact_bitmask>2</collide_without_contact_bitmask>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/scripts</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/textures</uri>
+              <name>drc_practice/cutout_wall</name>
+            </script>
+          </material>
+        </visual>
+        <sensor name='mud_contact' type='contact'>
+          <always_on>true</always_on>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>collision</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <plugin name='gazebo_mud' filename='libMudPlugin.so'>
+        <contact_sensor_name>link/mud_contact</contact_sensor_name>
+        <stiffness>0.0</stiffness>
+        <damping>40.0</damping>
+        <contact_surface_bitmask>2</contact_surface_bitmask>
+        <link_name>drill::link</link_name>
+      </plugin>
+      <pose>-4.2005801200866699 9.8115701675415039 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cutout_wall_0'>
+      <static>true</static>
+      <link name='link'>
+        <pose>0 0 1.3999999999999999 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+              <collide_without_contact_bitmask>2</collide_without_contact_bitmask>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/scripts</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/textures</uri>
+              <name>drc_practice/cutout_wall</name>
+            </script>
+          </material>
+        </visual>
+        <sensor name='mud_contact' type='contact'>
+          <always_on>true</always_on>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>collision</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <plugin name='gazebo_mud' filename='libMudPlugin.so'>
+        <contact_sensor_name>link/mud_contact</contact_sensor_name>
+        <stiffness>0.0</stiffness>
+        <damping>40.0</damping>
+        <contact_surface_bitmask>2</contact_surface_bitmask>
+        <link_name>drill::link</link_name>
+      </plugin>
+      <pose>-4.5728732016919889 -9.7548819035040673 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cutout_wall_1'>
+      <static>true</static>
+      <link name='link'>
+        <pose>0 0 1.3999999999999999 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+              <collide_without_contact_bitmask>2</collide_without_contact_bitmask>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/scripts</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/textures</uri>
+              <name>drc_practice/cutout_wall</name>
+            </script>
+          </material>
+        </visual>
+        <sensor name='mud_contact' type='contact'>
+          <always_on>true</always_on>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>collision</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <plugin name='gazebo_mud' filename='libMudPlugin.so'>
+        <contact_sensor_name>link/mud_contact</contact_sensor_name>
+        <stiffness>0.0</stiffness>
+        <damping>40.0</damping>
+        <contact_surface_bitmask>2</contact_surface_bitmask>
+        <link_name>drill::link</link_name>
+      </plugin>
+      <pose>5.2112197875976562 -9.7711372375488281 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cutout_wall_2'>
+      <static>true</static>
+      <link name='link'>
+        <pose>0 0 1.3999999999999999 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+              <collide_without_contact_bitmask>2</collide_without_contact_bitmask>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/scripts</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/textures</uri>
+              <name>drc_practice/cutout_wall</name>
+            </script>
+          </material>
+        </visual>
+        <sensor name='mud_contact' type='contact'>
+          <always_on>true</always_on>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>collision</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <plugin name='gazebo_mud' filename='libMudPlugin.so'>
+        <contact_sensor_name>link/mud_contact</contact_sensor_name>
+        <stiffness>0.0</stiffness>
+        <damping>40.0</damping>
+        <contact_surface_bitmask>2</contact_surface_bitmask>
+        <link_name>drill::link</link_name>
+      </plugin>
+      <pose>5.0395960807800293 9.7994699478149414 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cutout_wall_3'>
+      <static>true</static>
+      <link name='link'>
+        <pose>0 0 1.3999999999999999 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+              <collide_without_contact_bitmask>2</collide_without_contact_bitmask>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/scripts</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/textures</uri>
+              <name>drc_practice/cutout_wall</name>
+            </script>
+          </material>
+        </visual>
+        <sensor name='mud_contact' type='contact'>
+          <always_on>true</always_on>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>collision</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <plugin name='gazebo_mud' filename='libMudPlugin.so'>
+        <contact_sensor_name>link/mud_contact</contact_sensor_name>
+        <stiffness>0.0</stiffness>
+        <damping>40.0</damping>
+        <contact_surface_bitmask>2</contact_surface_bitmask>
+        <link_name>drill::link</link_name>
+      </plugin>
+      <pose>10.142600059509277 4.9063401222229004 -2.2204460492503131e-16 0 0 1.5975869278983041</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cutout_wall_4'>
+      <static>true</static>
+      <link name='link'>
+        <pose>0 0 1.3999999999999999 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+              <collide_without_contact_bitmask>2</collide_without_contact_bitmask>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/scripts</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/textures</uri>
+              <name>drc_practice/cutout_wall</name>
+            </script>
+          </material>
+        </visual>
+        <sensor name='mud_contact' type='contact'>
+          <always_on>true</always_on>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>collision</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <plugin name='gazebo_mud' filename='libMudPlugin.so'>
+        <contact_sensor_name>link/mud_contact</contact_sensor_name>
+        <stiffness>0.0</stiffness>
+        <damping>40.0</damping>
+        <contact_surface_bitmask>2</contact_surface_bitmask>
+        <link_name>drill::link</link_name>
+      </plugin>
+      <pose>10.294502258300781 -4.8952364921569824 4.4408920985006262e-16 0 0 1.5676399480184968</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Oak tree'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/oak tree/7/files/meshes/oak_tree.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='branch'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/oak tree/7/files/meshes/oak_tree.dae</uri>
+              <submesh>
+                <name>Branch</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <double_sided>true</double_sided>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/oak tree/7/files/materials/scripts/</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/oak tree/7/files/materials/textures/</uri>
+              <name>OakTree/Branch</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/oak tree/7/files/materials/textures/branch_diffuse.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <visual name='bark'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/oak tree/7/files/meshes/oak_tree.dae</uri>
+              <submesh>
+                <name>Bark</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/oak tree/7/files/materials/scripts/</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/oak tree/7/files/materials/textures/</uri>
+              <name>OakTree/Bark</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/oak tree/7/files/materials/textures/bark_diffuse.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>3.3332827381750967 4.9343365849635941 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Pine Tree'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/meshes/pine_tree.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='branch'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Branch</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <double_sided>true</double_sided>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/scripts/</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/textures/</uri>
+              <name>PineTree/Branch</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/textures/branch_2_diffuse.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <visual name='bark'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Bark</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/scripts/</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/textures/</uri>
+              <name>PineTree/Bark</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/textures/bark_diffuse.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>6.1277081139566576 -7.7897235026200047 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='OfficeChair'>
+      <static>true</static>
+      <link name='base_link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/kiranchand/.gz/fuel/fuel.gazebosim.org/openrobotics/models/office chair/1/meshes/officechair.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>materials/textures/OfficeChair_Albedo.png</albedo_map>
+                <normal_map>materials/textures/OfficeChair_Normal.png</normal_map>
+                <roughness_map>materials/textures/OfficeChair_Roughness.png</roughness_map>
+                <metalness_map>materials/textures/OfficeChair_Metalness.png</metalness_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='Box001'>
+          <pose>0 0.039620000000000002 0.46684999999999999 0.087266499999999997 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.51124899999999995 0.57835899999999996 0.108987</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Box002'>
+          <pose>0 -0.20027800000000001 0.76638499999999998 -1.48353 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.51124899999999995 0.66511299999999995 0.108987</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Cylinder001'>
+          <pose>0 0 0.23957700000000001 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.39559100000000003</length>
+              <radius>0.0321281</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Cylinder002'>
+          <pose>0.40693400000000002 -0.124695 0.037183000000000001 1.5707999999999998 0 -0.067165100000000019</pose>
+          <geometry>
+            <cylinder>
+              <length>0.058403099999999999</length>
+              <radius>0.0379998</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Cylinder003'>
+          <pose>0.243918 0.34860400000000002 0.037183000000000001 1.5708 0 1.17814</pose>
+          <geometry>
+            <cylinder>
+              <length>0.058403099999999999</length>
+              <radius>0.0379998</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Cylinder004'>
+          <pose>-0.25597700000000001 0.33987299999999998 0.037183000000000001 1.5708 5.5511151231257827e-17 2.4422899999999998</pose>
+          <geometry>
+            <cylinder>
+              <length>0.058403099999999999</length>
+              <radius>0.0379998</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Cylinder005'>
+          <pose>-0.40242 -0.13893 0.037183000000000001 1.5708 -5.5511151231257827e-17 -2.5741999999999998</pose>
+          <geometry>
+            <cylinder>
+              <length>0.058403099999999999</length>
+              <radius>0.0379998</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Cylinder006'>
+          <pose>0.0073951599999999996 -0.42568899999999998 0.037183000000000001 1.5708 1.1102230246251565e-16 1.8212999999999999</pose>
+          <geometry>
+            <cylinder>
+              <length>0.058403099999999999</length>
+              <radius>0.0379998</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Box003'>
+          <pose>0 -0.208233 0.12911 0.069925299999999996 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.050442899999999999 0.404478 0.059060799999999997</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Box004'>
+          <pose>-0.19804099999999999 -0.064347500000000002 0.12911 0.069925299999999996 0 -1.25664</pose>
+          <geometry>
+            <box>
+              <size>0.050442899999999999 0.404478 0.059060799999999997</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Box005'>
+          <pose>-0.122396 0.168464 0.12911 0.069925299999999996 0 -2.5132699999999999</pose>
+          <geometry>
+            <box>
+              <size>0.050442899999999999 0.404478 0.059060799999999997</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Box006'>
+          <pose>0.122396 0.168464 0.12911 0.069925299999999996 0 2.5132699999999999</pose>
+          <geometry>
+            <box>
+              <size>0.050442899999999999 0.404478 0.059060799999999997</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Box007'>
+          <pose>0.19804099999999999 -0.064347699999999994 0.12911 0.069925299999999996 0 1.25664</pose>
+          <geometry>
+            <box>
+              <size>0.050442899999999999 0.404478 0.059060799999999997</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Box008'>
+          <pose>-0.275812 -0.0026205 0.74155499999999996 1.5708 0.13962600000000008 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.26451999999999998 0.043899199999999999 0.065929100000000004</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Box009'>
+          <pose>-0.27317900000000001 -0.018006399999999999 0.59989199999999998 1.5708 0.13962600000000008 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.066130099999999997 0.28095500000000001 0.036920300000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Box010'>
+          <pose>0.27596500000000002 -0.0026205199999999999 0.74155499999999996 1.5708 -0.13962600000000008 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.26451999999999998 0.043899199999999999 0.065929100000000004</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name='Box011'>
+          <pose>0.27345999999999998 -0.018006399999999999 0.59989199999999998 1.5708 -0.13962600000000008 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.066130099999999997 0.28095500000000001 0.036920300000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-3.2868599891662598 -8.3487358093261719 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='humanod_from_mjcf'>
+      <static>false</static>
+      <self_collide>false</self_collide>
+      <allow_auto_disable>true</allow_auto_disable>
+      <enable_wind>false</enable_wind>
+      <pose>2.5448099758621097 4.3788755101594283 -0.53820748431299448 -0.71282996008800936 0.85456380769252327 -1.3645939909063616</pose>
+      <link name='torso'>
+        <pose>0 0 1.5 0 0 0</pose>
+        <inertial>
+          <pose>-0.00386404 0 -0.0463685 0 0.08314120000000004 0</pose>
+          <mass>5.8538300000000003</mass>
+          <inertia>
+            <ixx>0.051274199999999999</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.031966700000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.031149300000000001</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_torso'>
+          <pose>0 0 0 1.5708 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.070000000000000007</radius>
+              <length>0.14000000000000001</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <collision name='collision_upper_waist'>
+          <pose>-0.01 0 -0.12 1.5708 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.059999999999999998</radius>
+              <length>0.12</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <light name='top' type='spot'>
+          <pose>0 0 2 0 0 0</pose>
+          <cast_shadows>false</cast_shadows>
+          <intensity>1</intensity>
+          <direction>0 0 -1</direction>
+          <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+          <specular>0.300000012 0.300000012 0.300000012 1</specular>
+          <attenuation>
+            <range>10</range>
+            <linear>0</linear>
+            <constant>1</constant>
+            <quadratic>0</quadratic>
+          </attenuation>
+          <spot>
+            <inner_angle>0</inner_angle>
+            <outer_angle>1.5708</outer_angle>
+            <falloff>2</falloff>
+          </spot>
+        </light>
+        <sensor name='back' type='camera'>
+          <pose>-3 0 1 7.8504600000000004e-17 7.8504600000000004e-17 -7.8504600000000004e-17</pose>
+          <topic>__default__</topic>
+          <update_rate>25</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <camera name='__default__'>
+            <pose>0 0 0 0 0 0</pose>
+            <horizontal_fov>1.0469999999999999</horizontal_fov>
+            <image>
+              <width>320</width>
+              <height>240</height>
+              <format>RGB_INT8</format>
+              <anti_aliasing>4</anti_aliasing>
+            </image>
+            <camera_info_topic>__default__</camera_info_topic>
+            <trigger_topic></trigger_topic>
+            <triggered>false</triggered>
+            <clip>
+              <near>0.10000000000000001</near>
+              <far>100</far>
+            </clip>
+            <save enabled='false'>
+              <path>__default__</path>
+            </save>
+            <visibility_mask>4294967295</visibility_mask>
+            <noise>
+              <type>none</type>
+              <mean>0</mean>
+              <stddev>0</stddev>
+            </noise>
+            <distortion>
+              <k1>0</k1>
+              <k2>0</k2>
+              <k3>0</k3>
+              <p1>0</p1>
+              <p2>0</p2>
+              <center>0.5 0.5</center>
+            </distortion>
+            <lens>
+              <type>stereographic</type>
+              <scale_to_hfov>true</scale_to_hfov>
+              <cutoff_angle>1.5708</cutoff_angle>
+              <env_texture_size>256</env_texture_size>
+            </lens>
+            <optical_frame_id></optical_frame_id>
+          </camera>
+        </sensor>
+        <sensor name='side' type='camera'>
+          <pose>0 -3 1 2.2204499999999999e-16 2.4651903288156619e-32 1.5708</pose>
+          <topic>__default__</topic>
+          <update_rate>25</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <camera name='__default__'>
+            <pose>0 0 0 0 0 0</pose>
+            <horizontal_fov>1.0469999999999999</horizontal_fov>
+            <image>
+              <width>320</width>
+              <height>240</height>
+              <format>RGB_INT8</format>
+              <anti_aliasing>4</anti_aliasing>
+            </image>
+            <camera_info_topic>__default__</camera_info_topic>
+            <trigger_topic></trigger_topic>
+            <triggered>false</triggered>
+            <clip>
+              <near>0.10000000000000001</near>
+              <far>100</far>
+            </clip>
+            <save enabled='false'>
+              <path>__default__</path>
+            </save>
+            <visibility_mask>4294967295</visibility_mask>
+            <noise>
+              <type>none</type>
+              <mean>0</mean>
+              <stddev>0</stddev>
+            </noise>
+            <distortion>
+              <k1>0</k1>
+              <k2>0</k2>
+              <k3>0</k3>
+              <p1>0</p1>
+              <p2>0</p2>
+              <center>0.5 0.5</center>
+            </distortion>
+            <lens>
+              <type>stereographic</type>
+              <scale_to_hfov>true</scale_to_hfov>
+              <cutoff_angle>1.5708</cutoff_angle>
+              <env_texture_size>256</env_texture_size>
+            </lens>
+            <optical_frame_id></optical_frame_id>
+          </camera>
+        </sensor>
+        <visual name='visual_torso'>
+          <pose>0 0 0 1.5708 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.070000000000000007</radius>
+              <length>0.14000000000000001</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+        <visual name='visual_upper_waist'>
+          <pose>-0.01 0 -0.12 1.5708 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.059999999999999998</radius>
+              <length>0.12</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='head'>
+        <pose>0 1.7763568394002505e-15 1.6900000000000013 1.6653345369377348e-16 -7.1275450819197061e-16 -5.9348734942507915e-32</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>3.0536300000000001</mass>
+          <inertia>
+            <ixx>0.0098937499999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0098937499999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.0098937499999999998</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_head'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.089999999999999997</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <sensor name='egocentric' type='camera'>
+          <pose>0.089999999999999997 0 0 2.0641799999999988e-16 0.095166200000000006 -3.2285999999999984e-16</pose>
+          <topic>__default__</topic>
+          <update_rate>25</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <camera name='__default__'>
+            <pose>0 0 0 0 0 0</pose>
+            <horizontal_fov>1.0469999999999999</horizontal_fov>
+            <image>
+              <width>320</width>
+              <height>240</height>
+              <format>RGB_INT8</format>
+              <anti_aliasing>4</anti_aliasing>
+            </image>
+            <camera_info_topic>__default__</camera_info_topic>
+            <trigger_topic></trigger_topic>
+            <triggered>false</triggered>
+            <clip>
+              <near>0.10000000000000001</near>
+              <far>100</far>
+            </clip>
+            <save enabled='false'>
+              <path>__default__</path>
+            </save>
+            <visibility_mask>4294967295</visibility_mask>
+            <noise>
+              <type>none</type>
+              <mean>0</mean>
+              <stddev>0</stddev>
+            </noise>
+            <distortion>
+              <k1>0</k1>
+              <k2>0</k2>
+              <k3>0</k3>
+              <p1>0</p1>
+              <p2>0</p2>
+              <center>0.5 0.5</center>
+            </distortion>
+            <lens>
+              <type>stereographic</type>
+              <scale_to_hfov>true</scale_to_hfov>
+              <cutoff_angle>1.5708</cutoff_angle>
+              <env_texture_size>256</env_texture_size>
+            </lens>
+            <optical_frame_id></optical_frame_id>
+          </camera>
+        </sensor>
+        <visual name='visual_head'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.089999999999999997</radius>
+            </sphere>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='lower_waist'>
+        <pose>-0.028713365916392508 -0.0093121781888401145 1.2434525120459132 -2.9312527204387672e-17 0.32739137618254172 0.46174321219167797</pose>
+        <inertial>
+          <pose>0 0 0 1.5708 0 0</pose>
+          <mass>2.2619500000000001</mass>
+          <inertia>
+            <ixx>0.0098530400000000004</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0098530400000000004</iyy>
+            <iyz>0</iyz>
+            <izz>0.0037457800000000002</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_lower_waist'>
+          <pose>0 0 0 1.5708 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.059999999999999998</radius>
+              <length>0.12</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_lower_waist'>
+          <pose>0 0 0 1.5708 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.059999999999999998</radius>
+              <length>0.12</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='lower_waist_dummy_0'>
+        <pose>-0.0099999999999988987 8.8817841970012523e-16 1.2400000000000009 -2.2229199491852151e-16 -9.4567010196203731e-16 0.46174321219167835</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>9.9999999999999995e-07</mass>
+          <inertia>
+            <ixx>3.9999999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.9999999999999998e-07</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-07</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='pelvis'>
+        <pose>-0.077874604998719121 -0.029567527596033649 1.0872838107020317 0.037685347690583022 0.32739137618254088 0.46174321219167741</pose>
+        <inertial>
+          <pose>-0.02 0 0 1.5708 0 0</pose>
+          <mass>6.6161899999999996</mass>
+          <inertia>
+            <ixx>0.052318000000000003</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.052318000000000003</iyy>
+            <iyz>0</iyz>
+            <izz>0.024322099999999999</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_butt'>
+          <pose>-0.02 0 0 1.5708 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.089999999999999997</radius>
+              <length>0.14000000000000001</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_butt'>
+          <pose>-0.02 0 0 1.5708 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.089999999999999997</radius>
+              <length>0.14000000000000001</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='right_thigh'>
+        <pose>-0.046619138292701479 -0.12394872332954066 1.0458678030129474 -0.34054518011049906 0.4595290586002167 0.39873370778583783</pose>
+        <inertial>
+          <pose>0 0.0050000000000000001 -0.17000000000000001 0.02940329999999999 0 0</pose>
+          <mass>4.7517500000000004</mass>
+          <inertia>
+            <ixx>0.074951699999999996</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074951699999999996</iyy>
+            <iyz>0</iyz>
+            <izz>0.0082274300000000009</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_right_thigh'>
+          <pose>0 0.0050000000000000001 -0.17000000000000001 0.029403299999999993 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.059999999999999998</radius>
+              <length>0.34014699999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_right_thigh'>
+          <pose>0 0.0050000000000000001 -0.17000000000000001 0.029403299999999993 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.059999999999999998</radius>
+              <length>0.34014699999999998</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='right_thigh_dummy_0'>
+        <pose>-0.046618132881000029 -0.12394867423652745 1.0458678482773707 -0.31723047312103386 0.32738736892012427 0.46174055459103008</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>9.9999999999999995e-07</mass>
+          <inertia>
+            <ixx>3.9999999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.9999999999999998e-07</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-07</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='right_thigh_dummy_1'>
+        <pose>-0.046618132881000029 -0.12394867423652745 1.0458678482773713 -0.32122774724551906 0.32347174062191397 0.44923814021391423</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>9.9999999999999995e-07</mass>
+          <inertia>
+            <ixx>3.9999999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.9999999999999998e-07</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-07</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='right_shin'>
+        <pose>-0.15851596583142369 -0.30670514780440072 0.70509672438244209 -0.39848238343238479 0.68960230685647683 0.29290224150087368</pose>
+        <inertial>
+          <pose>0 0 -0.14999999999999999 0 0 0</pose>
+          <mass>2.7557</mass>
+          <inertia>
+            <ixx>0.032607999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.032607999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.0031898899999999999</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_right_shin'>
+          <pose>0 0 -0.14999999999999999 0 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.049000000000000002</radius>
+              <length>0.29999999999999999</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_right_shin'>
+          <pose>0 0 -0.14999999999999999 0 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.049000000000000002</radius>
+              <length>0.29999999999999999</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='right_foot'>
+        <pose>-0.34024670426983494 -0.52168910949273695 0.43616303184288063 -0.54512351942040893 0.79993000925645397 0.17445295693411811</pose>
+        <inertial>
+          <pose>0.035000000000000003 -0.01 0 2.6535897933102466e-06 -1.5707926536359933 3.1415926535897931</pose>
+          <mass>1.13114</mass>
+          <inertia>
+            <ixx>0.0064464600000000002</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0059437200000000004</iyy>
+            <iyz>0</iyz>
+            <izz>0.00090301699999999999</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_right_right_foot'>
+          <pose>0.035000000000000003 -0.029999999999999999 0 -1.5707999999999998 -1.47584 1.47584</pose>
+          <geometry>
+            <capsule>
+              <radius>0.027</radius>
+              <length>0.21095</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <collision name='collision_left_right_foot'>
+          <pose>0.035000000000000003 0.01 0 1.5707999999999998 -1.47584 -1.47584</pose>
+          <geometry>
+            <capsule>
+              <radius>0.027</radius>
+              <length>0.21095</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_right_right_foot'>
+          <pose>0.035000000000000003 -0.029999999999999999 0 -1.5707999999999998 -1.47584 1.47584</pose>
+          <geometry>
+            <capsule>
+              <radius>0.027</radius>
+              <length>0.21095</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+        <visual name='visual_left_right_foot'>
+          <pose>0.035000000000000003 0.01 0 1.5707999999999998 -1.47584 -1.47584</pose>
+          <geometry>
+            <capsule>
+              <radius>0.027</radius>
+              <length>0.21095</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='right_foot_dummy_0'>
+        <pose>-0.34154866673836626 -0.51965567545195412 0.4353174233925754 -0.45177926445464667 0.81522141683491112 0.21508922472239589</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>9.9999999999999995e-07</mass>
+          <inertia>
+            <ixx>3.9999999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.9999999999999998e-07</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-07</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='left_thigh'>
+        <pose>-0.13348718239118629 0.056059301212010304 1.0530020624678933 0.01259513654903311 0.52148337464991723 0.65292000145459606</pose>
+        <inertial>
+          <pose>0 -0.0050000000000000001 -0.17000000000000001 -0.02940329999999999 0 0</pose>
+          <mass>4.7517500000000004</mass>
+          <inertia>
+            <ixx>0.074951699999999996</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074951699999999996</iyy>
+            <iyz>0</iyz>
+            <izz>0.0082274300000000009</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_left_thigh'>
+          <pose>0 -0.0050000000000000001 -0.17000000000000001 -0.029403299999999993 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.059999999999999998</radius>
+              <length>0.34014699999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_left_thigh'>
+          <pose>0 -0.0050000000000000001 -0.17000000000000001 -0.029403299999999993 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.059999999999999998</radius>
+              <length>0.34014699999999998</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='left_thigh_dummy_0'>
+        <pose>-0.13348718239118718 0.056059301212009416 1.0530020624678937 -0.049585592036656197 0.32738736892012432 0.46174055459103003</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>9.9999999999999995e-07</mass>
+          <inertia>
+            <ixx>3.9999999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.9999999999999998e-07</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-07</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='left_thigh_dummy_1'>
+        <pose>-0.13348718239118629 0.056059301212010304 1.0530020624678933 0.011546979827897328 0.33079343120468235 0.6503958055989697</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>9.9999999999999995e-07</mass>
+          <inertia>
+            <ixx>3.9999999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.9999999999999998e-07</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-07</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='left_shin'>
+        <pose>-0.29466980349246574 -0.073439466434549239 0.70863910885454062 0.01791852227785835 0.91536924943852105 0.66085142078668613</pose>
+        <inertial>
+          <pose>0 0 -0.14999999999999999 0 0 0</pose>
+          <mass>2.7557</mass>
+          <inertia>
+            <ixx>0.032607999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.032607999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.0031898899999999999</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_left_shin'>
+          <pose>0 0 -0.14999999999999999 0 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.049000000000000002</radius>
+              <length>0.29999999999999999</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_left_shin'>
+          <pose>0 0 -0.14999999999999999 0 0 0</pose>
+          <geometry>
+            <capsule>
+              <radius>0.049000000000000002</radius>
+              <length>0.29999999999999999</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='left_foot'>
+        <pose>-0.50506601759411174 -0.23138492137201361 0.44166201898431989 -0.050130662716247471 0.21726621521710293 0.62079886786259719</pose>
+        <inertial>
+          <pose>0.035000000000000003 0.01 0 2.6535897933102466e-06 -1.5707926536359933 3.1415926535897931</pose>
+          <mass>1.13114</mass>
+          <inertia>
+            <ixx>0.0064464600000000002</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0059437200000000004</iyy>
+            <iyz>0</iyz>
+            <izz>0.00090301699999999999</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_left_left_foot'>
+          <pose>0.035000000000000003 0.029999999999999999 0 1.5707999999999998 -1.47584 -1.47584</pose>
+          <geometry>
+            <capsule>
+              <radius>0.027</radius>
+              <length>0.21095</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <collision name='collision_right_left_foot'>
+          <pose>0.035000000000000003 -0.01 0 -1.5707999999999998 -1.47584 1.47584</pose>
+          <geometry>
+            <capsule>
+              <radius>0.027</radius>
+              <length>0.21095</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_left_left_foot'>
+          <pose>0.035000000000000003 0.029999999999999999 0 1.5707999999999998 -1.47584 -1.47584</pose>
+          <geometry>
+            <capsule>
+              <radius>0.027</radius>
+              <length>0.21095</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+        <visual name='visual_right_left_foot'>
+          <pose>0.035000000000000003 -0.01 0 -1.5707999999999998 -1.47584 1.47584</pose>
+          <geometry>
+            <capsule>
+              <radius>0.027</radius>
+              <length>0.21095</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='left_foot_dummy_0'>
+        <pose>-0.50638293090790931 -0.22961296716690249 0.44162003246023707 0.011185201874225824 0.21780371492461803 0.64906233079317732</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>9.9999999999999995e-07</mass>
+          <inertia>
+            <ixx>3.9999999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.9999999999999998e-07</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-07</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='right_upper_arm'>
+        <pose>-4.4408920985006262e-16 -0.16999999999999993 1.5599999999999992 0.48884114961825337 -0.3551265585519926 0.44174148382715939</pose>
+        <inertial>
+          <pose>0.080000000000000002 -0.080000000000000002 -0.080000000000000002 -0.78539800000000026 -0.61548000000000003 0.26179900000000006</pose>
+          <mass>1.6610799999999999</mass>
+          <inertia>
+            <ixx>0.015905499999999999</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.015905499999999999</iyy>
+            <iyz>0</iyz>
+            <izz>0.00128597</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_right_upper_arm'>
+          <pose>0.080000000000000002 -0.080000000000000002 -0.080000000000000002 -0.78539800000000026 -0.61548000000000003 0.26179900000000006</pose>
+          <geometry>
+            <capsule>
+              <radius>0.040000000000000001</radius>
+              <length>0.27712799999999999</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_right_upper_arm'>
+          <pose>0.080000000000000002 -0.080000000000000002 -0.080000000000000002 -0.78539800000000026 -0.61548000000000003 0.26179900000000006</pose>
+          <geometry>
+            <capsule>
+              <radius>0.040000000000000001</radius>
+              <length>0.27712799999999999</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='right_upper_arm_dummy_0'>
+        <pose>-4.4408920985006262e-16 -0.16999999999999904 1.5600000000000001 0.50367271725719054 0.17023334289219172 0.28689726820990608</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>9.9999999999999995e-07</mass>
+          <inertia>
+            <ixx>3.9999999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.9999999999999998e-07</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-07</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='right_lower_arm'>
+        <pose>0.26089368501057897 -0.12890924585350039 1.3943315508454539 0.50249954607003289 -0.19230044120325504 0.39138979437184923</pose>
+        <inertial>
+          <pose>0.089999999999999997 0.089999999999999997 0.089999999999999997 2.3561899999999998 -0.61548000000000003 -1.3089999999999999</pose>
+          <mass>0.96145800000000003</mass>
+          <inertia>
+            <ixx>0.0084016200000000003</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0084016200000000003</iyy>
+            <iyz>0</iyz>
+            <izz>0.00044998800000000002</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_right_lower_arm'>
+          <pose>0.089999999999999997 0.089999999999999997 0.089999999999999997 2.3561899999999998 -0.61548000000000003 -1.3089999999999999</pose>
+          <geometry>
+            <capsule>
+              <radius>0.031</radius>
+              <length>0.27712799999999999</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_right_lower_arm'>
+          <pose>0.089999999999999997 0.089999999999999997 0.089999999999999997 2.3561899999999998 -0.61548000000000003 -1.3089999999999999</pose>
+          <geometry>
+            <capsule>
+              <radius>0.031</radius>
+              <length>0.27712799999999999</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='right_hand'>
+        <pose>0.35392450165831857 -0.01364678599509439 1.6686668065113004 0.50249954607003444 -0.19230044120325437 0.39138979437184773</pose>
+        <inertial>
+          <pose>0 0 0 -0.78539800000000026 0.61548000000000003 -0.26179900000000006</pose>
+          <mass>0.26808300000000002</mass>
+          <inertia>
+            <ixx>0.00017157300000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00017157300000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.00017157300000000001</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_right_hand'>
+          <pose>0 0 0 -0.78539800000000026 0.61548000000000003 -0.26179900000000006</pose>
+          <geometry>
+            <sphere>
+              <radius>0.040000000000000001</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_right_hand'>
+          <pose>0 0 0 -0.78539800000000026 0.61548000000000003 -0.26179900000000006</pose>
+          <geometry>
+            <sphere>
+              <radius>0.040000000000000001</radius>
+            </sphere>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='left_upper_arm'>
+        <pose>-4.4408920985006262e-16 0.17000000000000082 1.5600000000000005 -0.04488350867732141 -0.13767244240623258 -0.17500653261690008</pose>
+        <inertial>
+          <pose>0.080000000000000002 0.080000000000000002 -0.080000000000000002 0.78539800000000026 -0.61548000000000003 -0.26179900000000006</pose>
+          <mass>1.6610799999999999</mass>
+          <inertia>
+            <ixx>0.015905499999999999</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.015905499999999999</iyy>
+            <iyz>0</iyz>
+            <izz>0.00128597</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_left_upper_arm'>
+          <pose>0.080000000000000002 0.080000000000000002 -0.080000000000000002 0.78539800000000026 -0.61548000000000003 -0.26179900000000006</pose>
+          <geometry>
+            <capsule>
+              <radius>0.040000000000000001</radius>
+              <length>0.27712799999999999</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_left_upper_arm'>
+          <pose>0.080000000000000002 0.080000000000000002 -0.080000000000000002 0.78539800000000026 -0.61548000000000003 -0.26179900000000006</pose>
+          <geometry>
+            <capsule>
+              <radius>0.040000000000000001</radius>
+              <length>0.27712799999999999</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='left_upper_arm_dummy_0'>
+        <pose>-8.8817841970012523e-16 0.17000000000000082 1.5600000000000016 -0.053201169414376345 0.025709624756734092 -0.027114957766811242</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>9.9999999999999995e-07</mass>
+          <inertia>
+            <ixx>3.9999999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.9999999999999998e-07</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-07</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='left_lower_arm'>
+        <pose>0.23086875664604722 0.30358525020578497 1.3985856322003341 0.015905002022641234 -0.37524824613563434 -0.4119238845004583</pose>
+        <inertial>
+          <pose>0.089999999999999997 -0.089999999999999997 0.089999999999999997 -2.3561899999999998 -0.61548000000000003 1.3089999999999999</pose>
+          <mass>0.96145800000000003</mass>
+          <inertia>
+            <ixx>0.0084016200000000003</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0084016200000000003</iyy>
+            <iyz>0</iyz>
+            <izz>0.00044998800000000002</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_left_lower_arm'>
+          <pose>0.089999999999999997 -0.089999999999999997 0.089999999999999997 -2.3561899999999998 -0.61548000000000003 1.3089999999999999</pose>
+          <geometry>
+            <capsule>
+              <radius>0.031</radius>
+              <length>0.27712799999999999</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_left_lower_arm'>
+          <pose>0.089999999999999997 -0.089999999999999997 0.089999999999999997 -2.3561899999999998 -0.61548000000000003 1.3089999999999999</pose>
+          <geometry>
+            <capsule>
+              <radius>0.031</radius>
+              <length>0.27712799999999999</length>
+            </capsule>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <link name='left_hand'>
+        <pose>0.25164740358456861 0.094976363058451696 1.6293465041751038 0.015905002022642209 -0.37524824613563518 -0.4119238845004598</pose>
+        <inertial>
+          <pose>0 0 0 0.78539800000000026 0.61548000000000003 0.26179900000000006</pose>
+          <mass>0.26808300000000002</mass>
+          <inertia>
+            <ixx>0.00017157300000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00017157300000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.00017157300000000001</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <collision name='collision_left_hand'>
+          <pose>0 0 0 0.78539800000000026 0.61548000000000003 0.26179900000000006</pose>
+          <geometry>
+            <sphere>
+              <radius>0.040000000000000001</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>255</collide_bitmask>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.69999999999999996</mu>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual_left_hand'>
+          <pose>0 0 0 0.78539800000000026 0.61548000000000003 0.26179900000000006</pose>
+          <geometry>
+            <sphere>
+              <radius>0.040000000000000001</radius>
+            </sphere>
+          </geometry>
+          <cast_shadows>true</cast_shadows>
+          <laser_retro>0</laser_retro>
+          <transparency>0</transparency>
+          <visibility_flags>4294967295</visibility_flags>
+          <material>
+            <ambient>0.800000012 0.600000024 0.400000006 1</ambient>
+            <diffuse>0.800000012 0.600000024 0.400000006 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <render_order>0</render_order>
+            <lighting>true</lighting>
+            <double_sided>false</double_sided>
+            <shader type='pixel'/>
+          </material>
+        </visual>
+      </link>
+      <joint name='fixed_torso_head_joint' type='fixed'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>torso</parent>
+        <child>head</child>
+      </joint>
+      <joint name='joint_abdomen_z' type='revolute'>
+        <pose>0 0 0.064999999999999947 0 0 0</pose>
+        <parent>torso</parent>
+        <child>lower_waist_dummy_0</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-0.78539800000000004</lower>
+            <upper>0.78539800000000004</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>20</spring_stiffness>
+            <damping>5</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_abdomen_y' type='revolute'>
+        <pose>0 0 0.064999999999999947 0 0 0</pose>
+        <parent>lower_waist_dummy_0</parent>
+        <child>lower_waist</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.3089999999999999</lower>
+            <upper>0.52359900000000004</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>10</spring_stiffness>
+            <damping>5</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_abdomen_x' type='revolute'>
+        <pose>0 0 0.10000000000000009 0 0 0</pose>
+        <parent>lower_waist</parent>
+        <child>pelvis</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-0.61086499999999999</lower>
+            <upper>0.61086499999999999</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>10</spring_stiffness>
+            <damping>5</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_right_hip_x' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>pelvis</parent>
+        <child>right_thigh_dummy_0</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-0.436332</lower>
+            <upper>0.087266499999999997</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>10</spring_stiffness>
+            <damping>5</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_right_hip_z' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>right_thigh_dummy_0</parent>
+        <child>right_thigh_dummy_1</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1.0471999999999999</lower>
+            <upper>0.61086499999999999</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>10</spring_stiffness>
+            <damping>5</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_right_hip_y' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>right_thigh_dummy_1</parent>
+        <child>right_thigh</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.9198599999999999</lower>
+            <upper>0.34906599999999999</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>20</spring_stiffness>
+            <damping>5</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_right_knee' type='revolute'>
+        <pose>0 0 0.020000000000000018 0 0 0</pose>
+        <parent>right_thigh</parent>
+        <child>right_shin</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-2.7925300000000002</lower>
+            <upper>0.034906600000000003</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>1</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_right_ankle_y' type='revolute'>
+        <pose>0 0 0.079999999999999849 0 0 0</pose>
+        <parent>right_shin</parent>
+        <child>right_foot_dummy_0</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.87266500000000002</lower>
+            <upper>0.87266500000000002</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>6</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_right_ankle_x' type='revolute'>
+        <pose>0 0 0.039999999999999813 0 0 0</pose>
+        <parent>right_foot_dummy_0</parent>
+        <child>right_foot</child>
+        <axis>
+          <xyz>0.89442699099982848 0 0.4472139954999092</xyz>
+          <limit>
+            <lower>-0.87266500000000002</lower>
+            <upper>0.87266500000000002</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>3</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_left_hip_x' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>pelvis</parent>
+        <child>left_thigh_dummy_0</child>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-0.436332</lower>
+            <upper>0.087266499999999997</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>10</spring_stiffness>
+            <damping>5</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_left_hip_z' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>left_thigh_dummy_0</parent>
+        <child>left_thigh_dummy_1</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1.0471999999999999</lower>
+            <upper>0.61086499999999999</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>10</spring_stiffness>
+            <damping>5</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_left_hip_y' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>left_thigh_dummy_1</parent>
+        <child>left_thigh</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.9198599999999999</lower>
+            <upper>0.34906599999999999</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>20</spring_stiffness>
+            <damping>5</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_left_knee' type='revolute'>
+        <pose>0 0 0.020000000000000018 0 0 0</pose>
+        <parent>left_thigh</parent>
+        <child>left_shin</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-2.7925300000000002</lower>
+            <upper>0.034906600000000003</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>1</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_left_ankle_y' type='revolute'>
+        <pose>0 0 0.079999999999999849 0 0 0</pose>
+        <parent>left_shin</parent>
+        <child>left_foot_dummy_0</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.87266500000000002</lower>
+            <upper>0.87266500000000002</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>6</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_left_ankle_x' type='revolute'>
+        <pose>0 0 0.039999999999999813 0 0 0</pose>
+        <parent>left_foot_dummy_0</parent>
+        <child>left_foot</child>
+        <axis>
+          <xyz>0.89442699099982848 0 0.4472139954999092</xyz>
+          <limit>
+            <lower>-0.87266500000000002</lower>
+            <upper>0.87266500000000002</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>3</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_right_shoulder1' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>torso</parent>
+        <child>right_upper_arm_dummy_0</child>
+        <axis>
+          <xyz>0.81649691426088833 0.40824795713049666 0.40824795713049666</xyz>
+          <limit>
+            <lower>-1.48353</lower>
+            <upper>1.0471999999999999</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>1</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_right_shoulder2' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>right_upper_arm_dummy_0</parent>
+        <child>right_upper_arm</child>
+        <axis>
+          <xyz>0 -0.70710678118654757 0.70710678118654757</xyz>
+          <limit>
+            <lower>-1.48353</lower>
+            <upper>1.0471999999999999</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>1</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_right_elbow' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>right_upper_arm</parent>
+        <child>right_lower_arm</child>
+        <axis>
+          <xyz>0 -0.70710678118654757 0.70710678118654757</xyz>
+          <limit>
+            <lower>-1.5708</lower>
+            <upper>0.87266500000000002</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='fixed_right_lower_arm_right_hand_joint' type='fixed'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>right_lower_arm</parent>
+        <child>right_hand</child>
+      </joint>
+      <joint name='joint_left_shoulder1' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>torso</parent>
+        <child>left_upper_arm_dummy_0</child>
+        <axis>
+          <xyz>0.81649691426088833 -0.40824795713049666 0.40824795713049666</xyz>
+          <limit>
+            <lower>-1.0471999999999999</lower>
+            <upper>1.48353</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>1</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_left_shoulder2' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>left_upper_arm_dummy_0</parent>
+        <child>left_upper_arm</child>
+        <axis>
+          <xyz>0 0.70710678118654757 0.70710678118654757</xyz>
+          <limit>
+            <lower>-1.0471999999999999</lower>
+            <upper>1.48353</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>1</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='joint_left_elbow' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>left_upper_arm</parent>
+        <child>left_lower_arm</child>
+        <axis>
+          <xyz>0 -0.70710678118654757 -0.70710678118654757</xyz>
+          <limit>
+            <lower>-1.5708</lower>
+            <upper>0.87266500000000002</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.20000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='fixed_left_lower_arm_left_hand_joint' type='fixed'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>left_lower_arm</parent>
+        <child>left_hand</child>
+      </joint>
+    </model>
+    <model name='cylinder'>
+      <pose>-1.7852916997891786 -4.9330607397382948 0.49999943207967634 -1.8317796548835274e-19 1.8291930453031073e-19 3.7821432539631539e-20</pose>
+      <link name='cylinder_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.14580000000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.14580000000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.125</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='cylinder_collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='cylinder_visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cylinder_0'>
+      <pose>7.9348020425405394 0.2219017163436563 0.49999943207967634 2.7120257298276201e-19 -3.3597530694858341e-20 3.7424880247309598e-20</pose>
+      <link name='cylinder_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.14580000000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.14580000000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.125</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='cylinder_collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='cylinder_visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cone'>
+      <pose>-5.2334399234616056 5.3804774283384074 0.49999999990217003 1.5074091324028823e-10 5.043767910941838e-10 3.3448848317788373e-14</pose>
+      <link name='cone_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074999999999999997</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074999999999999997</iyy>
+            <iyz>0</iyz>
+            <izz>0.074999999999999997</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='cone_collision'>
+          <geometry>
+            <cone>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cone>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='cone_visual'>
+          <geometry>
+            <cone>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cone>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cutout_wall_5'>
+      <static>true</static>
+      <link name='link'>
+        <pose>0 0 1.3999999999999999 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+              <collide_without_contact_bitmask>2</collide_without_contact_bitmask>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/scripts</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/textures</uri>
+              <name>drc_practice/cutout_wall</name>
+            </script>
+          </material>
+        </visual>
+        <sensor name='mud_contact' type='contact'>
+          <always_on>true</always_on>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>collision</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <plugin name='gazebo_mud' filename='libMudPlugin.so'>
+        <contact_sensor_name>link/mud_contact</contact_sensor_name>
+        <stiffness>0.0</stiffness>
+        <damping>40.0</damping>
+        <contact_surface_bitmask>2</contact_surface_bitmask>
+        <link_name>drill::link</link_name>
+      </plugin>
+      <pose>-9.0003976821899414 4.9035530090332031 -0.6981779932975769 0 0 -1.5732099930125898</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cutout_wall_6'>
+      <static>true</static>
+      <link name='link'>
+        <pose>0 0 1.3999999999999999 0 0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+              <collide_without_contact_bitmask>2</collide_without_contact_bitmask>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <box>
+              <size>10 0.20000000000000001 3.7999999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/scripts</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/cutout wall/2/files/materials/textures</uri>
+              <name>drc_practice/cutout_wall</name>
+            </script>
+          </material>
+        </visual>
+        <sensor name='mud_contact' type='contact'>
+          <always_on>true</always_on>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>collision</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <plugin name='gazebo_mud' filename='libMudPlugin.so'>
+        <contact_sensor_name>link/mud_contact</contact_sensor_name>
+        <stiffness>0.0</stiffness>
+        <damping>40.0</damping>
+        <contact_surface_bitmask>2</contact_surface_bitmask>
+        <link_name>drill::link</link_name>
+      </plugin>
+      <pose>-1.4285693168640137 5.0918540954589844 -0.76978510618209839 -1.0063813223582227e-09 0.0038256400405619561 -1.5785900716637775</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

@@ -3,7 +3,8 @@
 
   <ros2_control name="SlambotReal" type="system">
     <hardware>
-      <plugin>slambot_hardware/SlambotHardwareInterface</plugin>
+      <plugin>kc_vision_hardware/KCVisionHardwareInterface</plugin>
+      <!-- <plugin>slambot_hardware/SlambotHardwareInterface</plugin> -->
     </hardware>
 
 

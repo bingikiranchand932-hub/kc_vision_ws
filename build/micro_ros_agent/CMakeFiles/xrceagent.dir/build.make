@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kiranchand/kc_vision_ws/src/micro-ROS-agent/micro_ros_agent
+CMAKE_SOURCE_DIR = /home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/kiranchand/kc_vision_ws/build/micro_ros_agent
@@ -142,6 +142,6 @@ CMakeFiles/xrceagent.dir/clean:
 .PHONY : CMakeFiles/xrceagent.dir/clean
 
 CMakeFiles/xrceagent.dir/depend:
-	cd /home/kiranchand/kc_vision_ws/build/micro_ros_agent && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kiranchand/kc_vision_ws/src/micro-ROS-agent/micro_ros_agent /home/kiranchand/kc_vision_ws/src/micro-ROS-agent/micro_ros_agent /home/kiranchand/kc_vision_ws/build/micro_ros_agent /home/kiranchand/kc_vision_ws/build/micro_ros_agent /home/kiranchand/kc_vision_ws/build/micro_ros_agent/CMakeFiles/xrceagent.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kiranchand/kc_vision_ws/build/micro_ros_agent && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent /home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent /home/kiranchand/kc_vision_ws/build/micro_ros_agent /home/kiranchand/kc_vision_ws/build/micro_ros_agent /home/kiranchand/kc_vision_ws/build/micro_ros_agent/CMakeFiles/xrceagent.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/xrceagent.dir/depend
 

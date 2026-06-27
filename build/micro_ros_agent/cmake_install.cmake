@@ -1,4 +1,4 @@
-# Install script for directory: /home/kiranchand/kc_vision_ws/src/micro-ROS-agent/micro_ros_agent
+# Install script for directory: /home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,7 +43,94 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/micro_ros_agent")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/micro_ros_agent")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent/environment" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent/environment" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_environment_hooks/path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_environment_hooks/local_setup.bash")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_environment_hooks/local_setup.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_environment_hooks/local_setup.zsh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_environment_hooks/local_setup.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_environment_hooks/package.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_index/share/ament_index/resource_index/packages/micro_ros_agent")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent/cmake" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent/cmake" TYPE FILE FILES
+    "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_core/micro_ros_agentConfig.cmake"
+    "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/ament_cmake_core/micro_ros_agentConfig-version.cmake"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent" TYPE FILE FILES "/home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent/package.xml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/micro_ros_agent/micro_ros_agent" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/micro_ros_agent/micro_ros_agent")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/micro_ros_agent/micro_ros_agent"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/micro_ros_agent" TYPE EXECUTABLE FILES "/home/kiranchand/kc_vision_ws/build/micro_ros_agent/micro_ros_agent")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/micro_ros_agent/micro_ros_agent" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/micro_ros_agent/micro_ros_agent")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/micro_ros_agent/micro_ros_agent"
+         OLD_RPATH "/home/kiranchand/kc_vision_ws/install/micro_ros_msgs/lib:/opt/ros/jazzy/lib:/home/kiranchand/kc_vision_ws/install/micro_ros_agent/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/micro_ros_agent/micro_ros_agent")
+    endif()
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/home/kiranchand/kc_vision_ws/build/micro_ros_agent/CMakeFiles/micro_ros_agent.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/micro_ros_agent" TYPE DIRECTORY FILES "/home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent/launch")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

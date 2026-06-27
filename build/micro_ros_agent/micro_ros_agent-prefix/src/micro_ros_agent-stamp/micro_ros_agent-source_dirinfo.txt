@@ -4,6 +4,6 @@
 
 method=source_dir
 command=
-source_dir=/home/kiranchand/kc_vision_ws/src/micro-ROS-agent/micro_ros_agent
+source_dir=/home/kiranchand/kc_vision_ws/src/uros/micro-ROS-Agent/micro_ros_agent
 work_dir=
 

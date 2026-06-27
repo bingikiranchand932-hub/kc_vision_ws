@@ -197,6 +197,43 @@ kc_vision_hardware_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kc_vision_hardware_uninstall.dir/build.make CMakeFiles/kc_vision_hardware_uninstall.dir/build
 .PHONY : kc_vision_hardware_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named kc_vision_hardware
+
+# Build rule for target.
+kc_vision_hardware: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kc_vision_hardware
+.PHONY : kc_vision_hardware
+
+# fast build rule for target.
+kc_vision_hardware/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kc_vision_hardware.dir/build.make CMakeFiles/kc_vision_hardware.dir/build
+.PHONY : kc_vision_hardware/fast
+
+src/kc_vision_system.o: src/kc_vision_system.cpp.o
+.PHONY : src/kc_vision_system.o
+
+# target to build an object file
+src/kc_vision_system.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kc_vision_hardware.dir/build.make CMakeFiles/kc_vision_hardware.dir/src/kc_vision_system.cpp.o
+.PHONY : src/kc_vision_system.cpp.o
+
+src/kc_vision_system.i: src/kc_vision_system.cpp.i
+.PHONY : src/kc_vision_system.i
+
+# target to preprocess a source file
+src/kc_vision_system.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kc_vision_hardware.dir/build.make CMakeFiles/kc_vision_hardware.dir/src/kc_vision_system.cpp.i
+.PHONY : src/kc_vision_system.cpp.i
+
+src/kc_vision_system.s: src/kc_vision_system.cpp.s
+.PHONY : src/kc_vision_system.s
+
+# target to generate assembly for a file
+src/kc_vision_system.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kc_vision_hardware.dir/build.make CMakeFiles/kc_vision_hardware.dir/src/kc_vision_system.cpp.s
+.PHONY : src/kc_vision_system.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +249,10 @@ help:
 	@echo "... test"
 	@echo "... kc_vision_hardware_uninstall"
 	@echo "... uninstall"
+	@echo "... kc_vision_hardware"
+	@echo "... src/kc_vision_system.o"
+	@echo "... src/kc_vision_system.i"
+	@echo "... src/kc_vision_system.s"
 .PHONY : help
 
 

@@ -12,7 +12,7 @@
         <hardware>
             <plugin>gz_ros2_control/GazeboSimSystem</plugin>
         </hardware>
-        <joint name="front_left_wheel_joint">
+        <!-- <joint name="front_left_wheel_joint">
             <command_interface name="velocity">
                 <param name="min">-10</param>
                 <param name="max">10</param>
@@ -28,7 +28,7 @@
             </command_interface>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
-        </joint>
+        </joint> -->
         <joint name="rear_left_wheel_joint">
             <command_interface name="velocity">
                 <param name="min">-10</param>

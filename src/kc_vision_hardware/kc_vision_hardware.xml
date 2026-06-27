@@ -1,0 +1,9 @@
+<library path="kc_vision_hardware">
+  <class name="kc_vision_hardware/KCVisionHardwareInterface"
+         type="kc_vision_hardware::KCVisionSystemHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      The ros2_control hardware interface for 2-wheel KC Vision, communicating via Micro-ROS.
+    </description>
+  </class>
+</library>

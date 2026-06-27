@@ -8,8 +8,8 @@ controller_manager:
     diff_drive_controller:
       type: diff_drive_controller/DiffDriveController
 
-    imu_sensor_broadcaster:
-      type: imu_sensor_broadcaster/IMUSensorBroadcaster
+    # imu_sensor_broadcaster:
+    #   type: imu_sensor_broadcaster/IMUSensorBroadcaster
 
 
 diff_drive_controller:
@@ -19,7 +19,7 @@ diff_drive_controller:
     # WHEELS
     # -----------------------------
     left_wheel_names: ["rear_left_wheel_joint"]
-    right_wheel_names: ["rear_right_wheel_joint"]
+    right_wheel_names: ["rear_right_wheel_joint",]
 
     wheel_separation: 0.42
     wheel_radius: 0.075
@@ -90,7 +90,7 @@ diff_drive_controller:
        1000000.0, 1000000.0, 0.03]
 
 
-imu_sensor_broadcaster:
-  ros__parameters:
-    sensor_name: imu_sensor
-    frame_id: imu_link_1            
+# imu_sensor_broadcaster:
+#   ros__parameters:
+#     sensor_name: imu_sensor
+#     frame_id: imu_link_1            

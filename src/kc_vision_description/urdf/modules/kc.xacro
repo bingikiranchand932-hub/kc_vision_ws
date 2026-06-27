@@ -622,6 +622,7 @@
   <parent link="A7_-_DC_Geared_Motor_v1_1"/>
   <child link="front_right_rim_1"/>
   <axis xyz="0.0 1.0 0.0"/>
+  <mimic joint="rear_right_wheel_joint" multiplier="1.0" offset="0.0"/>
 </joint>
 
 <joint name="Rigid 17" type="fixed">
@@ -635,6 +636,7 @@
   <parent link="A7_-_DC_Geared_Motor_2_1"/>
   <child link="front_left_rim_1"/>
   <axis xyz="0.0 1.0 0.0"/>
+  <mimic joint="rear_left_wheel_joint" multiplier="1.0" offset="0.0"/>
 </joint>
 
 <joint name="Rigid 19" type="fixed">
