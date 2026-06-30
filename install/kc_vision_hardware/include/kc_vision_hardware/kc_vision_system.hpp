@@ -1,1 +1,0 @@
-/home/kiranchand/kc_vision_ws/src/kc_vision_hardware/include/kc_vision_hardware/kc_vision_system.hpp

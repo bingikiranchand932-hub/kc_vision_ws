@@ -1,1 +1,0 @@
-/home/kiranchand/kc_vision_ws/build/kc_vision_nav2/ament_cmake_core/kc_vision_nav2Config.cmake

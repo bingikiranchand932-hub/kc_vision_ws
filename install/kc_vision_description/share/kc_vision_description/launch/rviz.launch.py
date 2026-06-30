@@ -1,1 +1,0 @@
-/home/kiranchand/kc_vision_ws/src/kc_vision_description/launch/rviz.launch.py

@@ -1,1 +1,0 @@
-/home/kiranchand/kc_vision_ws/build/kc_vision/ament_cmake_core/kc_visionConfig-version.cmake

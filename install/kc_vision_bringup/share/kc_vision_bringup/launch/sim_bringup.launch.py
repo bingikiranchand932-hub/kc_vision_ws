@@ -1,1 +1,0 @@
-/home/kiranchand/kc_vision_ws/src/kc_vision_bringup/launch/sim_bringup.launch.py

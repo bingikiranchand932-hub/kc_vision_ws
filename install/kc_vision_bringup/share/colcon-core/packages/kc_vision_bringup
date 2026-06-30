@@ -1,1 +1,0 @@
-controller_manager:geometry_msgs:joy:kc_vision_description:kc_vision_gazebo:kc_vision_localization:kc_vision_nav2:kc_vision_scripts:kc_vision_slam:micro_ros_agent:nav2_simple_commander:rclpy:ros2_control:ros2_controllers:teleop_twist_joy:twist_mux:twist_stamper

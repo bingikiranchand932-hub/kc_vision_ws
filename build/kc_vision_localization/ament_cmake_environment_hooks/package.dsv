@@ -1,4 +1,0 @@
-source;share/kc_vision_localization/local_setup.bash
-source;share/kc_vision_localization/local_setup.dsv
-source;share/kc_vision_localization/local_setup.sh
-source;share/kc_vision_localization/local_setup.zsh

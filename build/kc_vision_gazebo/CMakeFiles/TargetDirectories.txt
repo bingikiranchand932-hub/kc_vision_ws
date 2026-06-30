@@ -1,9 +1,0 @@
-/home/kiranchand/kc_vision_ws/build/kc_vision_gazebo/CMakeFiles/uninstall.dir
-/home/kiranchand/kc_vision_ws/build/kc_vision_gazebo/CMakeFiles/kc_vision_gazebo_uninstall.dir
-/home/kiranchand/kc_vision_ws/build/kc_vision_gazebo/CMakeFiles/test.dir
-/home/kiranchand/kc_vision_ws/build/kc_vision_gazebo/CMakeFiles/edit_cache.dir
-/home/kiranchand/kc_vision_ws/build/kc_vision_gazebo/CMakeFiles/rebuild_cache.dir
-/home/kiranchand/kc_vision_ws/build/kc_vision_gazebo/CMakeFiles/list_install_components.dir
-/home/kiranchand/kc_vision_ws/build/kc_vision_gazebo/CMakeFiles/install.dir
-/home/kiranchand/kc_vision_ws/build/kc_vision_gazebo/CMakeFiles/install/local.dir
-/home/kiranchand/kc_vision_ws/build/kc_vision_gazebo/CMakeFiles/install/strip.dir

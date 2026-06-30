@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 import rclpy
 from nav2_simple_commander.robot_navigator import BasicNavigator
 import yaml

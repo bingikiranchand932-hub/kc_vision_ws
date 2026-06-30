@@ -30,6 +30,10 @@ install(
 install(
   PROGRAMS
     scripts/coverage_planner.py
+    nav2_gps_waypoint_follower_demo/gps_coverage_planner.py
+    nav2_gps_waypoint_follower_demo/logged_waypoint_follower.py
+    nav2_gps_waypoint_follower_demo/interactive_waypoint_follower.py
+    nav2_gps_waypoint_follower_demo/gps_waypoint_logger.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

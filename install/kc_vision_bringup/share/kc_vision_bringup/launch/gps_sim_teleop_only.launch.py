@@ -1,1 +1,0 @@
-/home/kiranchand/kc_vision_ws/src/kc_vision_bringup/launch/gps_sim_teleop_only.launch.py

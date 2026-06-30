@@ -1,1 +1,0 @@
-/home/kiranchand/kc_vision_ws/build/kc_vision_gazebo/ament_cmake_core/kc_vision_gazeboConfig.cmake
