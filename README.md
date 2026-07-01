@@ -22,6 +22,12 @@
 
 Imagine a robot that can **see its surroundings, build its own map, and drive itself** to any point you click — without you touching a joystick.
 
+<div align="center">
+
+![How Autonomous Robots Navigate](media/videos/How_Autonomous_Robots_Navigate.mp4)
+
+</div>
+
 That's `kc_vision`. Every part of it was custom-built:
 
 - The **body** was designed by hand in Fusion 360 
@@ -93,6 +99,16 @@ Before driving the real robot, you can test it in different virtual environments
 | `warehouse_world.sdf` | Industrial / logistics-style testing |
 | `maze_world_1.sdf` | Stress-testing obstacle avoidance |
 | `living_room.sdf` | Home-robot style testing |
+
+**Gazebo World Previews:**
+<p align="center">
+  <img src="media/images/gazebo_world_1.png" width="32%" />
+  <img src="media/images/gazebo_world_2.png" width="32%" />
+  <img src="media/images/gazebo_world_3.png" width="32%" />
+  <img src="media/images/gazebo_world_4.png" width="32%" />
+  <img src="media/images/gazebo_world_5.png" width="32%" />
+  <img src="media/images/gazebo_world_6.png" width="32%" />
+</p>
 
 ---
 
@@ -208,6 +224,14 @@ ros2 launch kc_vision_bringup sim_nav_mode.launch.py map:=/path/to/your/saved_ma
 
 In RViz, click the **"2D Goal Pose"** button, then click anywhere on the map. The robot will plan its own path and drive there — avoiding anything in its way.
 
+**Navigation in Action:**
+
+![Navigation to 2D Goal](media/videos/navigation_2D_goal_pose.mp4)
+
+**Obstacle Avoidance:**
+
+![Obstacle Avoidance](media/videos/obstacle_avoidance.mp4)
+
 ---
 
 ### 🛰️ Mode 4 — GPS Lawnmower Coverage (The Star Feature)
@@ -256,6 +280,15 @@ ros2 run kc_vision_bringup gps_coverage_planner.py
 ```
 
 The robot will now automatically calculate parallel rows (0.2 m apart by default) and drive the entire pattern — covering 100% of the area with no gaps.
+
+**Coverage Path Planning (Boustrophedon Pattern):**
+
+![Boustrophedon Pattern Video](media/videos/boustro_pattern.mp4)
+
+<p align="center">
+  <img src="media/images/boustrophedon_pattern_1.png" width="48%" />
+  <img src="media/images/boustrophedon_pattern_2.png" width="48%" />
+</p>
 
 > 🔧 **Want tighter or wider rows?** Open `gps_coverage_planner.py` and change the `sweep_spacing` value.
 
