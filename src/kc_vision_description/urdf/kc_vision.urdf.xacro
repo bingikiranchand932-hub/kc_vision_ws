@@ -9,6 +9,7 @@
     <xacro:include filename="modules/kc.xacro" />
     <!-- <xacro:include filename="modules/camera.xacro" /> -->
     <!-- <xacro:include filename="modules/lidar.xacro" /> -->
+    <xacro:include filename="modules/rear_camera.xacro" />
 
     <xacro:if value="$(arg using_sim)">
         <!--<xacro:include filename="gazebo/gazebo_plugins.xacro" />--> <!-- REPLACED BY THE NEW ros2_control_sim.xacro MODULE -->

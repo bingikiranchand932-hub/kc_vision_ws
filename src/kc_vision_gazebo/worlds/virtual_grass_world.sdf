@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+    <world name="virtual_grass_world">
+        <physics name="1ms" type="ignored">
+            <max_step_size>0.001</max_step_size>
+            <real_time_factor>1.0</real_time_factor>
+        </physics>
+
+        <plugin filename="libgz-sim-physics-system.so" name="gz::sim::systems::Physics"/>
+        <plugin filename="libgz-sim-user-commands-system.so" name="gz::sim::systems::UserCommands"/>
+        <plugin filename="libgz-sim-scene-broadcaster-system.so" name="gz::sim::systems::SceneBroadcaster"/>
+        <plugin filename="libgz-sim-navsat-system" name="gz::sim::systems::NavSat"/>
+        <plugin filename="libgz-sim-imu-system.so" name="gz::sim::systems::Imu"/>
+
+        <spherical_coordinates>
+            <surface_model>EARTH_WGS84</surface_model>
+            <world_frame_orientation>ENU</world_frame_orientation>
+            <latitude_deg>-22.9</latitude_deg>
+            <longitude_deg>-43.2</longitude_deg>
+            <elevation>0</elevation>
+            <heading_deg>0</heading_deg>
+        </spherical_coordinates>
+
+        <!-- Sun light -->
+        <light type="directional" name="sun">
+            <cast_shadows>true</cast_shadows>
+            <pose>0 0 10 0 0 0</pose>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <direction>-0.5 0.1 -0.9</direction>
+        </light>
+
+        <!-- Uncut Grass Ground Plane -->
+        <model name="uncut_grass_ground">
+            <static>true</static>
+            <pose>0 0 0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                    <geometry>
+                        <plane>
+                            <normal>0 0 1</normal>
+                            <size>10 10</size>
+                        </plane>
+                    </geometry>
+                    <material>
+                        <!-- Light Green representing Tall Uncut Grass -->
+                        <ambient>0.3 0.6 0.1 1.0</ambient>
+                        <diffuse>0.3 0.6 0.1 1.0</diffuse>
+                        <specular>0.05 0.05 0.05 1</specular>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry>
+                        <plane>
+                            <normal>0 0 1</normal>
+                            <size>10 10</size>
+                        </plane>
+                    </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <!-- Boundary Walls -->
+        <model name="boundary_walls">
+            <static>true</static>
+            <pose>0 0 0.25 0 0 0</pose>
+            <!-- North Wall -->
+            <link name="north_wall">
+                <pose>5 0 0 0 0 0</pose>
+                <visual name="v"><geometry><box><size>0.2 10.2 0.5</size></box></geometry><material><ambient>0.5 0.3 0.1 1</ambient><diffuse>0.5 0.3 0.1 1</diffuse></material></visual>
+                <collision name="c"><geometry><box><size>0.2 10.2 0.5</size></box></geometry></collision>
+            </link>
+            <!-- South Wall -->
+            <link name="south_wall">
+                <pose>-5 0 0 0 0 0</pose>
+                <visual name="v"><geometry><box><size>0.2 10.2 0.5</size></box></geometry><material><ambient>0.5 0.3 0.1 1</ambient><diffuse>0.5 0.3 0.1 1</diffuse></material></visual>
+                <collision name="c"><geometry><box><size>0.2 10.2 0.5</size></box></geometry></collision>
+            </link>
+            <!-- East Wall -->
+            <link name="east_wall">
+                <pose>0 5 0 0 0 0</pose>
+                <visual name="v"><geometry><box><size>10.2 0.2 0.5</size></box></geometry><material><ambient>0.5 0.3 0.1 1</ambient><diffuse>0.5 0.3 0.1 1</diffuse></material></visual>
+                <collision name="c"><geometry><box><size>10.2 0.2 0.5</size></box></geometry></collision>
+            </link>
+            <!-- West Wall -->
+            <link name="west_wall">
+                <pose>0 -5 0 0 0 0</pose>
+                <visual name="v"><geometry><box><size>10.2 0.2 0.5</size></box></geometry><material><ambient>0.5 0.3 0.1 1</ambient><diffuse>0.5 0.3 0.1 1</diffuse></material></visual>
+                <collision name="c"><geometry><box><size>10.2 0.2 0.5</size></box></geometry></collision>
+            </link>
+        </model>
+
+    </world>
+</sdf>

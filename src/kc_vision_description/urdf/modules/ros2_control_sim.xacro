@@ -155,6 +155,37 @@
 <!--=========================================-->
 
 
+<!-- =========== Rear Camera Sensor (Ground-Facing for Grass Detection) ============ -->
+    <gazebo reference="rear_camera_link">
+        <sensor name="rear_camera" type="camera">
+            <camera>
+                <horizontal_fov>1.5708</horizontal_fov> <!-- 90° wide FOV to see ground close-up -->
+                <image>
+                    <width>640</width>
+                    <height>480</height>
+                    <format>R8G8B8</format>
+                </image>
+                <clip>
+                    <near>0.05</near>
+                    <far>5</far>
+                </clip>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.007</stddev>
+                </noise>
+                <optical_frame_id>rear_camera_optical_frame</optical_frame_id>
+                <camera_info_topic>/rear_camera/camera_info</camera_info_topic>
+            </camera>
+            <always_on>1</always_on>
+            <update_rate>15</update_rate>
+            <visualize>true</visualize>
+            <topic>/rear_camera/image_raw</topic>
+        </sensor>
+    </gazebo>
+<!--=========================================-->
+
+
 <!-- =========== IMU Sensor ============ -->
 
     <gazebo reference="imu_link_1">

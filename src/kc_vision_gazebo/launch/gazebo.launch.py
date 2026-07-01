@@ -36,7 +36,7 @@ def generate_launch_description():
     # World to launch in Gazebo
     declare_world_cmd = DeclareLaunchArgument(
         'world',
-        default_value='visionkc.sdf',
+        default_value='virtual_grass_world.sdf',
         description='The world file to launch in Gazebo')
 
     # Whether to run Gazebo without a GUI

@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!-- Rear-Facing Camera Module for Vision-Based Grass Detection -->
+<!-- This camera is mounted at the rear of the robot, angled ~45° downward -->
+<!-- to see the ground behind the robot for cut/uncut grass detection -->
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- =========== Rear Camera Link & Joint ============ -->
+
+    <!-- Rear camera mount point - attached to base_link at the rear -->
+    <link name="rear_camera_link">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0.01"/>
+            <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.025 0.025 0.025"/>
+            </geometry>
+            <material name="red">
+                <color rgba="0.8 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.025 0.025 0.025"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Optical frame for the rear camera (required for proper image orientation in ROS) -->
+    <link name="rear_camera_optical_frame"/>
+
+    <!-- Mount the rear camera at the back of the robot, tilted 45° downward -->
+    <!-- base_link rear is at roughly x = -0.14, we mount it at the rear edge -->
+    <!-- Pitch of ~0.785 rad (45°) tilts the camera downward to see the ground -->
+    <joint name="rear_camera_joint" type="fixed">
+        <origin xyz="-0.14 0.0 0.04" rpy="0 0.785 3.14159"/>
+        <parent link="base_link"/>
+        <child link="rear_camera_link"/>
+    </joint>
+
+    <!-- Optical frame transform: converts from ROS body frame to optical frame -->
+    <!-- In ROS, camera optical frame has Z forward, X right, Y down -->
+    <joint name="rear_camera_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
+        <parent link="rear_camera_link"/>
+        <child link="rear_camera_optical_frame"/>
+    </joint>
+
+</robot>

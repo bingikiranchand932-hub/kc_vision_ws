@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🤖 kc_vision
-### Autonomous Ground Robot — Built From Scratch with Fusion 360 + ROS 2
+### Autonomous Ground Robot — Custom-Designed with Fusion 360 + ROS 2
 
 **A complete self-driving robot you can simulate, study, and eventually build in real life.**
 
@@ -20,9 +20,9 @@
 
 Imagine a robot that can **see its surroundings, build its own map, and drive itself** to any point you click — without you touching a joystick.
 
-That's `kc_vision`. Every part of it was built from the ground up:
+That's `kc_vision`. Every part of it was custom-built:
 
-- The **body** was designed by hand in Fusion 360 (not downloaded from anywhere)
+- The **body** was designed by hand in Fusion 360 
 - The **brain** runs on ROS 2 — the same framework used by real robotics companies
 - The **eyes** are LiDAR, a camera, GPS, and an IMU working together
 - The **legs** are a differential-drive wheel system, just like a wheelchair turns
@@ -109,14 +109,11 @@ You'll also need these ROS 2 packages — don't worry, the setup steps below ins
 # Tell your terminal where ROS 2 lives
 source /opt/ros/jazzy/setup.bash
 
-# Create a fresh workspace folder
-mkdir -p ~/kc_vision_ws/src
-cd ~/kc_vision_ws/src
+# Clone the repository (this creates the kc_vision_ws folder for you)
+cd ~
+git clone https://github.com/bingikiranchand932-hub/kc_vision_ws.git
 
-# Download this project into it
-git clone https://github.com/<your-username>/kc_vision.git .
-
-# Go back and install everything the project needs
+# Go into the workspace and install all ROS dependencies
 cd ~/kc_vision_ws
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
