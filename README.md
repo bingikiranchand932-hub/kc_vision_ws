@@ -22,11 +22,7 @@
 
 Imagine a robot that can **see its surroundings, build its own map, and drive itself** to any point you click — without you touching a joystick.
 
-<div align="center">
 
-![How Autonomous Robots Navigate](media/videos/How_Autonomous_Robots_Navigate.mp4)
-
-</div>
 
 That's `kc_vision`. Every part of it was custom-built:
 
@@ -223,11 +219,11 @@ In RViz, click the **"2D Goal Pose"** button, then click anywhere on the map. Th
 
 **Navigation in Action:**
 
-![Navigation to 2D Goal](media/videos/navigation_2D_goal_pose.mp4)
+![Navigation Preview](media/videos/nav_preview.gif)
 
 **Obstacle Avoidance:**
 
-![Obstacle Avoidance](media/videos/obstacle_avoidance.mp4)
+![Obstacle Avoidance Preview](media/videos/obstacle_preview.gif)
 
 ---
 
@@ -280,7 +276,7 @@ The robot will now automatically calculate parallel rows (0.2 m apart by default
 
 **Coverage Path Planning (Boustrophedon Pattern):**
 
-![Boustrophedon Pattern Video](media/videos/boustro_pattern.mp4)
+![Boustrophedon Pattern Preview](media/videos/boustro_pattern.gif)
 
 <p align="center">
   <img src="media/images/boustrophedon_pattern_1.png" width="48%" />
