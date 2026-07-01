@@ -12,6 +12,8 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-purple)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu%2024.04-lightgrey?logo=ubuntu)](https://ubuntu.com/)
 
+![kc_vision Robot](media/images/kcvision_complete_iso.png)
+
 </div>
 
 ---
@@ -47,24 +49,30 @@ You can run this entire robot **in simulation right now** — no physical hardwa
 
 Think of this like rooms in a house — each folder has one clear job.
 
-```
-kc_vision_ws/src/
+```text
+kc_vision_ws/
 │
-├── kc_vision_description/    🦴  The robot's "skeleton" (3D model, shape, joints)
-├── kc_vision_gazebo/         🌍  Virtual worlds the robot lives and drives in
-├── kc_vision_localization/   📍  Helps the robot know exactly where it is
-├── kc_vision_slam/           🗺️  Lets the robot build maps as it explores
-├── kc_vision_nav2/           🧭  The "GPS app" that plans routes and drives
-├── kc_vision_scripts/        🔧  Small helper tools (like a QR code reader)
-├── kc_vision_hardware/       🛠️  (Coming soon) Code for the real physical robot
+├── media/                    📸  Images and videos for documentation
+│   ├── images/                  (Add your .png, .jpg files here)
+│   └── videos/                  (Add your .mp4, .gif files here)
 │
-└── kc_vision_bringup/        ⭐ START HERE — every command you'll run lives here
-    ├── launch/                  All the "press play" files
-    ├── config/                  Settings and tuning files
-    └── nav2_gps_waypoint_follower_demo/
-        ├── gps_waypoint_logger.py     📍 Click-to-save GPS points
-        ├── gps_coverage_planner.py    🌾 Plans the lawnmower sweep pattern
-        └── logged_waypoint_follower.py 🚗 Drives to saved points in order
+└── src/                      💻  All the ROS 2 packages live here
+    │
+    ├── kc_vision_description/    🦴  The robot's "skeleton" (3D model, shape, joints)
+    ├── kc_vision_gazebo/         🌍  Virtual worlds the robot lives and drives in
+    ├── kc_vision_localization/   📍  Helps the robot know exactly where it is
+    ├── kc_vision_slam/           🗺️  Lets the robot build maps as it explores
+    ├── kc_vision_nav2/           🧭  The "GPS app" that plans routes and drives
+    ├── kc_vision_scripts/        🔧  Small helper tools (like a QR code reader)
+    ├── kc_vision_hardware/       🛠️  (Coming soon) Code for the real physical robot
+    │
+    └── kc_vision_bringup/        ⭐ START HERE — every command you'll run lives here
+        ├── launch/                  All the "press play" files
+        ├── config/                  Settings and tuning files
+        └── nav2_gps_waypoint_follower_demo/
+            ├── gps_waypoint_logger.py     📍 Click-to-save GPS points
+            ├── gps_coverage_planner.py    🌾 Plans the lawnmower sweep pattern
+            └── logged_waypoint_follower.py 🚗 Drives to saved points in order
 ```
 
 > 💡 **Beginner tip:** You will almost never need to open the other folders directly. `kc_vision_bringup` is your control panel for everything.
@@ -276,6 +284,11 @@ If you want to peek under the hood and see what data is flowing between parts of
 
 The mechanical design is already finished in Fusion 360. Here's what the real hardware will look like:
 
+<p align="center">
+  <img src="media/images/kcvision_complete_top.png" width="48%" alt="Top View" />
+  <img src="media/images/kcvision_complete_side.png" width="48%" alt="Side View" />
+</p>
+
 | Part | Component |
 |---|---|
 | 🧠 Main Computer | Raspberry Pi 5 |
@@ -287,6 +300,28 @@ The mechanical design is already finished in Fusion 360. Here's what the real ha
 | 🛰️ GPS | NEO-M8N module |
 
 Once the hardware is assembled, this same README will be updated with `real_teleop_only.launch.py`, `real_map_mode.launch.py`, and full micro-ROS setup instructions.
+
+---
+
+## 📸 Adding Images and Videos
+
+If you want to add photos, diagrams, or videos (like screen recordings of the robot in Gazebo) to this README, follow these steps:
+
+1. Put your image files (e.g., `.png`, `.jpg`) into the `media/images/` folder.
+2. Put your video or GIF files (e.g., `.mp4`, `.gif`) into the `media/videos/` folder.
+3. Link them in this README file using the following markdown format:
+
+**For an image:**
+```markdown
+![Description of the image](media/images/your_picture_name.png)
+```
+
+**For a video (or GIF):**
+```markdown
+![Description of the video](media/videos/your_video_name.gif)
+```
+
+*Note: GitHub supports `.mp4` video playback directly if you drag and drop them into the web editor, but for keeping the repository organized, it's best to store them in the `media/` folders.*
 
 ---
 
