@@ -302,14 +302,6 @@ The mechanical design is already finished in Fusion 360. Here's what the real ha
 Once the hardware is assembled, this same README will be updated with `real_teleop_only.launch.py`, `real_map_mode.launch.py`, and full micro-ROS setup instructions.
 
 ---
-
-## 📸 Adding Images and Videos
-
-If you want to add photos, diagrams, or videos (like screen recordings of the robot in Gazebo) to this README, follow these steps:
-
-1. Put your image files (e.g., `.png`, `.jpg`) into the `media/images/` folder.
-
-
 ## 🤝 Want to Contribute?
 
 Found a bug? Have an idea? Contributions are genuinely welcome.
