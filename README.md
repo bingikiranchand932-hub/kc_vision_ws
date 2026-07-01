@@ -217,10 +217,6 @@ ros2 launch kc_vision_bringup sim_nav_mode.launch.py map:=/path/to/your/saved_ma
 
 In RViz, click the **"2D Goal Pose"** button, then click anywhere on the map. The robot will plan its own path and drive there — avoiding anything in its way.
 
-**Navigation in Action:**
-
-![Navigation Preview](media/videos/nav_preview.gif)
-
 **Obstacle Avoidance:**
 
 ![Obstacle Avoidance Preview](media/videos/obstacle_preview.gif)
@@ -324,8 +320,8 @@ The mechanical design is already finished in Fusion 360. Here's what the real ha
 | 🧠 Main Computer | Raspberry Pi 5 |
 | ⚙️ Motor Controller | STM32 (via micro-ROS) |
 | 🛞 Drive System | Differential drive with encoded DC motors |
-| 👁️ LiDAR | RPLidar A1 |
-| 🧭 IMU | MPU6050 |
+| 👁️ LiDAR | YD LiDAR |
+| 🧭 IMU | BNO086 |
 | 📷 Camera | RGB Camera |
 | 🛰️ GPS | NEO-M8N module |
 
@@ -355,6 +351,8 @@ This project is licensed under the **Apache License 2.0** — see the [LICENSE](
 ## 🙏 Acknowledgements
 
 Huge thanks to **[Ben May](https://benmay.co.uk/)** and his [slambot](https://github.com/benmay100/slambot) project, which served as a major reference for how this project's architecture and launch files were structured.
+
+A special thanks to **[Josh Newans](https://www.youtube.com/@ArticulatedRobotics)** from **Articulated Robotics** — his incredible tutorials were instrumental in helping me learn ROS and build this project.
 
 This project also stands on the shoulders of incredible open-source work:
 
