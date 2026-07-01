@@ -308,22 +308,7 @@ Once the hardware is assembled, this same README will be updated with `real_tele
 If you want to add photos, diagrams, or videos (like screen recordings of the robot in Gazebo) to this README, follow these steps:
 
 1. Put your image files (e.g., `.png`, `.jpg`) into the `media/images/` folder.
-2. Put your video or GIF files (e.g., `.mp4`, `.gif`) into the `media/videos/` folder.
-3. Link them in this README file using the following markdown format:
 
-**For an image:**
-```markdown
-![Description of the image](media/images/your_picture_name.png)
-```
-
-**For a video (or GIF):**
-```markdown
-![Description of the video](media/videos/your_video_name.gif)
-```
-
-*Note: GitHub supports `.mp4` video playback directly if you drag and drop them into the web editor, but for keeping the repository organized, it's best to store them in the `media/` folders.*
-
----
 
 ## 🤝 Want to Contribute?
 
