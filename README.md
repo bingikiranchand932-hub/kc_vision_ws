@@ -104,10 +104,7 @@ Before driving the real robot, you can test it in different virtual environments
 <p align="center">
   <img src="media/images/gazebo_world_1.png" width="32%" />
   <img src="media/images/gazebo_world_2.png" width="32%" />
-  <img src="media/images/gazebo_world_3.png" width="32%" />
-  <img src="media/images/gazebo_world_4.png" width="32%" />
-  <img src="media/images/gazebo_world_5.png" width="32%" />
-  <img src="media/images/gazebo_world_6.png" width="32%" />
+
 </p>
 
 ---
@@ -288,6 +285,10 @@ The robot will now automatically calculate parallel rows (0.2 m apart by default
 <p align="center">
   <img src="media/images/boustrophedon_pattern_1.png" width="48%" />
   <img src="media/images/boustrophedon_pattern_2.png" width="48%" />
+  <img src="media/images/gazebo_world_3.png" width="32%" />
+  <img src="media/images/gazebo_world_4.png" width="32%" />
+  <img src="media/images/gazebo_world_5.png" width="32%" />
+  <img src="media/images/gazebo_world_6.png" width="32%" />
 </p>
 
 > 🔧 **Want tighter or wider rows?** Open `gps_coverage_planner.py` and change the `sweep_spacing` value.
