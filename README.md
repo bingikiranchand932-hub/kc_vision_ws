@@ -102,8 +102,8 @@ Before driving the real robot, you can test it in different virtual environments
 
 **Gazebo World Previews:**
 <p align="center">
-  <img src="media/images/gazebo_world_1.png" width="32%" />
-  <img src="media/images/gazebo_world_2.png" width="32%" />
+  <img src="media/images/gazebo_world_1.png" width="50%" />
+  <img src="media/images/gazebo_world_2.png" width="50%" />
 
 </p>
 
